@@ -1,0 +1,1080 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+
+<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+<script>
+			// JavaScript Document
+
+	$(document).ready(function(){
+	
+	$("#1").click(function(){
+		$(".pkm").addClass("hide");
+		$("#pkm1").removeClass("hide");
+		});
+
+	$("#2").click(function(){
+		$(".pkm").addClass("hide");
+		$("#pkm2").removeClass("hide");
+		});
+
+	$("#3").click(function(){
+		$(".pkm").addClass("hide");
+		$("#pkm3").removeClass("hide");
+		});
+
+	$("#4").click(function(){
+		$(".pkm").addClass("hide");
+		$("#pkm4").removeClass("hide");
+		});
+
+	$("#5").click(function(){
+		$(".pkm").addClass("hide");
+		$("#pkm5").removeClass("hide");
+		});
+	
+	});
+</script>
+
+<!-- CSS -->
+
+<style>
+	
+	body {
+		font-family: verdana, arial;
+		font-size: 12px;
+		text-align:justify;
+	}
+
+	a {
+		text-decoration:none;
+		color:inherit;
+		font-weight:inherit;
+	}
+
+	.mainbody		/* bloc principal avec menu et onglets */
+
+	.pkmteam {		/* menu sur la gauche */
+		margin-right: 10px;
+		float: left;
+		background: #9DCED1;
+		padding: 10px;
+		font-size: 10px;
+		text-align: center;
+		line-height: 13px;
+		text-transform: uppercase;
+		color: white;
+		font-style: italic;
+		text-shadow: 1px 1px 1px #73B0B5;
+	}
+
+	.pokebloc {		/* espace pour les descriptions de pokémon */
+		float: left;
+		border-left: 1px solid #9DCED1;
+		padding-left: 25px;
+	}
+
+	.pkm {		/* bloc d'un pokémon */
+		width: 275px;
+		border: 10px solid #F7E2E5;
+		border-right: 48px solid #F7E2E5;
+		margin: auto;
+		color: white;
+	}
+
+	.species {		/* carré vert clair */
+		margin-bottom: 3px;
+		background: #cfe27e;
+		text-shadow: 1px 1px 1px #A9BD51;
+		text-transform: uppercase;
+		font-weight: bold;
+		font-size: 8px;
+		text-align: center;
+		height: 120px;
+	}
+
+	.stats1 {		/* carré rose : stats principales */
+		width: 78px;
+		padding: 5px;
+		background: #F0A4A6;
+		margin: auto;
+		font-weight: bold;
+		font-size: 7px;
+		line-height: 11px;
+		text-transform: uppercase;
+		margin-bottom: 3px;
+		text-shadow: 1px 1px 1px #DA8386;
+	}
+
+	.stats1 .left {		/* pv, def, def spe. // vit, atk, atk spe. */
+		color: #F9E9EA;
+		float: left;
+		margin-right: 6px;
+	}
+
+	.stats1 .right {		/* valeurs 1 + border */
+		float: left;
+		padding-right: 5px;
+		border-right: 1px solid #F9E9EA;
+		width: 9px;
+	}
+
+	.stats2 {		/* carré rose foncé */
+		width: 78px;
+		padding: 5px;
+		background: #9B3054;
+		text-shadow: 1px 1px 1px #960c3b;
+	}
+
+	.stats3 {		/* carré compétences avec border */
+		margin: auto;
+		font-weight: bold;
+		font-size: 7px;
+		line-height: 11px;
+		text-transform: uppercase;
+		border: 1px solid gainsboro;
+		padding: 5px;
+		width: 65px;
+	}
+
+	.stats3 .left {		/* valeurs compétences */
+		float: left;
+		margin-right: 5px;
+	}
+
+	.stats3 .right {		/* duel, athlétisme, recherche, beauté */
+		float: left;
+		color: #F5DCE4;
+	}
+
+	.name {		/* surnom du pkm */
+		text-shadow: 1px 1px 1px #3F836E;
+		background: #559884;
+		text-transform: uppercase;
+		font-style: italic;
+		font-size: 8px;
+		letter-spacing: 1px;
+		padding: 3px;
+		text-align: center;
+	}
+
+	.main {		/* carré vert foncé */
+		background: #83C3B0;
+		padding: 10px;
+		height: 199px;
+		width: 150px;
+	}
+
+	.desc {		/* description du pkm */
+		height: 120px;
+		font-size: 9px;
+		line-height: 11px;
+		border-bottom: 1px solid #AEE3D3;
+		padding-bottom: 3px;
+		margin-bottom: 5px;
+		margin-top: -5px;
+		text-shadow: 1px 1px 1px #6BB09C;
+	}
+
+	.desc .inner {
+		width: 150px;
+		height: 120px;
+		overflow: auto;
+		padding-right: 10px;
+	}
+
+	.log {		/* bloc pkm log */
+		line-height: 10px;
+		color: #559884;
+		background: #E7F7F2;
+		height: 68px;
+		width: 140px;
+		float: left;
+		padding: 5px;
+		text-shadow: 1px 1px 1px white;
+	}
+
+	.log .inner {
+		width: 140px;
+		height: 68px;
+		overflow: auto;
+		padding-right: 10px;
+	}
+
+	.log .left {	/* dates */
+		padding-top: 2px;
+		padding-left: 2px;
+		padding-right: 2px;
+		border: 1px solid #71BFA8;
+		color: #71BFA8;
+		font-size: 8px;
+		font-weight: bold;
+		width: 30px;
+		float: left;
+		margin-right: 5px;
+	}
+
+	.log .right {	/* évènements */
+		font-size: 9px;
+		padding-top: 2px;
+		width: 95px;
+		float: left;
+	}
+
+	.log .wrap {		/* séparateur */
+		border-bottom: 1px solid white;
+		padding-top: 5px;
+		clear: both;
+		margin-bottom: 5px;
+	}
+
+	.colonne1 {		/* objet tenu */
+		background: #F36F73;
+		padding: 5px;
+		line-height: 11px;
+		font-size: 8px;
+		text-shadow: 1px 1px 1px #AC4A4D;
+		width: 100px;
+		margin-bottom: 3px;
+	}
+
+	.item {
+		border: 1px solid white;
+		padding: 5px;
+		text-align: center;
+		font-weight: normal;
+	}
+
+	.itemtitle {
+		font-weight: normal;
+		letter-spacing: 1px;
+		border-bottom: 1px solid #F8AEB0;
+		margin-bottom: 5px;
+		text-transform: uppercase;
+	}
+
+	.colonne2 .itemtitle { border-bottom: 1px solid #D28487; }
+
+	.itembloc {
+		max-height: 55px;
+		overflow: auto;
+	}
+
+	.iteem {
+		text-transform: uppercase;
+		font-weight: bold;
+	}
+
+	.colonne2 {		/* capacité spéciale */
+		background: #A44B4E;
+		padding: 5px;
+		line-height: 11px;
+		font-size: 8px;
+		text-shadow: 1px 1px 1px #AC4A4D;
+		width: 100px;
+		margin-bottom: 3px;
+	}
+
+	.colonne3 {		/* attaques */
+		background: #F58B8E;
+		padding: 5px;
+		padding-left: 7px;
+		line-height: 11px;
+		font-size: 9px;
+		text-shadow: 1px 1px 1px #AC4A4D;
+		width: 100px;
+		text-transform: lowercase;
+		height: 56px;
+		letter-spacing: 1px;
+	}
+
+	.colonne3 .inner {
+		width: 100px;
+		height: 56px;
+		overflow: auto;
+		padding-right: 10px;
+	}
+
+	.attaques {
+		text-transform: uppercase;
+		color: #F58B8E;
+		text-shadow: 1px 1px 1px white;
+		font-size: 9px;
+		text-align: right;
+		font-weight: bold;
+		font-style: italic;
+	}
+
+	.hide { display: none; }	/* pour les onglets */
+</style>
+
+</head>
+
+
+
+<!-- HTML PROPER -->
+
+<DIV class="mainbody">
+
+	<!-- MENU GAUCHE -->
+	
+	<div class="pkmteam">Pokémon<br>capturés<br><br>▼
+		<table>
+			<tr>
+				<td>
+					<span id="1" style="cursor: pointer;"><img src="http://i.imgur.com/zYOZpA5.png"></span>
+				</td>
+				<td>
+					<span id="2" style="cursor: pointer;"><img src="http://i.imgur.com/kCbWCKV.png"></span>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<span id="3" style="cursor: pointer;"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAMAAADXqc3KAAAAHlBMVEX////36rAwMDC/qm9txIc8nFe347jfyo/4+PiGq29ABsKNAAAAbUlEQVQokb3QOwKAMAgDUIHQz/0vbIo6lNZRMzjkVakcx69RZtuLtLYRRSHIIgpARAqyaOEbIsjAARFkeSB/S+1u+ag6AcYIrNA9ZPQ2gTNx3MzmIUMq6+7pVux5mL3nHzG7YN1J0Ha/b2v/Lic19gH7zY2GEAAAAABJRU5ErkJggg=="></span>
+				</td>
+				<td>
+					<span id="4" style="cursor: pointer;"><img src="http://i.imgur.com/dnnveSa.png"></span>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<span id="5" style="cursor: pointer;"><img src="http://i.imgur.com/0D4k1bM.png"></span>
+				</td>
+				<td>
+					<img src="http://i.imgur.com/rMPiu1T.png">
+				</td>
+			</tr>
+		</table>
+	</div>
+
+	<!-- FIN MENU GAUCHE -->
+
+
+
+	<!-- POKEBLOC -->
+
+	<div class="pokebloc">
+
+
+		<!-- POKEMON 1 -->
+
+		<DIV CLASS="pkm" ID="pkm1">
+			<TABLE>
+				<TR>
+					<TD>
+						<div class="species">
+							<img src="http://i.imgur.com/4znl4LM.png">
+							<br><a href="http://www.pokebip.com/pokedex/6G_p92_Fantominus.html" target="_top">fantominus</a> ♂
+							<br><img src="http://i.imgur.com/yY0r5Wh.png"> <img src="http://i.imgur.com/dKE4Krw.png">
+						</div>
+						<div class="stats1">
+							<div class="left">
+								PV<br>Def<br>Spe
+							</div>
+							<div class="right">
+								30<br>30<br>35
+							</div>
+							<div class="left" style="margin-left: 5px;">
+								Vit<br>Att<br>Spe
+							</div>
+							<div style="float: left;">
+								80<br>35<br>100
+							</div>
+							
+							<div style="clear: both;"></div>
+
+						</div>
+						<div class="stats2">
+							<div class="stats3">
+								<div class="left">
+									0<br>2<br>0<br>0
+								</div>
+								<div class="right">
+									Duel<br>Athlétisme<br>Recherche<br>Beauté
+								</div>
+
+								<div style="clear: both;"></div>
+
+							</div>
+						</div>
+					</TD>
+
+					<TD>
+						<div class="name">
+							« Le spectre »
+						</div>
+						<div class="main">
+							<div class="desc">
+								<div class="inner">
+
+									Obtenu du <strong>Collectionneur</strong> le <strong>01/09/2015</strong>. De nature <strong>joviale</strong>. Il est plutôt sympathique et relativement taquin, parfois même farceur. Étant très jeune, il s'est aussitôt attaché à sa dresseuse et se montre affectueux et protecteur envers elle ; ce qui agace la demoiselle au plus haut point, en plus de la terrifier. Il a tendance à la léchouiller, ce qui la paralyse de peur. Il veille sur ses rêves toutes les nuits, utilisant parfois les propriétés soporifiques et hallucinogènes du gaz qui le compose pour l'aider à s'endormir ou provoquer des rêves agréables. Il n'y arrive pas encore très bien, mais il s'entraîne également à dévorer ses cauchemars pour lui assurer un sommeil paisible.
+
+								</div>
+							</div>
+						
+							<div class="log">
+								<div class="inner">
+									<div class="left">
+										16/09
+									</div>
+									<div class="right">
+										Ajout du <em>spectre</em>
+									</div>
+								
+									<div class="wrap"></div>
+
+									<div class="left">
+										07/02
+									</div>
+									<div class="right">
+										CT Toxik
+									</div>
+
+									<div class="wrap"></div>
+
+									<div class="left">
+										???
+									</div>
+									<div class="right">
+										???
+									</div>
+								</div>
+							</div>
+						</div>
+					</TD>
+
+					<TD>
+						<div class="colonne1">
+							<div class="item">
+								<div class="itemtitle">
+									Objets tenus
+								</div>
+
+								<div class="itembloc">
+									<span class="iteem">Foulard SPEEDY</span>
+									<br><em>(+10 vitesse)</em>
+
+									<br><br><span class="iteem">Mini-Costume Halloween</span>
+									<br><em>(+1 beauté)</em>
+								</div>
+							</div>
+						</div>
+
+						<div class="colonne2">
+							<div class="item">
+								<div class="itemtitle">
+									Capacité Spé.
+								</div>
+
+								<span class="iteem">Lévitation</span>
+								<br><em>évite les attaques sol</em>
+							</div>
+						</div>
+
+						<div class="colonne3">
+							<div class="inner">
+								1. <a href="http://www.pokebip.com/pokemon/pokedex/4eme_generation_attaque172__hypnose.html" target="_top">Hypnose</a>
+									
+								<br>2. <a href="http://www.pokebip.com/pokemon/pokedex/4eme_generation_attaque187__lechouille.html" target="_top">Lechouille</a>
+						
+								<br>3. <a href="http://www.pokebip.com/pokemon/pokedex/4eme_generation_attaque96__depit.html" target="_top">Depit</a>
+
+								<br>4. <a href="http://www.pokebip.com/pokemon/pokedex/4eme_generation_attaque271__regard_noir.html" target="_top">Regard Noir</a>
+								
+								<br>5. <a href="http://www.pokebip.com/pokemon/pokedex/4eme_generation_attaque196__malediction.html" target="_top">Malediction</a>
+								
+								<br>6. <a href="http://www.pokepedia.fr/Ombre_Nocturne" target="_top">Ombre Noct.</a>
+
+								<br>7. <a href="http://www.pokepedia.fr/Onde_Folie" target="_top">Onde Folie</a>
+
+								<br>8. <a href="http://www.pokepedia.fr/Coup_Bas" target="_top">Coup Bas</a>
+
+								<br>9. <a href="http://www.pokepedia.fr/Représailles" target="_top">Représailles</a>
+
+								<br>10. <a href="http://www.pokepedia.fr/Ball%27Ombre" target="_top">Ball'Ombre</a>
+
+								<br>11. <a href="http://www.pokepedia.fr/Toxik" target="_top">Toxic (CT)</a>
+							</div>
+						</div>
+
+						<div class="attaques">
+						attaques
+						</div>
+					</TD>
+				</TR>
+			</TABLE>
+		</DIV>
+
+		<!-- FIN POKEMON 1 -->
+
+
+
+		<!-- POKEMON 2 -->
+
+		<DIV CLASS="pkm hide" ID="pkm2">
+			<TABLE>
+				<TR>
+					<TD>
+						<div class="species">
+							<img src="http://i.imgur.com/RNqb5Ul.png" style="margin-top: 20px; margin-bottom: 10px;">
+							<br><a href="http://www.pokebip.com/pokedex/6G_p577_Nucleos.html" target="_top">nucléos</a> ♂
+							<br><img src="http://i.imgur.com/UAHBWge.png"> <img src="http://i.imgur.com/kcV2EyU.png">
+						</div>
+						<div class="stats1">
+							<div class="left">
+								PV<br>Def<br>Spe
+							</div>
+							<div class="right">
+								45<br>40<br>50
+							</div>
+							<div class="left" style="margin-left: 5px;">
+								Vit<br>Att<br>Spe
+							</div>
+							<div style="float: left;">
+								20<br>30<br>105
+							</div>
+							
+							<div style="clear: both;"></div>
+
+						</div>
+						<div class="stats2">
+							<div class="stats3">
+								<div class="left">
+									0<br>2<br>0<br>0
+								</div>
+								<div class="right">
+									Duel<br>Athlétisme<br>Recherche<br>Beauté
+								</div>
+
+								<div style="clear: both;"></div>
+
+							</div>
+						</div>
+					</TD>
+
+					<TD>
+						<div class="name">
+							« Tête de cul »
+						</div>
+						<div class="main">
+							<div class="desc">
+								<div class="inner">
+
+									<strong>Capturé</strong> le <strong>03/10/2015</strong> à l'occasion de la <a href="http://pokemoncommunity.forumactif.org/t3975-sortie-capture-16-03-10-2015" target="_top"><strong>sortie capture #16</strong></a>. De nature <strong>discrète</strong>. Le nucléos d'Alex est une vraie saleté. Il sait se faire discret et se contente généralement de flotter d'un air molasson avec son grand sourire niais. Une façade idéale pour tromper son monde, et faire chier sa dresseuse qui ne supporte pas le sourire en question. Son unique but dans la vie semble de mettre sa dresseuse dans l'embarras, et à s'improviser narrateur de son histoire en lui faisant un commentaire mental permanent généralement destiné à la rabaisser et à appuyer là où ça l'irrite. Il a néanmoins fait preuve de loyauté spontanée envers sa dresseuse lors de sa seconde sortie capture : Alex ignore cependant si son geste était motivé par une sorte de possessivité malsaine, ou par des sentiments plus purs.
+
+								</div>
+							</div>
+						
+							<div class="log">
+								<div class="inner">
+									<div class="left">
+										10/10
+									</div>
+									<div class="right">
+										Ajout du <em>nucléos</em>
+									</div>
+								
+									<div class="wrap"></div>
+
+									<div class="left">
+										???
+									</div>
+									<div class="right">
+										???
+									</div>
+
+									<div class="wrap"></div>
+
+									<div class="left">
+										???
+									</div>
+									<div class="right">
+										???
+									</div>
+								</div>
+							</div>
+						</div>
+					</TD>
+
+					<TD>
+						<div class="colonne1">
+							<div class="item">
+								<div class="itemtitle">
+									Objet tenu
+								</div>
+
+								<span class="iteem"><em><a href="http://www.pokepedia.fr/Orbe_Vie" target="_top">Orbe Vie</a></em></span>
+							</div>
+						</div>
+
+						<div class="colonne2">
+							<div class="item">
+								<div class="itemtitle">
+									Capacité Spé.
+								</div>
+
+								<span class="iteem">Garde Magik</span>
+								<br><em>seules les attaques qui infligent des dégats fonctionnent contre lui</em>
+							</div>
+						</div>
+
+						<div class="colonne3">
+							<div class="inner">
+								1. <a href="http://www.pokebip.com/pokemon/pokedex/pokedex_5G_attaque337__vague_psy.html" target="_top">Vague Psy</a>
+										
+								<br>2. <a href="http://www.pokebip.com/pokemon/pokedex/pokedex_5G_attaque252__protection.html" target="_top">Protection</a>
+
+								<br>3. <a href="http://www.pokebip.com/pokemon/pokedex/pokedex_5G_attaque282__roulade.html" target="_top">Roulade</a>
+
+								<br>4. <a href="http://www.pokebip.com/pokemon/pokedex/pokedex_5G_attaque287__saisie.html" target="_top">Saisie</a>
+
+								<br>5. <a href="http://www.pokebip.com/pokemon/pokedex/pokedex_5G_attaque256__puis_cachee.html" target="_top">P. Cachée</a>
+
+								<br>6. <a href="http://www.pokebip.com/pokemon/pokedex/pokedex_5G_attaque211__mur_lumiere.html" target="_top">Mur Lumiere</a>
+
+								<br>7. <a href="http://www.pokebip.com/pokemon/pokedex/pokedex_5G_attaque56__charme.html" target="_top">Charme</a>
+
+								<br>8. <a href="http://www.pokepedia.fr/Soin" target="_top">Soin</a>
+
+								<br>9. <a href="http://www.pokepedia.fr/Choc_Psy" target="_top">Choc Psy</a>
+
+								<br>10. <a href="http://www.pokepedia.fr/Effort" target="_top">Effort</a>
+							</div>
+						</div>
+
+						<div class="attaques">
+							attaques
+						</div>
+					</TD>
+				</TR>
+			</TABLE>
+		</DIV>
+
+		<!-- FIN POKEMON 2 -->
+
+
+
+		<!-- POKEMON 3 -->
+
+		<DIV CLASS="pkm hide" ID="pkm3">
+			<TABLE>
+				<TR>
+					<TD>
+						<div class="species">
+							???
+						</div>
+						<div class="stats1">
+							<div class="left">
+								PV<br>Def<br>Spe
+							</div>
+							<div class="right">
+								0<br>0<br>0
+							</div>
+							<div class="left" style="margin-left: 5px;">
+								Vit<br>Att<br>Spe
+							</div>
+							<div style="float: left;">
+								0<br>0<br>0
+							</div>
+							
+							<div style="clear: both;"></div>
+
+						</div>
+						<div class="stats2">
+							<div class="stats3">
+								<div class="left">
+									0<br>0<br>0<br>0
+								</div>
+								<div class="right">
+									Duel<br>Athlétisme<br>Recherche<br>Beauté
+								</div>
+
+								<div style="clear: both;"></div>
+
+							</div>
+						</div>
+					</TD>
+
+					<TD>
+						<div class="name">
+							???
+						</div>
+						<div class="main">
+							<div class="desc">
+								<div class="inner">
+
+									<strong>Oeuf de kangourex</strong>.<br>Acheté au Collectionneur le <strong>21/11/2015</strong>.
+
+								</div>
+							</div>
+						
+							<div class="log">
+								<div class="inner">
+									<div class="left">
+										10/10
+									</div>
+									<div class="right">
+										Ajout de <em>l'oeuf</em>
+									</div>
+								
+									<div class="wrap"></div>
+
+									<div class="left">
+										25/12
+									</div>
+									<div class="right">
+										<em>Eclosion prévue</em>
+									</div>
+
+									<div class="wrap"></div>
+
+									<div class="left">
+										???
+									</div>
+									<div class="right">
+										???
+									</div>
+								</div>
+							</div>
+						</div>
+					</TD>
+
+					<TD>
+						<div class="colonne1">
+							<div class="item">
+								<div class="itemtitle">
+									Objet tenu
+								</div>
+
+								<span class="iteem"><em>???</em></span>
+							</div>
+						</div>
+
+						<div class="colonne2">
+							<div class="item">
+								<div class="itemtitle">
+									Capacité Spé.
+								</div>
+
+								<span class="iteem">???</span>
+							</div>
+						</div>
+
+						<div class="colonne3">
+							<div class="inner">
+								???
+							</div>
+						</div>
+
+						<div class="attaques">
+							attaques
+						</div>
+					</TD>
+				</TR>
+			</TABLE>
+		</DIV>
+
+		<!-- FIN POKEMON 3 -->
+
+
+		<!-- POKEMON 4 -->
+
+		<DIV CLASS="pkm hide" ID="pkm4">
+			<TABLE>
+				<TR>
+					<TD>
+						<div class="species">
+							<img src="http://i.imgur.com/yXNkkvY.png"/>
+							★ <a href="http://www.pokebip.com/pokedex/6G_p272_Ludicolo.html" target="_top">ludicolo</a> ♂
+							<img src="http://www.pokebip.com/pokedex/images/gen6_types/4.png"/> <img src="http://www.pokebip.com/pokedex/images/gen6_types/10.png"/>
+						</div>
+						<div class="stats1">
+							<div class="left">
+								PV<br>Def<br>Spe
+							</div>
+							<div class="right">
+								80<br>70<br>100
+							</div>
+							<div class="left" style="margin-left: 5px;">
+								Vit<br>Att<br>Spe
+							</div>
+							<div style="float: left;">
+								70<br>70<br>90
+							</div>
+							
+							<div style="clear: both;"></div>
+
+						</div>
+						<div class="stats2">
+							<div class="stats3">
+								<div class="left">
+									0<br>2<br>0<br>0
+								</div>
+								<div class="right">
+									Duel<br>Athlétisme<br>Recherche<br>Beauté
+								</div>
+
+								<div style="clear: both;"></div>
+
+							</div>
+						</div>
+					</TD>
+
+					<TD>
+						<div class="name">
+							« Le Troll »
+						</div>
+						<div class="main">
+							<div class="desc">
+								<div class="inner">
+
+									<strong>Donné</strong> par <strong>Max</strong> le <strong>05/12/2015</strong>, <a href="http://pokemoncommunity.forumactif.org/t4547-and-he-s-dancing-like-a-madman-max#46724" target="_top">au retour de la sortie capture de Noël</a>. De nature <strong>joviale</strong>.
+
+								</div>
+							</div>
+						
+							<div class="log">
+								<div class="inner">
+									<div class="left">
+										08/02
+									</div>
+									<div class="right">
+										Ajout du <em>ludicotroll</em>
+									</div>
+								
+									<div class="wrap"></div>
+
+									<div class="left">
+										???
+									</div>
+									<div class="right">
+										???
+									</div>
+
+									<div class="wrap"></div>
+
+									<div class="left">
+										???
+									</div>
+									<div class="right">
+										???
+									</div>
+								</div>
+							</div>
+						</div>
+					</TD>
+
+					<TD>
+						<div class="colonne1">
+							<div class="item">
+								<div class="itemtitle">
+									Objet tenu
+								</div>
+
+								<span class="iteem"><em>Ruban de Noël</em></span>
+								<br><em>(+1 athlé)</em>
+							</div>
+						</div>
+
+						<div class="colonne2">
+							<div class="item">
+								<div class="itemtitle">
+									Capacité Spé.
+								</div>
+
+								<span class="iteem">Glissade</span>
+								<br><em>double la vitesse sous la pluie</em>
+							</div>
+						</div>
+
+						<div class="colonne3">
+							<div class="inner">
+								1. <a href="http://www.pokepedia.fr/Vol-Vie" target="_top">Vol-Vie</a>
+
+								<br>2. <a href="http://www.pokepedia.fr/Méga-Sangsue" target="_top">Mega-Sangsue</a>
+
+								<br>3. <a href="http://www.pokepedia.fr/Rugissement" target="_top">Rugissement</a>
+
+								<br>4. <a href="http://www.pokepedia.fr/Force-Nature" target="_top">Force-Nature</a>
+
+								<br>5. <a href="http://www.pokepedia.fr/Étonnement" target="_top">Etonnement</a>
+
+								<br>6. <a href="http://www.pokepedia.fr/Surf" target="_top">Surf (CS)</a>
+
+								<br>7. <a href="http://www.pokepedia.fr/Force" target="_top">Force (CS)</a>
+
+								<br>8. <a href="http://www.pokepedia.fr/Cascade" target="_top">Cascade (CS)</a>
+
+								<br>9. <a href="http://www.pokepedia.fr/Plongée" target="_top">Plongée (CS)</a>
+							</div>
+						</div>
+
+						<div class="attaques">
+							attaques
+						</div>
+					</TD>
+				</TR>
+			</TABLE>
+		</DIV>
+
+		<!-- FIN POKEMON 4 -->
+
+
+		<!-- POKEMON 5 -->
+
+		<DIV CLASS="pkm hide" ID="pkm5">
+			<TABLE>
+				<TR>
+					<TD>
+						<div class="species">
+							<img src="http://www.pokebip.com/pokedex/images/gen4_front_m/3-1.png" style="height: 80px;"/>
+							<a href="http://www.pokebip.com/pokedex/6G_p3_Florizarre.html" target="_top">florizarre</a> ♂
+							<img src="http://www.pokebip.com/pokedex/images/gen6_types/10.png"/> <img src="http://www.pokebip.com/pokedex/images/gen6_types/11.png"/>
+						</div>
+						<div class="stats1">
+							<div class="left">
+								PV<br>Def<br>Spe
+							</div>
+							<div class="right">
+								80<br>83<br>100
+							</div>
+							<div class="left" style="margin-left: 5px;">
+								Vit<br>Att<br>Spe
+							</div>
+							<div style="float: left;">
+								80<br>82<br>100
+							</div>
+							
+							<div style="clear: both;"></div>
+
+						</div>
+						<div class="stats2">
+							<div class="stats3">
+								<div class="left">
+									0<br>2<br>0<br>0
+								</div>
+								<div class="right">
+									Duel<br>Athlétisme<br>Recherche<br>Beauté
+								</div>
+
+								<div style="clear: both;"></div>
+
+							</div>
+						</div>
+					</TD>
+
+					<TD>
+						<div class="name">
+							« Froussarre »
+						</div>
+						<div class="main">
+							<div class="desc">
+								<div class="inner">
+
+									<a href="http://pokemoncommunity.forumactif.org/t4340-jour-101-un-pas-en-avant" target="_top"><strong>Acheté</strong> à <strong>Haru</strong></a> le <strong>12/12/2015</strong>. De nature <strong>lâche</strong>.
+
+								</div>
+							</div>
+						
+							<div class="log">
+								<div class="inner">
+									<div class="left">
+										08/02
+									</div>
+									<div class="right">
+										Ajout du <em>froussarre</em>
+									</div>
+								
+									<div class="wrap"></div>
+
+									<div class="left">
+										???
+									</div>
+									<div class="right">
+										???
+									</div>
+
+									<div class="wrap"></div>
+
+									<div class="left">
+										???
+									</div>
+									<div class="right">
+										???
+									</div>
+								</div>
+							</div>
+						</div>
+					</TD>
+
+					<TD>
+						<div class="colonne1">
+							<div class="item">
+								<div class="itemtitle">
+									Objet tenu
+								</div>
+
+								<span class="iteem"><em>Ruban Halloween</em></span>
+								<br><em>(+1 athlé.)</em>
+							</div>
+						</div>
+
+						<div class="colonne2">
+							<div class="item">
+								<div class="itemtitle">
+									Capacité Spé.
+								</div>
+
+								<span class="iteem">Chlorophylle</span>
+								<br><em>augmente la vitesse au soleil</em>
+							</div>
+						</div>
+
+						<div class="colonne3">
+							<div class="inner">
+								1. <a href="http://www.pokepedia.fr/Charge" target="_top">Charge</a>
+
+								<br>2. <a href="http://www.pokepedia.fr/Rugissement" target="_top">Rugissement</a>
+
+								<br>3. <a href="http://www.pokepedia.fr/Vampigraine" target="_top">Vampigraine</a>
+
+								<br>4. <a href="http://www.pokepedia.fr/Fouet_Lianes" target="_top">Fouet Lianes</a>
+
+								<br>5. <a href="http://www.pokepedia.fr/Poudre_Toxik" target="_top">Poudre Toxik</a>
+
+								<br>6. <a href="http://www.pokepedia.fr/Poudre_Dodo" target="_top">Poudre Dodo</a>
+
+								<br>7. <a href="http://www.pokepedia.fr/Bélier" target="_top">Bélier</a>
+
+								<br>8. <a href="http://www.pokepedia.fr/Tranch%27Herbe" target="_top">Tranch'Herbe</a>
+
+								<br>9. <a href="http://www.pokepedia.fr/Doux_Parfum" target="_top">Doux Parfum</a>
+
+								<br>10. <a href="http://www.pokepedia.fr/Croissance" target="_top">Croissance</a>
+
+								<br>11. <a href="http://www.pokepedia.fr/Coupe" target="_top">Coupe (CS)</a>
+
+								<br>12. <a href="http://www.pokepedia.fr/Force" target="_top">Force (CS)</a>
+							</div>
+						</div>
+
+						<div class="attaques">
+							attaques
+						</div>
+					</TD>
+				</TR>
+			</TABLE>
+		</DIV>
+
+		<!-- FIN POKEMON 5 -->
+
+
+
+	</div>
+
+	<!-- FIN BLOC POKEMON -->
+
+
+</DIV>
