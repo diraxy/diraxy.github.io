@@ -1,0 +1,389 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+
+<!-- JAVASCRIPT -->
+
+<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+<script>
+			// JavaScript Document
+
+	$(document).ready(function(){
+	
+	$("#1").click(function(){
+		$(".onglet1").addClass("hide");
+		$("#inventaire").removeClass("hide");
+		$("#2") .addClass("opacity");
+		$("#1") .removeClass("opacity");
+		});
+
+	$("#2").click(function(){
+		$(".onglet1").addClass("hide");
+		$("#progression").removeClass("hide");
+		$("#1") .addClass("opacity");
+		$("#2") .removeClass("opacity");
+		});
+
+	$("#3").click(function(){
+		$(".onglet2").addClass("hide");
+		$("#points").removeClass("hide");
+		$("#4") .addClass("opacity");
+		$("#3") .removeClass("opacity");
+		});
+	
+	$("#4").click(function(){
+		$(".onglet2").addClass("hide");
+		$("#jetons").removeClass("hide");
+		$("#3") .addClass("opacity");
+		$("#4") .removeClass("opacity");
+		});
+
+	});
+</script>
+
+<!-- [FIN] JAVASCRIPT -->
+
+
+<!-- CSS -->
+
+<style>
+	
+	body {
+		font-family: verdana, arial;
+		font-size: 12px;
+		text-align:justify;
+	}
+
+	a {
+		text-decoration:none;
+		color:inherit;
+		font-weight:inherit;
+	}
+
+	.hide { display: none; }	/* pour les onglets */
+
+	.opacity { opacity: 0.6; }		/* pour les onglets */
+
+	.clear { clear: both; }
+
+	.bloc {
+		width:244px;
+		height:449px;
+	}
+
+	.box1 {		/* rectangle rose */
+		width: 204px;
+		height: 260px;
+		padding: 20px;
+		background: #f3a3a7;
+		color: white;
+		text-shadow: 1px 1px 1px #CE8185;
+	}
+
+	.box1 em { color: #F9EAEA; }
+
+	.bouton1 {
+		text-transform: uppercase;
+		font-size: 9px;
+		font-weight: bold;
+		letter-spacing: 2px;
+		font-style: italic;
+		margin-top: -10px;
+		padding-bottom: 15px;
+		border-bottom: 2px solid white;
+	}
+
+	.b1 {
+		float: left;
+		text-align: left;
+		width: 50%;
+		cursor : pointer;
+	}
+
+	.b2 {
+		float: left;
+		text-align: right;
+		width: 50%;
+		cursor : pointer;
+	}
+
+	.overflow {
+		width: 224px;
+		height: 140px;
+		border-bottom: 1px solid white;
+		padding-bottom: 6px;
+		margin-top: 10px;
+		overflow: auto;
+		font-size: 11px;
+	}
+
+	.cstitre {
+		text-transform: uppercase;
+		font-style: italic;
+		font-size: 9px;
+		border: 1px solid white;
+		padding: 2px;
+		font-weight: bold;
+		text-align: center;
+		margin-top: 20px;
+		margin-bottom: 7px;
+	}
+
+	.csbox {
+		background: white;
+		color: #f3a3a7;
+		padding: 10px;
+		font-size: 8px;
+		text-shadow: none;
+	}
+
+	.cs {
+		float: left;
+		text-transform: uppercase;
+		text-align: center;
+	}
+
+	.border {
+		border-left: 1px solid #f3a3a7;
+		border-right: 1px solid #f3a3a7;
+		padding-left: 4px;
+		padding-right: 5px;
+		margin-left: 4px;
+		margin-right: 3px;
+	}
+
+	.wrap {
+		width: 204px;
+		height: 250px;
+		border-bottom: 1px solid white;
+		padding-bottom: 8px;
+		margin-top: 5px;
+		font-size: 11px;
+	}
+
+	.overflow2 {
+		width: 204px;
+		height: 250px;
+		overflow: auto;
+	}
+
+	.grade {
+		text-transform: uppercase;
+		font-size: 8px;
+		font-weight: bold;
+		padding-top: 5px;
+	}
+
+	.gradeinfo {
+		font-size: 10px;
+		margin-left: 10px;
+		background: white;
+		padding: 2px;
+		margin: 3px;
+		color: #f3a3a7;
+		text-shadow: none;
+	}
+
+	.box2 {		/* rectangle bleu */
+		width: 230px;
+		height: 131px;
+		background: #7fc3b1;
+		margin-top: 4px;
+		color: white;
+		padding: 7px;
+	}
+
+	.bouton2 {
+		text-transform: uppercase;
+		font-size: 9px;
+		letter-spacing: 2px;
+		font-style: italic;
+		margin-left: 3px;
+		margin-bottom: 10px;
+		font-weight: bold;
+	}
+
+	.b3 {
+		background: white;
+		color: #7fc3b1;
+		float: left;
+		text-align: left;
+		width: 47%;
+		text-align: center;
+		margin-right: 4px;
+		padding-top: 2px;
+		padding-bottom: 2px;
+		cursor : pointer;
+	}
+
+	.b4 {
+		background: white;
+		color: #7fc3b1;
+		float: left;
+		text-align: right;
+		width: 47%;
+		text-align: center;
+		margin-left: 4px;
+		padding-top: 2px;
+		padding-bottom: 2px;
+		cursor : pointer;
+	}
+
+	.border2 {
+		border: 1px solid white;
+		padding: 10px;
+		height: 84px;
+		text-transform: uppercase;
+		font-size: 10px;
+		line-height: 15px;
+		word-spacing: 2px;
+	}
+
+	.box2 .couleur {
+		color: #E9F7F3;
+		font-weight: bold;
+		font-size: 9px;
+	}
+
+	.infojetons {
+		text-transform: lowercase;
+		font-size: 9px;
+		border-top: 1px solid #A0D9CA;
+		color: #E9F7F3;
+		padding-top: 3px;
+		overflow: auto;
+		height: 60px;
+		width: 180px;
+		padding-right: 10px;
+		margin: auto;
+		margin-top: 10px;
+	}
+
+</style>
+</head>
+
+<!-- [FIN] CSS -->
+
+
+
+
+<!-- HTML -->
+
+<body>
+
+
+	<div class="bloc">
+
+	<div class="box1">		<!-- RECTANGLE ROSE -->
+		<div class="bouton1">
+			<div id="1" class="b1">inventaire</div>
+			<div id="2" class="b2 opacity">progression</div>
+		</div>
+		
+		<div class="clear"></div>
+
+		
+		<div id="inventaire" class="onglet1">	<!-- onglet inventaire -->
+			<div class="overflow">
+				<div>— ipok</div>
+				<div>— Lot de musculation (+1 athlé)</div>
+				<div>— 9 pokéballs</div>
+				<div>— 4 superballs</div>
+				<div>— 2 écaillecoeurs roses</div>
+				<div>— 1 pierre lune</div>
+				<div>— foulard SPEEDY</div>
+				<div>— mini-costume halloween (+1 bté)</div>
+				<div>— ruban Halloween (+1 athlé)</div>
+				<div>— ruban de Noël (+1 comp. <em>→ athlé</em>)</div>
+				<div>— Orbe Vie</div>
+				<div>— Vive Griffe</div>
+				<div>— CT06 Toxik (2/3)</div>
+				<div>— CT18 Danse Pluie (2/3)</div>
+				<div>— CT11 Zénith (2/3)</div>
+				<div>— CT30 Ball'Ombre (0/1) <em>(obtenue d'Alban)</em></div>
+				<div>— CT92 Distorsion (1/3)</div>
+
+				<br><div>— <strong>baies :</strong> 1 nanab, 1 lingan, 1 ceriz, <br>1 oran, 1 pêcha</div>
+			</div>
+
+			<div class="cstitre">capsules spéciales</div>
+
+			<div class="csbox">
+				<div class="cs" style="width: 25%;">
+					<div><INPUT type="checkbox"/> vol</div>		<!-- <INPUT type="checkbox" checked/> -->
+					<div><INPUT type="checkbox" checked/> surf</div>
+				</div>
+
+				<div class="cs border" style="width: 27%;">
+					<div><INPUT type="checkbox" checked/> force</div>
+					<div><INPUT type="checkbox" checked/> coupe</div>
+				</div>
+
+				<div class="cs" style="width: 38%;">
+					<div><INPUT type="checkbox" checked/> cascade</div>
+					<div><INPUT type="checkbox" checked/> plongée</div>
+				</div>
+
+				<div class="clear"></div>
+			</div>
+		</div>
+
+		<div id="progression" class="onglet1 hide">		<!-- onglet progression -->
+			<div class="wrap">
+				<div class="overflow2">
+					<div class="grade">Grade 0</div>
+					<div class="gradeinfo">
+						<div><INPUT type="checkbox" checked /> niveau 2</div>
+					</div>
+
+					<div class="grade">Grade 1</div>
+					<div class="gradeinfo">
+						<div><INPUT type="checkbox" checked /> niveau 10</div>
+						<div><INPUT type="checkbox" checked /> 1 évènement</div>
+						<div><INPUT type="checkbox" checked /> 1 cours</div>
+						<div><INPUT type="checkbox" checked /> 2 pokémon</div>
+					</div>
+
+					<div class="grade">Grade 2</div>
+					<div class="gradeinfo">
+						<div><INPUT type="checkbox" /> niveau 20</div>
+						<div><INPUT type="checkbox" checked /> 3 évènements</div>
+						<div><INPUT type="checkbox" /> 3 cours (1 spé, 1 normal)</div>
+						<div><INPUT type="checkbox" /> 2 missions (1 spé.)</div>
+						<div><INPUT type="checkbox" checked /> 4 pokémon</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="box2">		<!-- RECTANGLE BLEU -->
+		<div class="bouton2">
+			<div id="3" class="b3">points</div>
+			<div id="4" class="b4 opacity">jetons</div>
+
+			<div class="clear"></div>
+		</div>
+
+		<div id="points" class="border2 onglet2">	<!-- onglet points -->
+			<div><span class="couleur">Grade :</span> 1</div>
+			<div><span class="couleur">Niveau :</span> 15</div>
+			<div><span class="couleur">Total de points :</span> 75</div>
+			<div><span class="couleur">Points utilisés :</span> 0</div>
+			<div><span class="couleur">Points restants :</span> 75</div>
+		</div>
+
+		<div id="jetons" class="border2 onglet2 hide">	<!-- onglet jetons -->
+			<div><strong>Solde : 3170 (-750 = 2420)</strong></div>
+			<div class="infojetons"><strong>Historique :</strong> <a href="http://pokemoncommunity.forumactif.org/t139p105-top-sites-voter-paye#41866" target="_top">8 (tops)</a> + <a href="http://pokemoncommunity.forumactif.org/t139p105-top-sites-voter-paye#42207">36 (tops)</a> + <a href="http://pokemoncommunity.forumactif.org/t139p105-top-sites-voter-paye#43039" target="_top">86 (tops)</a> + <a href="http://pokemoncommunity.forumactif.org/t139p105-top-sites-voter-paye#43398" target="_top">98 (tops)</a> + <a href="http://pokemoncommunity.forumactif.org/t4111-resultats-de-la-soiree-skype" target="_top">250 (soirée skype)</a> + <a href="http://pokemoncommunity.forumactif.org/t139p120-top-sites-voter-paye#43638" target="_top">234 (tops)</a> + <a href="http://pokemoncommunity.forumactif.org/t139p120-top-sites-voter-paye#43856" target="_top">248 (tops)</a> + <a href="http://pokemoncommunity.forumactif.org/t139p120-top-sites-voter-paye#44009" target="_top">254 (tops)</a> + <a href="http://pokemoncommunity.forumactif.org/t139p120-top-sites-voter-paye#44244" target="_top">384 (tops)</a> – <a href="http://pokemoncommunity.forumactif.org/t683p225-acheter-des-oeufs#44298" target="_top">1000 (oeuf kangourex)</a> + <a href="http://pokemoncommunity.forumactif.org/t139p120-top-sites-voter-paye#44479" target="_top">280 (tops)</a> – <a href="http://pokemoncommunity.forumactif.org/t4277-achats-alex-j-lovell" target="_top">300 (4 pokéballs)</a> + <a href="http://pokemoncommunity.forumactif.org/t139p120-top-sites-voter-paye#44979" target="_top">324 (top-sites)</a> – <a href="http://pokemoncommunity.forumactif.org/t4324-vente-d-un-florizarre-attente-de-rp" target="_top">450 (achat Florizarre)</a> + <a href="http://pokemoncommunity.forumactif.org/t139p120-top-sites-voter-paye#45569" target="_top">384 (tops)</a> + <a href="http://pokemoncommunity.forumactif.org/t139p120-top-sites-voter-paye#46063" target="_top">352 (tops)</a> - <a href="http://pokemoncommunity.forumactif.org/t4498p30-venez-faire-vos-achats#46319" target="_top">880 (boutique de Noël)</a> + <a href="http://pokemoncommunity.forumactif.org/t139p135-top-sites-voter-paye" target="_top">288 (tops)</a> + <a href="http://pokemoncommunity.forumactif.org/t139p135-top-sites-voter-paye#46919" target="_top">296 (tops)</a> – <a href="http://pokemoncommunity.forumactif.org/t4498p90-venez-faire-vos-achats#47147" target="_top">500 (boutique de Noël)</a> + <a href="http://pokemoncommunity.forumactif.org/t139p135-top-sites-voter-paye#47484" target="_top">152 (tops)</a> - <a href="http://pokemoncommunity.forumactif.org/t4498p90-venez-faire-vos-achats#47501" target="_top">200 (boutique de Noël)</a> + <a href="http://pokemoncommunity.forumactif.org/t139p135-top-sites-voter-paye#47880" target="_top">128 (tops)</a> + <a href="http://pokemoncommunity.forumactif.org/t4619-vente-d-ecaillecoeurs-termine" target="_top">900 (vente écaillecoeurs)</a> + <a href="http://pokemoncommunity.forumactif.org/t139p135-top-sites-voter-paye#48287" target="_top">176 (tops)</a> + <a href="http://pokemoncommunity.forumactif.org/t139p135-top-sites-voter-paye#48833" target="_top">192 (tops)</a> + <a href="http://pokemoncommunity.forumactif.org/t139p135-top-sites-voter-paye#49160" target="_top">224 (tops)</a> + <a href="http://pokemoncommunity.forumactif.org/t139p135-top-sites-voter-paye#50000" target="_top">366 (tops)</a> – <a href="http://pokemoncommunity.forumactif.org/t4277-achats-alex-j-lovell#50526" target="_top"> 750 (CTs)</a> + <a href="http://pokemoncommunity.forumactif.org/t139p135-top-sites-voter-paye#50562" target="_top">88 (tops)</a> + <a href="http://pokemoncommunity.forumactif.org/t139p135-top-sites-voter-paye#50905" target="_top">128 (tops)</a> + <a href="http://pokemoncommunity.forumactif.org/t139p135-top-sites-voter-paye#51407" target="_top">48 (tops)</a> + <a href="http://pokemoncommunity.forumactif.org/t4211-mission-ordinaire-caramels-et-sucroquins-mademoiselle-amelia-pv-la-team-well#50953" target="_top">30 (mission)</a> + <a href="http://pokemoncommunity.forumactif.org/t139p135-top-sites-voter-paye#52126" target="_top">128 (tops)</a> + <a href="http://pokemoncommunity.forumactif.org/t139p135-top-sites-voter-paye#52348" target="_top">56 (tops)</a> + <a href="http://pokemoncommunity.forumactif.org/t139p135-top-sites-voter-paye#52592" target="_top">64 (tops)</a> + <a href="http://pokemoncommunity.forumactif.org/t139p135-top-sites-voter-paye#52789" target="_top">40 (tops)</a> + <a href="http://pokemoncommunity.forumactif.org/t139p150-top-sites-voter-paye#53040" target="_top">52 (tops)</a> + <a href="http://pokemoncommunity.forumactif.org/t139p150-top-sites-voter-paye#53518" target="_top">312 (tops)</a> + <a href="http://pokemoncommunity.forumactif.org/t4951-achat-d-une-pierre-soleil-termine">300 (vente pierre soleil)</a> + <a href="http://pokemoncommunity.forumactif.org/t5034-vente-d-une-pierre-eau-termine">300 (vente pierre eau)</a> + <a href="http://pokemoncommunity.forumactif.org/t139p150-top-sites-voter-paye#53806" target="_top">78 (tops)</a> + <a href="http://pokemoncommunity.forumactif.org/t139p150-top-sites-voter-paye#54250" target="_top">32 (tops)</a> + <a href="http://pokemoncommunity.forumactif.org/t139p150-top-sites-voter-paye#56194" target="_top">28 (tops)</a> + <a href="http://pokemoncommunity.forumactif.org/t139p150-top-sites-voter-paye#56380" target="_top">2 (tops)</a> + <a href="http://pokemoncommunity.forumactif.org/t139p150-top-sites-voter-paye#56599" target="_top">404 (tops)</a> - <a href="http://pokemoncommunity.forumactif.org/t5245-boutique-d-ete#56937" target="_top">500 (boutique d'été)</a></div>
+		</div>
+	</div>
+
+	</div>
+
+
+</body>
+
+<!-- [FIN] HTML -->
