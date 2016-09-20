@@ -1,0 +1,378 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+
+<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+<script>
+			// JavaScript Document (Onglets)
+
+	$(document).ready(function(){
+	
+	$("#ONGLET_1A").click(function(){
+		$(".onglet").addClass("hide");
+		$("#ONGLET_1B").removeClass("hide");
+		$(".tab").addClass("opacity");
+		$("#ONGLET_1A").removeClass("opacity");
+		$("#LOCK").removeClass("opacity");
+		});
+
+	$("#ONGLET_2A").click(function(){
+		$(".onglet").addClass("hide");
+		$("#ONGLET_2B").removeClass("hide");
+		$(".tab").addClass("opacity");
+		$("#ONGLET_2A").removeClass("opacity");
+		$("#LOCK").removeClass("opacity");
+		});
+
+	$("#ONGLET_3A").click(function(){
+		$(".onglet").addClass("hide");
+		$("#ONGLET_3B").removeClass("hide");
+		$(".tab").addClass("opacity");
+		$("#ONGLET_3A").removeClass("opacity");
+		$("#LOCK").removeClass("opacity");
+		});
+
+	$("#ONGLET_4A").click(function(){
+		$(".onglet").addClass("hide");
+		$("#ONGLET_4B").removeClass("hide");
+		$(".tab").addClass("opacity");
+		$("#ONGLET_4A").removeClass("opacity");
+		$("#LOCK").removeClass("opacity");
+		});
+
+	$("#LOCK").click(function(){
+		$(".onglet").addClass("hide");
+		$("#WALLPAPER").removeClass("hide");
+		$(".tab").addClass("opacity");
+		$("#LOCK").removeClass("opacity");
+		});
+	
+	});
+
+		// Javascript Document (Time)
+
+	function startTime()
+{
+var today=new Date();
+var h=today.getHours();
+var m=today.getMinutes();
+// add a zero in front of numbers<10
+m=checkTime(m);
+document.getElementById('WALLPAPER').innerHTML=h+":"+m;
+t=setTimeout('startTime()',500);
+}
+function checkTime(i)
+{
+if (i<10)
+{
+i="0" + i;
+}
+return i;
+}
+
+</script>
+
+<!-- CSS -->
+
+<style>
+	
+	body {
+		font-family: arial;
+		font-size: 12px;
+		color: #303030;
+	}
+
+	.ipok_box {
+		margin: auto;
+		width: 500px;
+	}
+
+	.ipok_screen {
+		margin: auto;
+		width: 280px;
+		height: 160px;
+		padding: 10px;
+		border: 30px solid crimson;
+		background: #G4G4G4;
+		border-radius: 10px;
+		-moz-border-radius: 10px;
+		-webkit-border-radius: 10px;
+		-o-border-radius: 10px;
+		box-shadow: 0px 0px 3px black;
+	}
+
+	.top {
+		background: black;
+	}
+
+	.onglet {
+		background: #2E2E2E;
+		height: 140px;
+		padding: 10px;
+		color: grey;
+	}
+
+	#WALLPAPER {
+		padding: 0px;
+		color: gainsboro;
+		font-size: 36px;
+		text-align: center;
+		letter-spacing: 2px;
+	}
+
+	.heure {
+		
+	}
+
+	.wallpaper {
+		background: url('http://i.imgur.com/z5nCbeX.jpg');
+		height: 160px;
+		width: 280px;
+	}
+
+	.bottom {
+		background: #2E2E2E;
+		text-align: center;
+		text-transform: uppercase;
+		font-size: 9px;
+		letter-spacing: 2px;
+	}
+
+	.menu {
+		color: grey;
+		border-bottom: 1px solid #505050;
+		padding-bottom: 3px;
+		margin-bottom: 10px;
+	}
+
+	.icon {
+		background: #1E1E1E;
+		padding: 4px;
+		width: 25px;
+		margin: 2px;
+		border-radius: 100px;
+		-moz-border-radius: 100px;
+		-webkit-border-radius: 100px;
+		-o-border-radius: 100px;
+		transition: 0.7s;
+		-moz-transition: 0.7s;
+		-webkit-transition: 0.7s;
+		-o-transition: 0.7s;
+	}
+
+	.cat {
+		color: #C6C6C6;
+		font-size: 8px;
+		background: #1E1E1E;
+		width: 100px;
+		height: 7px;
+		margin-top: 2px;
+		text-align: center;
+		margin-left: 4px;
+		padding: 10px;
+		border-radius: 50px;
+		-moz-border-radius: 50px;
+		-webkit-border-radius: 50px;
+		-o-border-radius: 50px;
+		transition: 0.7s;
+		-moz-transition: 0.7s;
+		-webkit-transition: 0.7s;
+		-o-transition: 0.7s;
+	}
+
+	.right {
+		margin-left: 10px;
+	}
+
+	.loremipsum {
+		background: url('http://i.imgur.com/7Os8tfV.png');
+		width: 108px;
+		margin-bottom: 7px;
+		height: 100px;
+	}
+
+	.lock {
+		color: red;
+		background: #111111;
+		padding: 7px 5px 5px 7px;
+		width: 96px;
+	}
+
+	.middle_row {
+		background: #303030;
+		width: 330px;
+		height: 7px;
+		margin: auto;
+	}
+
+	.middle_part {
+		margin: auto;
+		width: 280px;
+		height: 7px;
+		border-left: 3px solid black;
+		border-right: 3px solid black;
+	}
+
+	.diode_1 {
+		width: 5px;
+		height: 10px;
+		background: limegreen;
+		margin: auto;
+		margin-top: -10px;
+		margin-left: 370px;
+		box-shadow: 0px 0px 7px white;
+	}
+
+	.diode_2 {
+		width: 2px;
+		height: 10px;
+		background: cyan;
+		margin: auto;
+		margin-top: -10px;
+		margin-left: 380px;
+		box-shadow: 0px 0px 7px white;
+	}
+
+	.float { float: left; }
+	.clear { clear: both; }
+
+	.opacity { opacity: 0.7; }
+
+	.hide { display: none; }	/* pour les onglets */
+	
+</style>
+
+</head>
+
+
+
+<!-- HTML PROPER -->
+
+
+	<!-- ECRAN DU HAUT (CONTENU) -->
+
+<body>
+
+<div class="ipok_box">
+	<div class="ipok_screen top">
+
+		<div id="WALLPAPER" class="wallpaper onglet">
+		</div>
+
+		<div id="ONGLET_1B" class="onglet hide">
+			Onglet 1
+		</div>
+
+		<div id="ONGLET_2B" class="onglet hide">
+			Onglet 2
+		</div>
+
+		<div id="ONGLET_3B" class="onglet hide">
+			Onglet 3
+		</div>
+
+		<div id="ONGLET_4B" class="onglet hide">
+			Onglet 4
+		</div>	
+	</div>
+
+		<!-- FIN ECRAN DU HAUT -->
+
+
+
+		<!-- CHARNIERE -->
+
+	<div class="middle_row">
+		<div class="middle_part"></div>
+	</div>
+
+		<!-- FIN CHARNIERE -->
+
+
+
+		<!-- ECRAN DU BAS (MENU) -->
+
+	<div class="ipok_screen bottom">
+		<div class="menu">
+			navigation
+		</div>
+
+
+			<!-- Onglet 1 -->
+
+		<div class="float">
+			<div id="ONGLET_1A" style="cursor: pointer;" class="tab opacity">
+				<div class="icon float">
+					<img src="http://img4.hostingpics.net/pics/782889montre.png"/>
+				</div>
+				<div class="cat float">
+					catégorie 1
+				</div>
+				<div class="clear"></div>
+			</div>
+
+
+			<!-- Onglet 2 -->
+
+			<div id="ONGLET_2A" style="cursor: pointer;" class="tab opacity">
+				<div class="icon float">
+					<img src="http://img4.hostingpics.net/pics/725195pkdex.png"/>
+				</div>
+				<div class="cat float">
+					catégorie 2
+				</div>
+				<div class="clear"></div>
+			</div>
+
+
+			<!-- Onglet 3 -->
+
+			<div id="ONGLET_3A" style="cursor: pointer;" class="tab opacity">
+				<div class="icon float">
+					<img src="http://img4.hostingpics.net/pics/844738adresse.png"/>
+				</div>
+				<div class="cat float">
+					catégorie 3
+				</div>
+				<div class="clear"></div>
+			</div>
+
+
+			<!-- Onglet 4 -->
+
+			<div id="ONGLET_4A" style="cursor: pointer;" class="tab opacity">
+				<div class="icon float">
+					<img src="http://img4.hostingpics.net/pics/388837carnet.png"/>
+				</div>
+				<div class="cat float">
+					catégorie 4
+				</div>
+				<div class="clear"></div>
+			</div>
+
+		</div>
+
+		<div id="LOCK" class="float right tab" style="cursor: pointer;">
+			<div class="loremipsum">
+			</div>
+
+			<div class="lock">
+				verrouiller
+			</div>
+		</div>
+
+		<div class="clear"></div>
+
+	</div>
+
+		<!-- FIN ECRAN DU BAS -->
+
+
+	<div class="diode_1"></div>
+	<div class="diode_2"></div>
+
+</div>
+
+</body>

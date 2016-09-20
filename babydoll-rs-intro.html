@@ -1,0 +1,730 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+
+<!-- https://dl.dropboxusercontent.com/u/11149043/Hosted%20Codes/%28DL%29%20RS%20babydoll/rs%20babydoll%20-%20iframe1.html -->
+
+
+<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+<script>
+			// JavaScript Document
+
+	$(document).ready(function(){
+	
+		// NAVIGATION PRINCIPALE
+
+	$("#1").click(function(){ 	// chelsea
+		$(".tab").addClass("hide");
+		$("#tab1").removeClass("hide");
+		$(".menu").addClass("normal");
+		$("#1").removeClass("normal");
+		});
+
+	$("#2").click(function(){ 	// babydoll
+		$(".tab").addClass("hide");
+		$("#tab2").removeClass("hide");
+		$(".menu").addClass("normal");
+		$("#2").removeClass("normal");
+		});
+
+	$("#3").click(function(){ 	// pouvoir
+		$(".tab").addClass("hide");
+		$("#tab3").removeClass("hide");
+		$(".menu").addClass("normal");
+		$("#3").removeClass("normal");
+		$(".cardlist").addClass("hide"); // réinitialiser onglets tarot
+		$("#tb1").removeClass("hide");
+		$(".menu2").addClass("opacity");
+		$("#sword").removeClass("opacity");
+		$(".card").addClass("hide"); // réinitialiser onglets cartes
+		$("#c0").removeClass("hide");
+		});
+
+	$("#4").click(function(){ 	// roleplays
+		$(".tab").addClass("hide");
+		$("#tab4").removeClass("hide");
+		$(".menu").addClass("normal");
+		$("#4").removeClass("normal");
+		});
+
+		// ONGLETS TAROT
+
+	$("#sword").click(function(){ 	// sword
+		$(".cardlist").addClass("hide");
+		$("#tb1").removeClass("hide");
+		$(".menu2").addClass("opacity");
+		$("#sword").removeClass("opacity");
+		});
+
+	$("#wand").click(function(){ 	// wand
+		$(".cardlist").addClass("hide");
+		$("#tb2").removeClass("hide");
+		$(".menu2").addClass("opacity");
+		$("#wand").removeClass("opacity");
+		});
+
+	$("#cup").click(function(){ 	// cup
+		$(".cardlist").addClass("hide");
+		$("#tb3").removeClass("hide");
+		$(".menu2").addClass("opacity");
+		$("#cup").removeClass("opacity");
+		});
+
+	$("#coin").click(function(){ 	// coin
+		$(".cardlist").addClass("hide");
+		$("#tb4").removeClass("hide");
+		$(".menu2").addClass("opacity");
+		$("#coin").removeClass("opacity");
+		});
+
+	$("#arcana").click(function(){ 	// arcanes
+		$(".cardlist").addClass("hide");
+		$("#tb5").removeClass("hide");
+		$(".menu2").addClass("opacity");
+		$("#arcana").removeClass("opacity");
+		});
+
+		// ONGLETS CARTES
+
+	$("#tc0").click(function(){ 	// grimoire
+		$(".card").addClass("hide");
+		$("#c0").removeClass("hide");
+		});
+
+	$("#tca0").click(function(){	// the fool
+		$(".card").addClass("hide");
+		$("#ca0").removeClass("hide");
+		});
+	
+	});
+</script>
+
+
+<!-- CSS -->
+
+<style>
+	
+	body {
+		font-family: verdana, arial;
+		font-size: 12px;
+		text-align:justify;
+	}
+
+	a {
+		text-decoration:none;
+		color:inherit;
+		font-weight:inherit;
+	}
+
+	.mainbody{
+		width: 550px;
+		height: 800px;
+		font-family: arial;
+		font-size: 12px;
+		margin: auto;
+		background: url('http://i.imgur.com/3LSiuFz.jpg');
+	}
+
+	.navi{		/* bloc de la nagivation principale */
+		margin: auto;
+		text-align: center;
+		position: relative;
+		top: 140px;
+	}
+
+	.menu{		/* onglets : chelsea, baybdoll, pouvoir, roleplays */
+		text-transform: uppercase;
+		padding: 5px;
+		padding-left: 10px;
+		padding-right: 10px;
+		margin-left: 3px;
+		margin-right: 3px;
+		font-size: 10px;
+		font-style: italic;
+		position: relative;
+		color: white;
+		border: 1px solid white;
+		text-shadow: 1px 1px 1px #e7717f;
+		cursor: pointer;
+		font-weight: bold;
+	}
+
+	.hide{		/* general class pour les onglets */
+		display: none;
+	}
+
+	.normal{	/* pour les onglets de la navigation principale */
+		font-weight: normal;
+		border: 1px solid #fcdde2;
+		color: #fcdde2;
+	}
+
+	.box{		/* premier rectangle gris */
+		margin: auto;
+		width: 426px;
+		border: 1px solid white;
+		padding: 20px;
+		position: relative;
+		top: 170px;
+		height: 190px;
+		color: #d86976;
+		text-shadow: 1px 1px 1px white;
+		text-align: justify;
+		text-transform: uppercase;
+		font-size: 9px;
+	}
+
+	.c1{	/* chelsea + babydoll : bloc gauche */
+		width: 110px;
+		height: 140px;
+		float: left;
+		margin-right: 20px;
+	}
+
+	.icn{		/* icon style */
+		border: 5px solid #f5F5F5;
+	}
+
+	.idcard{	/* bloc rose, infos principales */
+		background: #fc7c8b;
+		color: white;
+		margin-top: 10px;
+		padding: 5px;
+		font-size: 9px;
+		font-style: italic;
+		text-transform: uppercase;
+		text-shadow: 1px 1px 1px #df6775;
+	}
+
+	.idline{	/* séparateur */
+		border-bottom: 1px dotted #f2b6bd;
+		padding-bottom: 4px;
+		margin-bottom: 3px;
+	}
+
+	.c2{	/* chelsea + baydoll : bloc droite */
+		width: 295px;
+		float: left;
+		color: #d86976;
+		text-shadow: 1px 1px 1px white;
+		columns: 2 70px;
+		-moz-columns: 2 70px;
+		-webkit-columns: 2 70px;
+		column-gap: 2em;
+		-moz-column-gap: 2em;
+		-webkit-column-gap: 2em;
+		text-align: justify;
+		text-transform: uppercase;
+		font-size: 9px;
+		line-height: 11px;
+	}
+
+	.pvr1{		/* pouvoir : bloc gauche */
+		float: left;
+		width: 58%;
+		margin-right: 14px;
+	}
+
+	.pvrtitre{		/* grimoire */
+		font-size: 12px;
+		letter-spacing: -1px;
+		font-weight: bold;
+		font-style: italic;
+		padding-bottom: 0px;
+		border-bottom: 1px solid #e88f99;
+		margin-bottom: 6px;
+		cursor: pointer;
+	}
+
+	.pvrinfo{
+		font-weight: normal;
+		font-size: 10px;
+		text-transform: lowercase;
+		letter-spacing: 0px;
+	}
+
+	.pvrdesc{	/* description principale du pouvoir */
+		columns: 2 100px;
+		-moz-columns: 2 100px;
+		-webkit-columns: 2 100px;
+		column-gap: 1em;
+		-moz-column-gap: 1em;
+		-webkit-column-gap: 1em;
+	}
+
+	.card{} 		/* class description des cartes */
+
+	.pvr2{		/* pouvoir : bloc droite */
+		float: left;
+		width: 35%;
+		border: 1px solid #eaa6ae;
+		padding: 5px;
+		height: 192px;
+		margin-top: -7px;
+	}
+
+	.nav2{		/* bloc des onglets tarot */
+		margin: auto;
+		text-align: center;
+		border-bottom: 1px dotted #e88f99;
+		padding-bottom: 5px;
+	}
+
+	.menu2{		/* onglets tarot : sword, wand, cup, coin, arcana */
+		margin-left: 2px;
+		margin-right: 2px;
+		font-size: 8px;
+		font-style: italic;
+		font-weight: bold;
+		cursor: pointer;
+	}
+
+	.opacity{	/* pour onglets tarot */
+		opacity: 0.7;
+	}
+
+	.cardlist ul{		/* bloc de liste des cartes */
+		margin-left: -40px;
+		height: 167px;
+		overflow: auto;
+		text-align: center;
+	}
+
+	.cardlist li{		/* style liste des cartes */
+		background: #fbf4f5;
+		list-style-type: none;
+		padding: 1px;
+	}
+
+	.cardlist li:nth-child(odd){		/* style liste des cartes */
+		background: #f3e3e4;
+	}
+
+	.heads{		/* pour les cartes avec des noms */
+		font-size: 8px;
+	}
+
+	.tc{	/* class pour les onglets des cartes */
+		cursor: pointer;
+	}
+
+	.box2{		/* deuxième rectangle gris */
+		margin: auto;
+		width: 466px;
+		position: relative;
+		top: 210px;
+		height: 230px;
+		color: #d86976;
+		text-shadow: 1px 1px 1px white;
+		text-align: justify;
+		text-transform: uppercase;
+		font-size: 9px;
+	}
+
+	.wanted{	/* liens & scenarii ; bloc gauche */
+		width: 228px;
+		float: left;
+		border: 1px solid #eaa6ae;
+		padding: 10px;
+		height: 210px;
+	}
+
+	.wanted .titre{		/* titre liens & scenarii */
+		font-size: 9px;
+		text-transform: uppercase;
+		font-style: italic;
+		border-bottom: 1px solid #eaa6ae;
+		font-weight: bold;
+		letter-spacing: 1px;
+		margin-bottom: 10px;
+	}
+
+	.wanted .soustitre{		/* titres des liens */
+		font-size: 9px;
+		text-transform: uppercase;
+		font-style: italic;
+		font-weight: bold;
+		padding-right: 5px;
+	}
+
+	.wanted .inner{		/* bloc scroll liens */
+		height: 189px;
+		overflow: auto;
+	}
+
+	.wanted p{
+		margin-top: 0px;
+		margin-bottom: 0px;
+		padding-bottom: 7px;
+	}
+
+	.icons{		/* icons ; bloc droite */
+		width: 207px;
+		float: left;
+		margin-left: 9px;
+		text-align: center;
+		margin-top: -2px;
+	}
+
+	.icons .titre{		/* titre "icons" */
+		text-transform: uppercase;
+		font-style: italic;
+		font-weight: bold;
+		font-size: 9px;
+		letter-spacing: 2px;
+		padding: 3px;
+	}
+
+	.icons .inner{ 		/* bloc scroll liens */
+		width: 207px;
+		height: 207px;
+		overflow: auto;
+	}
+
+	.icons img{		/* style icons */
+		border: 1px solid white;
+	}
+
+	.navibottom{		/* bloc des liens externes (en bas) */
+		margin: auto;
+		text-align: center;
+		position: relative;
+		top: 240px;
+		width: 500px;
+	}
+
+	.menubottom{		/* onglets des liens externes (en bas) */
+		text-transform: uppercase;
+		padding: 5px;
+		padding-left: 10px;
+		padding-right: 10px;
+		margin-left: 3px;
+		margin-right: 3px;
+		font-size: 10px;
+		font-style: italic;
+		position: relative;
+		text-shadow: 1px 1px 1px #e7717f;
+		font-weight: normal;
+		border: 1px solid #fcdde2;
+		color: #fcdde2;
+	}
+
+	.footer{	/* footer quote */
+		text-transform: uppercase;
+		color: #FFE4E9;
+		letter-spacing: 2px;
+		font-size: 8px;
+		font-style: italic;
+		border-top: 1px solid #FFC1CD;
+		position: relative;
+		top: 275px;
+		text-align: center;
+		width: 400px;
+		margin: auto;
+		padding-top: 3px;
+		text-shadow: 1px 1px 1px #e7717f;
+	}
+
+</style>
+
+</head>
+
+<!-- FIN CSS -->
+
+
+<!-- HTML PROPER -->
+
+<DIV class="mainbody">
+
+
+	<div class="navi">
+		<span id="1" class="menu">i. chelsea</span>
+		<span id="2" class="menu normal">ii. babydoll</span>
+		<span id="3" class="menu normal">iii. pouvoir</span>
+		<span id="4" class="menu normal">iv. roleplays</span>
+	</div>
+
+	<div class="box">	<!-- PREMIER RECTANGLE GRIS -->
+
+
+		<!-- ONGLET CHELSEA -->
+
+		<div id="tab1" class="tab">
+			<div class="c1">
+				<img class="icn" src="http://i.imgur.com/PvURqr3.png"/>
+
+				<div class="idcard">
+					<div class="idline"><strong>chelsea peterson</strong></div>
+					<div class="idline">quinze ans</div>
+					<div class="idline">équilibrienne</div>
+					<div>altered</div>
+				</div>
+			</div>
+
+			<div class="c2">
+				<strong>chelsea</strong> est une adolescente de <strong>quinze ans</strong> à qui on en donnerait trois de moins, en <strong>première année de lycée</strong> (classe de seconde). Elle habite à <strong>gredchester</strong> avec son père et sa belle-mère. Elle a aussi un <strong>demi-frère</strong> de dix-sept ans, <strong>nils</strong>, qui a quitté la maison pour aller vivre seul. le père de chelsea est ingénieur en génie urbain, et chelsea touche mensuellement une <strong>généreuse somme</strong> en guise d'argent de poche, dans laquelle elle pioche pour se payer ses dernières <strong>lubies</strong>. chelsea, elle est plutôt jolie, <strong>attentionnée</strong> et <strong>optimiste</strong>. mais elle a l'air d'une gamine. elle se comporte aussi comme une <strong>gamine</strong>. elle a plein de <strong>goodies bizarres</strong>, <strong>kitsch</strong> et <strong>roses</strong>. elle <strong>adore sa ville</strong>. mais vraiment. elle dit bonjour à <strong>tout le monde</strong>. elle vit dans une petite bulle rose, et rêve <strong>de paix et d'amour</strong> toutes les nuits.
+			</div>
+
+			<div style="clear: both;"></div>
+		</div>
+
+		<!-- FIN ONGLET CHELSEA -->
+
+
+		<!-- ONGLET BABYDOLL -->
+
+		<div id="tab2" class="tab hide">
+			<div class="c1">
+				<img class="icn" src="http://i.imgur.com/Ih7j1Iz.png"/>
+
+				<div class="idcard">
+					<div class="idline"># <strong>babydoll</strong></div>
+					<div class="idline">magical girl</div>
+					<div>superhéroïne qui veille sur vous</div>
+				</div>
+			</div>
+
+			<div class="c2">
+				dans son temps libre, chelsea revêt ses plus beaux jupons et devient <strong>babydoll</strong>, une wanna-be <strong>magical girl</strong> qui patrouille les rues d'equilibrium. elle commence à avoir une certaine renommée, et est notamment très présente sur les <strong>réseaux sociaux</strong>. certains sont <strong>inspirés</strong> par ce qu'elle fait, d'autres en rient et <strong>ne la prennent pas au sérieux</strong>. Désespérément <strong>altruiste</strong>, Babydoll <strong>aime tout le monde</strong> ; pourtant, elle <strong>ne supporte pas l'injustice</strong>. Et quand elle tombe sur une brebis égarée, elle fera tout ce qui est en son pouvoir pour la <strong>remettre sur le droit chemin</strong> (en passant si besoin par un <strong>séjour à l'hôpital</strong>). Parce qu'elle a beau être un peu naïve et <strong>maladroite au possible</strong>, elle est plus <strong>fortiche</strong> que sa frêle apparence ne le laisserait croire.
+			</div>
+
+			<div style="clear: both;"></div>
+		</div>
+
+		<!-- FIN ONGLET BABYDOLL -->
+
+
+		<!-- ONGLET POUVOIR -->
+
+		<div id="tab3" class="tab hide">
+			<div class="pvr1">
+				<div id="tc0" class="pvrtitre">★ grimoire</div>
+
+				<div id="c0" class="pvrdesc card">
+					<p><strong>→ enchanter des objets pour y graver des sorts à utiliser plus tard.</strong></p>
+
+					<p>elle l'utilise surtout pour inscrire des sorts sur des <strong>cartes de tarot</strong>, et rechigne à créer des grimoires pour d'autres personnes. elle peut lancer des sorts <strong>très variés</strong>, à condition d'avoir une carte préalablement enchantée à cet effet, et d'être en mesure de <strong>toucher la carte</strong> pour l'activer. créer un grimoire demande du <strong>temps</strong> et de la <strong>concentration</strong>. le sort doit être précisément <strong>détaillé</strong>, chelsea ne peut pas "l'adapter" au moment de le lancer. <strong>n'importe qui peut utiliser un grimoire</strong> pour lancer le sort qu'il contient.</p>
+
+				</div>
+
+
+				<!-- DESCRIPTIONS CARTES/SORTS -->
+
+				<div id="ca0" class="card hide"> <!-- the Fool -->
+					<p><strong>THE FOOL ;</strong> le <strong>fou</strong> (ou le mat) représente le départ, le voyage, l'évolution. Seule arcane majeure sans numéro, elle est considérée comme la première ou la dernière du deck. Pour babydoll, elle représente le point de départ de sa carrière de magical girl. C'est la première carte qu'elle aie gravée avec son nouveau pouvoir.</p>
+
+					<p><strong>GLITTER ;</strong> cette carte fait <strong>apparaître des paillettes</strong>. babydoll l'utilise à tout va pour soigner ses effets, comme une sorte de poudre de perlimpinpin.</p>
+				</div>
+
+				<!-- FIN DESCRIPTIONS CARTES/SORTS -->
+
+
+			</div>
+
+
+			<!-- LISTES CARTES -->
+
+			<div class="pvr2">
+				<div class="nav2">
+					<span id="sword" class="menu2">sword</span>
+					<span id="wand" class="menu2 opacity">wand</span>
+					<span id="cup" class="menu2 opacity">cup</span>
+					<span id="coin" class="menu2 opacity">coin</span>
+					<span id="arcana" class="menu2 opacity">arc.</span>
+				</div>
+
+				<div id="tb1" class="cardlist">
+					<ul>
+						<li>I</li>
+						<li>II</li>
+						<li>III</li>
+						<li>IV</li>
+						<li>V</li>
+						<li>VI</li>
+						<li>VII</li>
+						<li>VIII</li>
+						<li>IX</li>
+						<li>X</li>
+						<li><span class="heads">Jack</span></li>
+						<li><span class="heads">Knight</span></li>
+						<li><span class="heads">Queen</span></li>
+						<li><span class="heads">King</span></li>
+					</ul>
+				</div>
+
+				<div id="tb2" class="cardlist hide">
+					<ul>
+						<li>I</li>
+						<li>II</li>
+						<li>III</li>
+						<li>IV</li>
+						<li>V</li>
+						<li>VI</li>
+						<li>VII</li>
+						<li>VIII</li>
+						<li>IX</li>
+						<li>X</li>
+						<li><span class="heads">Jack</span></li>
+						<li><span class="heads">Knight</span></li>
+						<li><span class="heads">Queen</span></li>
+						<li><span class="heads">King</span></li>
+					</ul>
+				</div>
+
+				<div id="tb3" class="cardlist hide">
+					<ul>
+						<li>I</li>
+						<li>II</li>
+						<li>III</li>
+						<li>IV</li>
+						<li>V</li>
+						<li>VI</li>
+						<li>VII</li>
+						<li>VIII</li>
+						<li>IX</li>
+						<li>X</li>
+						<li><span class="heads">Jack</span></li>
+						<li><span class="heads">Knight</span></li>
+						<li><span class="heads">Queen</span></li>
+						<li><span class="heads">King</span></li>
+					</ul>
+				</div>
+
+				<div id="tb4" class="cardlist hide">
+					<ul>
+						<li>I</li>
+						<li>II</li>
+						<li>III</li>
+						<li>IV</li>
+						<li>V</li>
+						<li>VI</li>
+						<li>VII</li>
+						<li>VIII</li>
+						<li>IX</li>
+						<li>X</li>
+						<li><span class="heads">Jack</span></li>
+						<li><span class="heads">Knight</span></li>
+						<li><span class="heads">Queen</span></li>
+						<li><span class="heads">King</span></li>
+					</ul>
+				</div>
+
+				<div id="tb5" class="cardlist hide">
+					<ul>
+						<li><span id="tca0" class="tc heads">
+							0. the fool</span></li>
+						<li><span class="heads">i. the magician</span></li>
+						<li><span class="heads">ii. the high priestess</span></li>
+						<li><span class="heads">iii. the empress</span></li>
+						<li><span class="heads">iv. the emperor</span></li>
+						<li><span class="heads">v. the hierophant</span></li>
+						<li><span class="heads">vi. the lovers</span></li>
+						<li><span class="heads">vii. the chariot</span></li>
+						<li><span class="heads">viii. strength</span></li>
+						<li><span class="heads">ix. the hermit</span></li>
+						<li><span class="heads">x. wheel of fortune</span></li>
+						<li><span class="heads">xi. justice</span></li>
+						<li><span class="heads">xii. the hanged man</span></li>
+						<li><span class="heads">xiii. death</span></li>
+						<li><span class="heads">xiv. temperance</span></li>
+						<li><span class="heads">xv. the devil</span></li>
+						<li><span class="heads">xvi. the tower</span></li>
+						<li><span class="heads">xvii. the star</span></li>
+						<li><span class="heads">xviii. the moon</span></li>
+						<li><span class="heads">xix. the sun</span></li>
+						<li><span class="heads">xx. the judgement</span></li>
+						<li><span class="heads">xxi. the world</span></li>
+					</ul>
+				</div>
+			</div>
+
+			<!-- FIN LISTE CARTES -->
+
+		</div>
+
+		<!-- FIN ONGLET POUVOIR -->
+
+
+		<!-- ONGLET ROLEPLAYS -->
+
+		<div id="tab4" class="tab hide">
+			à venir.
+		</div>
+
+		<!-- FIN ONGLET ROLEPLAYS -->
+
+	</div>	<!-- FIN PREMIER RECTANGLE GRIS -->
+
+
+	<div class="box2">	<!-- DEUXIEME RECTANGLE GRIS -->
+
+		<div class="wanted">
+			<div class="titre">liens & rp recherchés</div>
+
+			<div class="inner">
+				<p><span class="soustitre">bloggeur(se) ;</span> parce que les superhéros ont toujours besoin de quelqu'un pour parler d'eux sur le net.</p>
+
+				<p><span class="soustitre">titre du lien ;</span> bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla</p>
+
+				<p><span class="soustitre">titre du lien ;</span> bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla</p>
+			</div>
+		</div>
+
+		<div class="icons">
+			<div class="titre">icons icons icons icons</div>
+
+			<div class="inner">
+				<img src="http://s10.postimg.org/ohdnvi8n9/13_zps1cdd421f_png_c100.png?noCache=1448037996"/>
+				<img src="http://s10.postimg.org/um568u0qt/16_zps08720e00_png_c100.png?noCache=1448037996"/>
+				<img src="http://s10.postimg.org/44rvfseh1/image.png?noCache=1448037996"/>
+				<img src="http://s10.postimg.org/gek2xxdfp/ccs_18witchrae.png?noCache=1448037996"/>
+				<img src="http://s10.postimg.org/bupxctiyt/sealed008.png?noCache=1448038087"/>
+				<img src="http://s10.postimg.org/ie9vgtmit/sak002.png?noCache=1448038081"/>
+				<img src="http://s10.postimg.org/5jy1i94xx/batch01b_04.png?noCache=1448037996"/>
+				<img src="http://s10.postimg.org/6dju2cpqd/mh_ccs_010.png?noCache=1448038081"/>
+				<img src="http://s10.postimg.org/6wkbxvrr9/ccs002.png?noCache=1448037996"/>
+				<img src="http://s10.postimg.org/qohwjfdxh/image.png?noCache=1448037996"/>
+				<img src="http://s10.postimg.org/yp5dze9mt/mh_ccs_003.png?noCache=1448038081"/>
+				<img src="http://s10.postimg.org/4oaquaa11/clamp002.png?noCache=1448038081"/>
+				<img src="http://s10.postimg.org/6rzeqjux1/sak060.png?noCache=1448038087"/>
+				<img src="http://s10.postimg.org/xusho7xhh/sak043.png?noCache=1448038081"/>
+				<img src="http://s10.postimg.org/oxuqnknyd/y4_Wxf_Y5_M43_P30_Ms8_Pse_RDx_Ffs_Bi_Q5_RAj_Ya_Cv_G_Ecb6_M.png"/>
+				<img src="http://s10.postimg.org/k0h62glz9/t_WCwt_QJM50_C5j_ARPDTFDCHvk55o_JLHARy_E7zn5_LQpo_M.png"/>
+				<img src="http://s10.postimg.org/9rk3iw8jp/tumblr_inline_ni1crz_Vi5_L1qk8x8b.png"/>
+				<img src="http://s10.postimg.org/n4e1u0ymd/sak094.png?noCache=1448038087"/>
+			</div>
+
+			<div class="titre">icons icons icons icons</div>
+		</div>
+
+		<div style="clear:both;"></div>
+
+	</div>	<!-- FIN DEUXIEME RECTANGLE GRIS -->
+
+
+	<!-- LIENS EXTERNES (BOTTOM) -->
+
+	<div class="navibottom">
+
+		<a href="http://daftland.rpg-board.net/t184-i-just-want-to-be-a-super-hero-babydoll" target="_top"><span class="menubottom">présentation</span></a>
+
+		<span class="menubottom">messagerie</span>
+
+		<span class="menubottom">blog</span>
+
+	</div>
+
+	<!-- FIN LIENS EXTERNES -->
+
+
+	<div class="footer">
+		Nevertheless, I won’t give up
+		on the tiny prayers
+	</div>
+
+
+</DIV>
+
+<!-- FIN HTML -->

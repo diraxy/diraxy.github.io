@@ -1,0 +1,363 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+
+
+<!-- CODE FORUM POST :
+<iframe src="https://dl.dropboxusercontent.com/u/11149043/Hosted%20Codes/%28MH%29%20T-Card%20Faith/t-card%20faith%20-%20iframe%203%20%28rs%29.html" style="height: 150px; width: 600px; margin: auto; border: none;"></iframe> -->
+
+
+
+<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+<script>
+			// JavaScript Document
+
+	$(document).ready(function(){
+	
+		// ICONS ONGLETS
+
+	$("#1").click(function(){
+		$(".box1").addClass("hide");
+		$("#ppl1").removeClass("hide");
+		$(".icn1").addClass("normal");
+		$("#1").removeClass("normal");
+		});
+
+	$("#2").click(function(){
+		$(".box1").addClass("hide");
+		$("#ppl2").removeClass("hide");
+		$(".icn1").addClass("normal");
+		$("#2").removeClass("normal");
+		});
+
+	$("#3").click(function(){
+		$(".box1").addClass("hide");
+		$("#ppl3").removeClass("hide");
+		$(".icn1").addClass("normal");
+		$("#3").removeClass("normal");
+		});
+
+	$("#4").click(function(){
+		$(".box1").addClass("hide");
+		$("#ppl4").removeClass("hide");
+		$(".icn1").addClass("normal");
+		$("#4").removeClass("normal");
+		});
+
+	$("#5").click(function(){
+		$(".box2").addClass("hide");
+		$("#ppl5").removeClass("hide");
+		$(".icn2").addClass("normal");
+		$("#5").removeClass("normal");
+		});
+
+	$("#6").click(function(){
+		$(".box2").addClass("hide");
+		$("#ppl6").removeClass("hide");
+		$(".icn2").addClass("normal");
+		$("#6").removeClass("normal");
+		});
+
+	$("#7").click(function(){
+		$(".box2").addClass("hide");
+		$("#ppl7").removeClass("hide");
+		$(".icn2").addClass("normal");
+		$("#7").removeClass("normal");
+		});
+
+	$("#8").click(function(){
+		$(".box2").addClass("hide");
+		$("#ppl8").removeClass("hide");
+		$(".icn2").addClass("normal");
+		$("#8").removeClass("normal");
+		});
+	
+	});
+</script>
+
+
+<!-- CSS -->
+
+<style>
+	
+	body {
+		font-family: verdana, arial;
+		font-size: 12px;
+		text-align:justify;
+		width: 550px;
+		margin: auto;
+		color: white;
+	}
+
+	a {
+		text-decoration:none;
+		color:inherit;
+		font-weight:inherit;
+	}
+
+	.mainbody1 {
+		width: 550px;
+		height: 235px;
+		font-family: arial;
+		font-size: 12px;
+		margin: auto;
+		background: url('http://i.imgur.com/93t1G6w.jpg');
+	}
+
+	.mainbody1 .quote {
+		text-transform: uppercase;
+		color: #FFE4E9;
+		letter-spacing: 2px;
+		font-size: 8px;
+		font-style: italic;
+		position: relative;
+		top: 170px;
+		text-align: center;
+		width: 400px;
+		margin: auto;
+		text-shadow: 1px 1px 1px #e7717f;
+	}
+
+	.mainbody2 {
+		background: #fc8b99;
+		width: 550px;
+		font-family: arial;
+		font-size: 12px;
+		margin: auto;
+	}
+
+	.mainbody2 .c1 {
+		float: left;
+		width: 110px;
+		margin-right: 5px;
+		margin-left: 29px;
+		margin-bottom: 30px;
+		margin-top: -3px;
+	}
+
+	.mainbody2 .c1 img {
+		border: 5px solid #F2F2F2;
+		margin-top: 3px;
+		margin-bottom: 3px;
+	}
+
+	.mainbody2 .c2 {
+		float: left;
+		width: 250px;
+		height: 400px;
+		margin-left: 5px;
+		margin-right: 5px;
+		margin-bottom: 30px;
+		margin-top: -5px;
+	}
+
+	.mainbody2 .c2 .box {
+		background: #F1F1F1;
+		height: 216px;
+		margin-top: 5px;
+		margin-bottom: 6px;
+		padding: 5px;
+	}
+
+	.mainbody2 .c2 .box .inner {
+		border: 1px solid white;
+		height: 194px;
+		padding: 10px;
+		color: #B2B2B2;
+		text-shadow: 1px 1px 1px white;
+		font-size: 11px;
+	}
+
+	.mainbody2 .c2 .box .nom {
+		text-transform: uppercase;
+		font-style: italic;
+		font-size: 12px;
+		color: pink;
+		font-weight: bold;
+		letter-spacing: 2px;
+		border-bottom: 1px solid white;
+		margin-bottom: 10px;
+		padding-bottom: 2px;
+	}
+
+	.mainbody2 .c2 .box .inner .inner2 {
+		height: 170px;
+		overflow: auto;
+	}
+
+	.c2 .box .inner .inner2 .info {
+		font-weight: bold;
+		color: #C3818A;
+		margin-bottom: 5px;
+		text-transform: uppercase;
+		font-size: 9px;
+	}
+
+	.mainbody2 .c3 {
+		float: left;
+		width: 110px;
+		height: 400px;
+		margin-left: 5px;
+		margin-bottom: 30px;
+		margin-top: -3px;
+	}
+
+	.mainbody2 .c3 img {
+		border: 5px solid #F2F2F2;
+		margin-top: 3px;
+		margin-bottom: 3px;
+	}
+
+	.hide{		/* general class pour les onglets */
+		display: none;
+	}
+
+	.normal{	/* pour les onglets de la navigation principale */
+		opacity: 0.7;
+	}
+
+	.clear { clear: both; }
+
+</style>
+
+</head>
+
+<!-- FIN CSS -->
+
+
+<!-- HTML PROPER -->
+
+<DIV class="mainbody1">
+	<div class="quote">
+		< everybody finds love in the end >
+	</div>
+</DIV>
+
+
+<DIV class="mainbody2">
+	<div class="c1">
+		<img id="1" class="icn1" src="http://67.media.tumblr.com/515dd4a142dfe58d121e765c83302e82/tumblr_inline_molgi5n8EJ1qz4rgp.jpg"/>
+		<img id="2" class="icn1 normal" src="http://i1050.photobucket.com/albums/s404/splaycons/RWBY%20Volume%203/Episode%202%20-%20New%20Challengers/Neptune/532523%2034_zps5otyqzyw.png"/>
+		<img id="5" class="icn2" src="http://i.imgur.com/uxCIsKf.png"/>
+		<img id="6" class="icn2 normal" src="http://i.imgur.com/uxCIsKf.png"/>
+	</div>
+
+	<div class="c2">
+		<div id="ppl1" class="box box1">
+			<div class="inner">
+				<div class="nom">JAMES NICHOLS</div>
+				<div class="inner2">
+					<div class="info">
+						19 ans, kalos, justice<br>( <a href="http://pkmmhyone.forumactif.org/t24-better-be-alone-than-in-bad-company-complet" target="_top">fiche</a> - <a href="" target="_top">tcard</a> )
+					</div>
+
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+				</div>
+			</div>
+		</div>
+
+		<div id="ppl2" class="box box1 hide">
+			<div class="inner">
+				<div class="nom">enzo white</div>
+				<div class="inner2">
+					<div class="info">
+						20 ans, pacifiville (hoenn), savoir<br>( <a href="http://pkmmhyone.forumactif.org/t42-enzo-as-the-madness-of-the-system-grows-terminee" target="_top">fiche</a> - <a href="" target="_top">tcard</a> )
+					</div>
+
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+				</div>
+			</div>
+		</div>
+
+		<div id="ppl3" class="box box1 hide">
+			<div class="inner">
+				<div class="nom">prénom p. nom 3</div>
+				<div class="inner2">
+					<div class="info">
+						xx ans, ville (région), cercle.
+					</div>
+
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+				</div>
+			</div>
+		</div>
+
+		<div id="ppl4" class="box box1 hide">
+			<div class="inner">
+				<div class="nom">prénom p. nom 4</div>
+				<div class="inner2">
+					<div class="info">
+						xx ans, ville (région), cercle.
+					</div>
+
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+				</div>
+			</div>
+		</div>
+
+		<div id="ppl5" class="box box2">
+			<div class="inner">
+				<div class="nom">prénom p. nom 5</div>
+				<div class="inner2">
+					<div class="info">
+						xx ans, ville (région), cercle.
+					</div>
+
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+				</div>
+			</div>
+		</div>
+
+		<div id="ppl6" class="box box2 hide">
+			<div class="inner">
+				<div class="nom">prénom p. nom 6</div>
+				<div class="inner2">
+					<div class="info">
+						xx ans, ville (région), cercle.
+					</div>
+
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+				</div>
+			</div>
+		</div>
+
+		<div id="ppl7" class="box box2 hide">
+			<div class="inner">
+				<div class="nom">prénom p. nom 7</div>
+				<div class="inner2">
+					<div class="info">
+						xx ans, ville (région), cercle.
+					</div>
+
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+				</div>
+			</div>
+		</div>
+
+		<div id="ppl8" class="box box2 hide">
+			<div class="inner">
+				<div class="nom">prénom p. nom 8</div>
+				<div class="inner2">
+					<div class="info">
+						xx ans, ville (région), cercle.
+					</div>
+
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="c3">
+		<img id="3" class="icn1 normal" src="http://i.imgur.com/uxCIsKf.png"/>
+		<img id="4" class="icn1 normal" src="http://i.imgur.com/uxCIsKf.png"/>
+		<img id="7" class="icn2 normal" src="http://i.imgur.com/uxCIsKf.png"/>
+		<img id="8" class="icn2 normal" src="http://i.imgur.com/uxCIsKf.png"/>
+	</div>
+
+	<div class="clear"></div>
+</DIV>
+
+<!-- FIN HTML -->

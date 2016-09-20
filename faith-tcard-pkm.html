@@ -1,0 +1,764 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+
+
+<!-- CODE FORUM POST :
+<iframe src="https://dl.dropboxusercontent.com/u/11149043/Hosted%20Codes/%28MH%29%20T-Card%20Faith/t-card%20faith%20-%20iframe%202%20%28pkm%29.html" style="height: 150px; width: 600px; margin: auto; border: none;"></iframe> -->
+
+
+
+<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+<script>
+			// JavaScript Document
+
+	$(document).ready(function(){
+	
+		// PKM ONGLETS
+
+	$("#1").click(function(){
+		$(".pkm").addClass("hide");
+		$("#pkm1").removeClass("hide");
+		});
+
+	$("#2").click(function(){
+		$(".pkm").addClass("hide");
+		$("#pkm2").removeClass("hide");
+		});
+
+	$("#3").click(function(){
+		$(".pkm").addClass("hide");
+		$("#pkm3").removeClass("hide");
+		});
+
+	$("#4").click(function(){
+		$(".pkm").addClass("hide");
+		$("#pkm4").removeClass("hide");
+		});
+
+	$("#5").click(function(){
+		$(".pkm").addClass("hide");
+		$("#pkm5").removeClass("hide");
+		});
+
+	$("#6").click(function(){
+		$(".pkm").addClass("hide");
+		$("#pkm6").removeClass("hide");
+		});
+	
+	});
+</script>
+
+
+<!-- CSS -->
+
+<style>
+	
+	body {
+		font-family: verdana, arial;
+		font-size: 12px;
+		text-align:justify;
+		width: 540px;
+	}
+
+	a {
+		text-decoration:none;
+		color:inherit;
+		font-weight:inherit;
+	}
+
+	.mainbody{
+		width: 550px;
+		height: 475px;
+		font-family: arial;
+		font-size: 12px;
+		margin: auto;
+		background: url('http://i.imgur.com/B3qiigL.jpg');
+	}
+
+	.team {
+		text-transform: uppercase;
+		font-size: 14px;
+		font-weight: bold;
+		font-style: italic;
+		color: white;
+		letter-spacing: 2px;
+		position: relative;
+		top: 150px;
+		left: 30px;
+		text-shadow: 1px 1px 1px #BE6671;
+	}
+
+	.navi {		/* onglets pkm */
+		position: relative;
+		top: 125px;
+		left: 100px;
+	}
+
+	.cursor { cursor: pointer; }
+
+	.pokebloc {
+		position: relative;
+		left: 35px;
+		top: 135px;
+		width: 477px;
+		height: 240px;
+	}
+
+	.pokebloc .c1 {
+		float: left;
+		width: 112px;
+		margin-right: 5px;
+	}
+
+	.pokebloc .c2 {
+		float: left;
+		margin-left: 5px;
+		margin-right: 5px;
+		width: 188px;
+		height: 240px;
+		background: #F9F9F9;
+		border-bottom: 1px solid #fc7c8b;
+	}
+
+	.pokebloc .c3 {
+		float: left;
+		margin-left: 5px;
+		width: 155px;
+	}
+
+	.pokebloc .icon {
+		border: 6px solid white;
+		height: 80px;
+		width: 80px;
+		background: #F2F2F2;
+		text-align: center;
+		padding: 10px;
+	}
+
+	.pokebloc .id {
+		background: white;
+		width: 100px;
+		padding: 6px;
+		margin-top: 10px;
+	}
+
+	.pokebloc .id .name {
+		font-style: italic;
+		text-transform: uppercase;
+		font-size: 16px;
+		letter-spacing: -1px;
+		text-align: right;
+		color: #fc7c8b;
+		font-weight: bold;
+		border-bottom: 1px solid #fc7c8b;
+		line-height: 14px;
+		padding-bottom: 2px;
+		text-shadow: 1px 1px 1px white;
+		margin-bottom: 4px;
+	}
+
+	.pokebloc .id .info {
+		padding: 2px;
+		padding-top: 3px;
+		text-align: center;
+		color: white;
+		margin-top: 5px;
+		text-transform: uppercase;
+		font-size: 9px;
+		font-weight: bold;
+		letter-spacing: 1px;
+		opacity: 0.7;
+		transition: 0.8s;
+		-moz-transition: 0.8s;
+		-webkit-transition: 0.8s;
+		-o-transition: 0.8s;
+		margin-top: 2px;
+		margin-bottom: 2px;
+	}
+
+	.pokebloc .id .info:hover {
+		transition: 0.8s;
+		-moz-transition: 0.8s;
+		-webkit-transition: 0.8s;
+		-o-transition: 0.8s;
+		opacity: 1;
+	}
+
+	.pokebloc .id .info1 {
+		background: #65899A;
+		text-shadow: 1px 1px 1px #4E7080;
+	}
+
+	.pokebloc .id .info2 {
+		background: #94B7C9;
+		text-shadow: 1px 1px 1px #7BA2B5;
+	}
+
+	.pokebloc .c2 .titre {
+		background: #fc7c8b;
+		padding: 3px;
+		text-align: center;
+		text-transform: uppercase;
+		font-size: 9px;
+		font-weight: bold;
+		letter-spacing: 1px;
+		color: white;
+		margin-bottom: 7px;
+	}
+
+	.pokebloc .c2 .desc {
+		font-size: 11px;
+		color: #814A52;
+		padding-left: 10px;
+		padding-right: 10px;
+		text-shadow: 1px 1px 1px white;
+		height: 210px;
+		overflow: auto;
+	}
+
+	.pokebloc .c3 .cap {
+		background: #65899A;
+		text-shadow: 1px 1px 1px #4E7080;
+		color: white;
+		text-align: center;
+		padding: 5px;
+		font-style: italic;
+		font-size: 11px;
+		color: #C8E3EF;
+		margin-bottom: 7px;
+	}
+
+	.pokebloc .c3 .cap .inner {
+		border: 1px solid white;
+		padding: 5px;
+	}
+
+	.pokebloc .c3 .cap .capa {
+		text-transform: uppercase;
+		font-size: 9px;
+		font-weight: bold;
+		margin-bottom: 3px;
+		color: white;
+	}
+
+	.pokebloc .c3 .atk {
+		background: #F5BCBF;
+		padding: 5px;
+		color: white;
+		font-size: 11px;
+		font-weight: bold;
+		text-shadow: 1px 1px 1px #DE9EA3;
+		margin-bottom: 7px;
+	}
+
+	.pokebloc .c3 .atk .inner {
+		border: 1px solid white;
+		padding: 5px;
+	}
+
+	.pokebloc .c3 .atk .inner .titre {
+		text-transform: uppercase;
+		text-align: center;
+		font-size: 9px;
+		border-bottom: 3px double #F2F2F2;
+		padding-bottom: 2px;
+		letter-spacing: 2px;
+		margin-bottom: 5px;
+	}
+
+	.pokebloc .c3 .atk .inner .inner2 {
+		padding-left: 5px;
+		padding-right: 5px;
+		height: 55px;
+		overflow: auto;
+	}
+
+	.pokebloc .c3 .log {
+		background: #B8696D;
+		padding: 5px;
+		color: white;
+		font-size: 11px;
+		text-shadow: 1px 1px 1px #A25256;
+		height: 73px;
+	}
+
+	.pokebloc .c3 .log .titre {
+		border: 1px solid #F2F2F2;
+		padding: 2px;
+		text-transform: uppercase;
+		font-size: 9px;
+		font-weight: bold;
+		font-style: italic;
+		text-align: center;
+		margin-bottom: 5px;
+	}
+
+	.pokebloc .c3 .log .inner {
+		border-bottom: 1px solid #E4A4A8;
+		padding-bottom: 5px;
+	}
+
+	.pokebloc .c3 .log .inner .inner2 {
+		height: 45px;
+		overflow: auto;
+	}
+
+	.pokebloc .c3 .log .inner .inner2 .left {
+		float: left;
+		width: 30px;
+		font-weight: bold;
+	}
+
+	.pokebloc .c3 .log .inner .inner2 .right {
+		float: left;
+		width: 112px;
+		margin-left: 3px;
+		margin-bottom: 3px;
+		line-height: 10px;
+		color: #F7DFE0;
+	}
+
+	.hide{		/* general class pour les onglets */
+		display: none;
+	}
+
+	.normal{	/* pour les onglets de la navigation principale */
+		font-weight: normal;
+		border: 1px solid #fcdde2;
+		color: #fcdde2;
+	}
+
+	.clear { clear: both; }
+
+</style>
+
+</head>
+
+<!-- FIN CSS -->
+
+
+<!-- HTML PROPER -->
+
+<DIV class="mainbody">
+
+
+	<div class="team">TEAM ;</div>
+	<div class="navi">
+		<img id="1" style="cursor: pointer; width: 30px;" src="http://i.imgur.com/rTnHmWU.png"/>
+		<img id="2" style="cursor: pointer;" src="http://i.imgur.com/Xct7KsJ.png"/>
+		<img id="3" style="cursor: pointer;" src="http://i.imgur.com/Xct7KsJ.png"/>
+		<img id="4" style="cursor: pointer;" src="http://i.imgur.com/Xct7KsJ.png"/>
+		<img id="5" style="cursor: pointer;" src="http://i.imgur.com/Xct7KsJ.png"/>
+		<img id="6" style="cursor: pointer;" src="http://i.imgur.com/Xct7KsJ.png"/>
+
+		<!-- love ball : http://i.imgur.com/UjRRJo7.png -->
+	</div>
+
+	<DIV class="pokebloc">
+
+	<!-- POKEMON 1 -->
+
+		<div CLASS="pkm" ID="pkm1">
+
+			<div class="c1">
+				<div class="icon">
+					<a href="https://www.pokebip.com/pokedex/6G_p133_Evoli.html" target="_top"><img src="http://i.imgur.com/rTnHmWU.png"/></a><br><br>
+					<img src="https://www.pokebip.com/pokedex/images/gen6_types/9.png"/>
+					<img src="http://i.imgur.com/kcV2EyU.png"/>
+				</div>
+			
+
+				<div class="id">
+					<div class="name">cuius bestia</div>
+					<div class="info info1"><a href="https://www.pokebip.com/pokedex/6G_p133_Evoli.html" target="_top">evoli</a> &nbsp;♂ ★</div>
+					<div class="info info2">malin</div>
+					<div class="info info1">rang d</div>
+					<div class="info info2">johto</div>
+				</div>
+			</div>
+
+			<div class="c2">
+				<div class="titre">description</div>
+				<div class="desc">
+					Evoli chromatique rencontré et secouru le <strong>07/11/14</strong> dans la <strong>Tour Cendrée</strong> de <strong>Rosalia (Johto)</strong>, alors qu'il s'était coincé sous des débris. Surnommé <strong>CuBe</strong> – parfois « couillon » – il se montre peu à l'écoute sa dresseuse, malgré les deux ans qu'il a déjà passés en sa compagnie, et ne cesse de défier son autorité. Leur relation paraît particulièrement houleuse à première vue, et pourtant, ils ont démontré à plus d'une reprise qu'un lien extrêmement fort les unit, au point qu'on peut s'interroger sur les épreuves qu'ils ont dû traverser ensemble pour en arriver là. Il faut dire que le pokémon est un petit malin qui cache bien son jeu : derrière sa petite gueule d'ange, c'est un vrai petit chieur qui ne manque jamais une occasion de faire des siennes. Mais il a beau lui en faire voir de toutes les couleurs, au fond, il se sent très reconnaissant envers sa dresseuse actuelle, et semble finalement apprécier sa compagnie. Quant à celle-ci, elle affirme qu'il la connaît et la comprend mieux que quiconque, et qu'elle sait qu'elle peut compter sur lui dans les moments qui importent le plus.
+				</div>
+			</div>
+
+			<div class="c3">
+				<div class="cap">
+					<div class="inner">
+						<div class="capa">adaptabilité</div>
+						stab x2 (au lieu de x1.5)
+					</div>
+				</div>
+
+				<div class="atk">
+					<div class="inner">
+						<div class="titre">attaques</div>
+
+						<div class="inner2">
+							▬ charge
+							<br>▬ mimi-queue
+							<br>▬ coup d'main
+							<br>▬ rugissement
+							<br>▬ jet de sable
+							<br>▬ regard touchant
+							<br>▬ météores
+						</div>
+					</div>
+				</div>
+
+				<div class="log">
+					<div class="titre">updates</div>
+					<div class="inner">
+						<div class="inner2">
+							<div class="left">03/06</div>
+							<div class="right">
+								ajout du pokémon
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="clear"></div>
+
+		</div>
+
+
+	<!-- POKEMON 2 -->
+
+		<div CLASS="pkm hide" ID="pkm2">
+
+			<div class="c1">
+				<div class="icon">
+					<a href="" target="_top"><img src="http://cdn.bulbagarden.net/upload/9/94/Dream_Love_Ball_Sprite.png" style="width: 46px"/></a><br><br>
+					<img src="http://i.imgur.com/kcV2EyU.png"/>
+					<img src="http://i.imgur.com/kcV2EyU.png"/>
+				</div>
+			
+
+				<div class="id">
+					<div class="name">nom</div>
+					<div class="info info1"><a href="" target="_top">espèce</a> &nbsp;♂/♀/★</div>
+					<div class="info info2">nature</div>
+					<div class="info info1">rang</div>
+					<div class="info info2">région</div>
+				</div>
+			</div>
+
+			<div class="c2">
+				<div class="titre">description</div>
+				<div class="desc">
+					à venir.
+				</div>
+			</div>
+
+			<div class="c3">
+				<div class="cap">
+					<div class="inner">
+						<div class="capa">talent</div>
+						decription
+					</div>
+				</div>
+
+				<div class="atk">
+					<div class="inner">
+						<div class="titre">attaques</div>
+
+						<div class="inner2">
+							▬ à venir
+							<br>▬ à venir
+						</div>
+					</div>
+				</div>
+
+				<div class="log">
+					<div class="titre">updates</div>
+					<div class="inner">
+						<div class="inner2">
+							<div class="left">00/00</div>
+							<div class="right">
+								ajout du pokémon
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="clear"></div>
+
+		</div>
+
+
+	<!-- POKEMON 3 -->
+
+		<div CLASS="pkm hide" ID="pkm3">
+
+			<div class="c1">
+				<div class="icon">
+					<a href="" target="_top"><img src="http://cdn.bulbagarden.net/upload/9/94/Dream_Love_Ball_Sprite.png" style="width: 46px"/></a><br><br>
+					<img src="http://i.imgur.com/kcV2EyU.png"/>
+					<img src="http://i.imgur.com/kcV2EyU.png"/>
+				</div>
+			
+
+				<div class="id">
+					<div class="name">nom</div>
+					<div class="info info1"><a href="" target="_top">espèce</a> &nbsp;♂/♀/★</div>
+					<div class="info info2">nature</div>
+					<div class="info info1">rang</div>
+					<div class="info info2">région</div>
+				</div>
+			</div>
+
+			<div class="c2">
+				<div class="titre">description</div>
+				<div class="desc">
+					à venir.
+				</div>
+			</div>
+
+			<div class="c3">
+				<div class="cap">
+					<div class="inner">
+						<div class="capa">talent</div>
+						decription
+					</div>
+				</div>
+
+				<div class="atk">
+					<div class="inner">
+						<div class="titre">attaques</div>
+
+						<div class="inner2">
+							▬ à venir
+							<br>▬ à venir
+						</div>
+					</div>
+				</div>
+
+				<div class="log">
+					<div class="titre">updates</div>
+					<div class="inner">
+						<div class="inner2">
+							<div class="left">00/00</div>
+							<div class="right">
+								ajout du pokémon
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="clear"></div>
+
+		</div>
+
+
+	<!-- POKEMON 4 -->
+
+		<div CLASS="pkm hide" ID="pkm4">
+
+			<div class="c1">
+				<div class="icon">
+					<a href="" target="_top"><img src="http://cdn.bulbagarden.net/upload/9/94/Dream_Love_Ball_Sprite.png" style="width: 46px"/></a><br><br>
+					<img src="http://i.imgur.com/kcV2EyU.png"/>
+					<img src="http://i.imgur.com/kcV2EyU.png"/>
+				</div>
+			
+
+				<div class="id">
+					<div class="name">nom</div>
+					<div class="info info1"><a href="" target="_top">espèce</a> &nbsp;♂/♀/★</div>
+					<div class="info info2">nature</div>
+					<div class="info info1">rang</div>
+					<div class="info info2">région</div>
+				</div>
+			</div>
+
+			<div class="c2">
+				<div class="titre">description</div>
+				<div class="desc">
+					à venir.
+				</div>
+			</div>
+
+			<div class="c3">
+				<div class="cap">
+					<div class="inner">
+						<div class="capa">talent</div>
+						decription
+					</div>
+				</div>
+
+				<div class="atk">
+					<div class="inner">
+						<div class="titre">attaques</div>
+
+						<div class="inner2">
+							▬ à venir
+							<br>▬ à venir
+						</div>
+					</div>
+				</div>
+
+				<div class="log">
+					<div class="titre">updates</div>
+					<div class="inner">
+						<div class="inner2">
+							<div class="left">00/00</div>
+							<div class="right">
+								ajout du pokémon
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="clear"></div>
+
+		</div>
+
+
+	<!-- POKEMON 5 -->
+
+		<div CLASS="pkm hide" ID="pkm5">
+
+			<div class="c1">
+				<div class="icon">
+					<a href="" target="_top"><img src="http://cdn.bulbagarden.net/upload/9/94/Dream_Love_Ball_Sprite.png" style="width: 46px"/></a><br><br>
+					<img src="http://i.imgur.com/kcV2EyU.png"/>
+					<img src="http://i.imgur.com/kcV2EyU.png"/>
+				</div>
+			
+
+				<div class="id">
+					<div class="name">nom</div>
+					<div class="info info1"><a href="" target="_top">espèce</a> &nbsp;♂/♀/★</div>
+					<div class="info info2">nature</div>
+					<div class="info info1">rang</div>
+					<div class="info info2">région</div>
+				</div>
+			</div>
+
+			<div class="c2">
+				<div class="titre">description</div>
+				<div class="desc">
+					à venir.
+				</div>
+			</div>
+
+			<div class="c3">
+				<div class="cap">
+					<div class="inner">
+						<div class="capa">talent</div>
+						decription
+					</div>
+				</div>
+
+				<div class="atk">
+					<div class="inner">
+						<div class="titre">attaques</div>
+
+						<div class="inner2">
+							▬ à venir
+							<br>▬ à venir
+						</div>
+					</div>
+				</div>
+
+				<div class="log">
+					<div class="titre">updates</div>
+					<div class="inner">
+						<div class="inner2">
+							<div class="left">00/00</div>
+							<div class="right">
+								ajout du pokémon
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="clear"></div>
+
+		</div>
+
+
+	<!-- POKEMON 6 -->
+
+		<div CLASS="pkm hide" ID="pkm6">
+
+			<div class="c1">
+				<div class="icon">
+					<a href="" target="_top"><img src="http://cdn.bulbagarden.net/upload/9/94/Dream_Love_Ball_Sprite.png" style="width: 46px"/></a><br><br>
+					<img src="http://i.imgur.com/kcV2EyU.png"/>
+					<img src="http://i.imgur.com/kcV2EyU.png"/>
+				</div>
+			
+
+				<div class="id">
+					<div class="name">nom</div>
+					<div class="info info1"><a href="" target="_top">espèce</a> &nbsp;♂/♀/★</div>
+					<div class="info info2">nature</div>
+					<div class="info info1">rang</div>
+					<div class="info info2">région</div>
+				</div>
+			</div>
+
+			<div class="c2">
+				<div class="titre">description</div>
+				<div class="desc">
+					à venir.
+				</div>
+			</div>
+
+			<div class="c3">
+				<div class="cap">
+					<div class="inner">
+						<div class="capa">talent</div>
+						decription
+					</div>
+				</div>
+
+				<div class="atk">
+					<div class="inner">
+						<div class="titre">attaques</div>
+
+						<div class="inner2">
+							▬ à venir
+							<br>▬ à venir
+						</div>
+					</div>
+				</div>
+
+				<div class="log">
+					<div class="titre">updates</div>
+					<div class="inner">
+						<div class="inner2">
+							<div class="left">00/00</div>
+							<div class="right">
+								ajout du pokémon
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="clear"></div>
+
+		</div>
+
+
+	<!-- /// FIN POKEMONS /// -->
+
+	</DIV>
+
+
+</DIV>
+
+<!-- FIN HTML -->

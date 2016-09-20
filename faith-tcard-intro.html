@@ -1,0 +1,725 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+
+
+<!-- CODE FORUM POST :
+<iframe src="https://dl.dropboxusercontent.com/u/11149043/Hosted%20Codes/%28MH%29%20T-Card%20Faith/t-card%20faith%20-%20iframe%201.html" style="height: 850px; width: 600px; margin: auto; border: none;"></iframe> -->
+
+
+
+<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+<script>
+			// JavaScript Document
+
+	$(document).ready(function(){
+	
+		// NAVIGATION PRINCIPALE
+
+	$("#1").click(function(){ 	// faith
+		$(".tab").addClass("hide");
+		$("#tab1").removeClass("hide");
+		$(".menu").addClass("normal");
+		$("#1").removeClass("normal");
+		});
+
+	$("#2").click(function(){ 	// progression
+		$(".tab").addClass("hide");
+		$("#tab2").removeClass("hide");
+		$(".menu").addClass("normal");
+		$("#2").removeClass("normal");
+		});
+
+	$("#3").click(function(){ 	// anecdotes
+		$(".tab").addClass("hide");
+		$("#tab3").removeClass("hide");
+		$(".menu").addClass("normal");
+		$("#3").removeClass("normal");
+		});
+
+	$("#4").click(function(){ 	// roleplays
+		$(".tab").addClass("hide");
+		$("#tab4").removeClass("hide");
+		$(".menu").addClass("normal");
+		$("#4").removeClass("normal");
+		});
+	
+	});
+</script>
+
+
+<!-- CSS -->
+
+<style>
+	
+	body {
+		font-family: verdana, arial;
+		font-size: 12px;
+		text-align:justify;
+	}
+
+	a {
+		text-decoration:none;
+		color:inherit;
+		font-weight:inherit;
+	}
+
+	.mainbody{
+		width: 550px;
+		height: 800px;
+		font-family: arial;
+		font-size: 12px;
+		margin: auto;
+		background: url('http://i.imgur.com/3LSiuFz.jpg');
+	}
+
+	.navi{		/* bloc de la nagivation principale */
+		margin: auto;
+		text-align: center;
+		position: relative;
+		top: 140px;
+	}
+
+	.menu{		/* onglets : faith, progression, anecdotes, roleplays */
+		text-transform: uppercase;
+		padding: 5px;
+		padding-left: 10px;
+		padding-right: 10px;
+		margin-left: 3px;
+		margin-right: 3px;
+		font-size: 10px;
+		font-style: italic;
+		position: relative;
+		color: white;
+		border: 1px solid white;
+		text-shadow: 1px 1px 1px #e7717f;
+		cursor: pointer;
+		font-weight: bold;
+	}
+
+	.hide{		/* general class pour les onglets */
+		display: none;
+	}
+
+	.normal{	/* pour les onglets de la navigation principale */
+		font-weight: normal;
+		border: 1px solid #fcdde2;
+		color: #fcdde2;
+	}
+
+	.box{		/* premier rectangle gris */
+		margin: auto;
+		width: 426px;
+		border: 1px solid white;
+		padding: 20px;
+		position: relative;
+		top: 170px;
+		height: 190px;
+		color: #d86976;
+		text-shadow: 1px 1px 1px white;
+		text-align: justify;
+		text-transform: uppercase;
+		font-size: 9px;
+	}
+
+	.c1{	/* faith : bloc gauche */
+		width: 110px;
+		height: 140px;
+		float: left;
+		margin-right: 20px;
+	}
+
+	.icn{		/* icon style */
+		border: 5px solid #f5F5F5;
+		margin-top: -9px;
+	}
+
+	.idcard{	/* bloc rose, infos principales */
+		background: #fc7c8b;
+		color: white;
+		margin-top: 5px;
+		padding: 5px;
+		font-size: 9px;
+		font-style: italic;
+		text-transform: uppercase;
+		text-shadow: 1px 1px 1px #df6775;
+	}
+
+	.idline{	/* séparateur */
+		border-bottom: 1px dotted #f2b6bd;
+		padding-bottom: 4px;
+		margin-bottom: 3px;
+	}
+
+	.c2{	/* faith : bloc droite */
+		width: 295px;
+		float: left;
+		color: #d86976;
+		text-shadow: 1px 1px 1px white;
+		columns: 2 70px;
+		-moz-columns: 2 70px;
+		-webkit-columns: 2 70px;
+		column-gap: 2em;
+		-moz-column-gap: 2em;
+		-webkit-column-gap: 2em;
+		text-align: justify;
+		font-size: 11px;
+		text-transform: none;
+		line-height: 11px;
+		margin-top: -9px;
+	}
+
+	.items {	/* progression : inventaire */
+		border: 1px solid #eaa6ae;
+		padding: 5px;
+		width: 100px;
+		margin-top: -10px;
+		text-transform: none;
+		font-size: 11px;
+		float: left;
+	}
+
+	.items .title {
+		background: #eaa6ae;
+		color: white;
+		text-align: center;
+		margin-bottom: 5px;
+		text-shadow: 1px 1px 1px transparent;
+		padding: 2px;
+		text-transform: uppercase;
+		font-size: 8px;
+		letter-spacing: 1px;
+	}
+
+	.items .inner {
+		height: 180px;
+		overflow: auto;
+	}
+
+	.xp {	/* progression : bloc exp */
+		margin-left: 7px;
+		float: left;
+		background: #d86976;
+		padding: 7px;
+		color: white;
+		text-shadow: 1px 1px 1px transparent;
+		line-height: 13px;
+		margin-top: -10px;
+		width: 290px;
+		margin-bottom: 7px;
+	}
+
+	.xp .xp1 {		/* progression : exp (titre) */
+		line-height: 25px;
+		font-size: 26px;
+		font-style: italic;
+		margin: auto;
+		border: 1px solid white;
+		padding-left: 5px;
+		padding-right: 7px;
+		padding-top: 3px;
+		text-align: center;
+		float: left;
+		margin-right: 10px;
+		text-shadow: 1px 1px 1px #B25661;
+	}
+
+	.xp .xp2 {		/* progression : exp (contenu) */
+		float: left;
+		text-align: right;
+		padding-right: 4px;
+		margin-right: 10px;
+		width: 50px;
+		border-right: 1px solid #E69C9C;
+		color: #F7E0E0;
+		text-shadow: 1px 1px 1px #B25661;
+	}
+
+	.xp span {		/* progression : exp (nombres) */
+		font-weight: bold;
+		color: white;
+	}
+
+	.log1 {		/* progression : updates */
+		border: 1px solid #eaa6ae;
+		padding: 5px;
+		width: 137px;
+		text-transform: none;
+		font-size: 11px;
+		float: left;
+		margin-right: 3px;
+		margin-left: 7px;
+	}
+
+	.log1 .title {
+		background: #94B7C9;
+		color: white;
+		text-align: center;
+		margin-bottom: 5px;
+		text-shadow: 1px 1px 1px transparent;
+		padding: 2px;
+		text-transform: uppercase;
+		font-size: 8px;
+		letter-spacing: 1px;
+	}
+
+	.log1 .inner {
+		height: 129px;
+		overflow: auto;
+	}
+
+	.log1 .date {
+		float: left;
+		width: 30px;
+		margin-right: 5px;
+		font-weight: bold;
+	}
+
+	.log1 .info {
+		float: left;
+		width: 101px;
+		padding-bottom: 5px;
+		line-height: 11px;
+	}
+
+	.log2 {		/* progression : talents */
+		border: 1px solid #eaa6ae;
+		padding: 5px;
+		width: 137px;
+		text-transform: none;
+		font-size: 11px;
+		float: left;
+		margin-left: 3px;
+	}
+
+	.log2 .title {
+		background: #879CA6;
+		color: white;
+		text-align: center;
+		margin-bottom: 5px;
+		text-shadow: 1px 1px 1px transparent;
+		padding: 2px;
+		text-transform: uppercase;
+		font-size: 8px;
+		letter-spacing: 1px;
+	}
+
+	.log2 .inner {
+		height: 129px;
+		overflow: auto;
+	}
+
+	.anecdotes {	/* anecdotes (général) */
+
+	}
+
+	.rp {	/* roleplays (général) */
+		color: #E18690;
+		text-shadow: 1px 1px 1px white;
+		text-align: justify;
+		font-size: 11px;
+		text-transform: none;
+		line-height: 11px;
+		margin-top: -9px;
+	}
+
+	.rp .left {
+		float: left;
+		height: 200px;
+		width: 120px;
+		margin-right: 15px;
+	}
+
+	.rp img {
+		border: 5px solid #f5F5F5;
+		width: 90px;
+		margin-bottom: 3px;
+	}
+
+	.rp .right {
+		float: left;
+		height: 207px;
+		width: 290px;
+		border-bottom: 1px solid pink;
+	}
+
+	.rp .right .chrono {
+		text-transform: uppercase;
+		font-style: italic;
+		font-size: 20px;
+		text-align: center;
+		border-bottom: 3px double white;
+		padding-bottom: 7px;
+		margin-bottom: 7px;
+	}
+
+	.rp .right .inner {
+		max-height: 172px;
+		overflow: auto;
+	}
+
+	.rp .date {
+		float: left;
+		width: 30px;
+		margin-right: 10px;
+		font-weight: bold;
+		font-size: 11px;
+		text-transform: lowercase;
+		border: 1px solid #F3BCC2;
+		padding: 2px;
+	}
+
+	.rp .info {
+		float: left;
+		padding-bottom: 7px;
+		line-height: 11px;
+		max-width: 242px;
+	}
+
+	.rp a {
+		text-transform: uppercase;
+		font-size: 9px;
+		font-weight: bold;
+		color: #d86976;
+	}
+
+	.info span {
+		text-transform: uppercase;
+		letter-spacing: 1px;
+		font-size: 8px;
+		color: #B45863;
+	}
+
+	.box2{		/* deuxième rectangle gris */
+		margin: auto;
+		width: 466px;
+		position: relative;
+		top: 210px;
+		height: 230px;
+		color: #d86976;
+		text-shadow: 1px 1px 1px white;
+		text-align: justify;
+		text-transform: uppercase;
+		font-size: 9px;
+	}
+
+	.wanted{	/* liens & scenarii ; bloc gauche */
+		width: 228px;
+		float: left;
+		border: 1px solid #eaa6ae;
+		padding: 10px;
+		height: 210px;
+	}
+
+	.wanted .titre{		/* titre liens & scenarii */
+		font-size: 9px;
+		text-transform: uppercase;
+		font-style: italic;
+		border-bottom: 1px solid #eaa6ae;
+		font-weight: bold;
+		letter-spacing: 1px;
+		margin-bottom: 10px;
+	}
+
+	.wanted .soustitre{		/* titres des liens */
+		font-size: 9px;
+		text-transform: uppercase;
+		font-style: italic;
+		font-weight: bold;
+		padding-right: 5px;
+	}
+
+	.wanted .inner{		/* bloc scroll liens */
+		height: 189px;
+		overflow: auto;
+	}
+
+	.wanted p{
+		margin-top: 0px;
+		margin-bottom: 0px;
+		padding-bottom: 7px;
+	}
+
+	.icons{		/* icons ; bloc droite */
+		width: 207px;
+		float: left;
+		margin-left: 9px;
+		text-align: center;
+		margin-top: -2px;
+	}
+
+	.icons .titre{		/* titre "icons" */
+		text-transform: uppercase;
+		font-style: italic;
+		font-weight: bold;
+		font-size: 9px;
+		letter-spacing: 2px;
+		padding: 3px;
+	}
+
+	.icons .inner{ 		/* bloc scroll liens */
+		width: 207px;
+		height: 207px;
+		overflow: auto;
+	}
+
+	.icons img{		/* style icons */
+		border: 1px solid white;
+	}
+
+	.navibottom{		/* bloc des liens externes (en bas) */
+		margin: auto;
+		text-align: center;
+		position: relative;
+		top: 240px;
+		width: 500px;
+	}
+
+	.menubottom{		/* onglets des liens externes (en bas) */
+		text-transform: uppercase;
+		padding: 5px;
+		padding-left: 10px;
+		padding-right: 10px;
+		margin-left: 3px;
+		margin-right: 3px;
+		font-size: 10px;
+		font-style: italic;
+		position: relative;
+		text-shadow: 1px 1px 1px #e7717f;
+		font-weight: normal;
+		border: 1px solid #fcdde2;
+		color: #fcdde2;
+	}
+
+	.footer{	/* footer quote */
+		text-transform: uppercase;
+		color: #FFE4E9;
+		letter-spacing: 2px;
+		font-size: 8px;
+		font-style: italic;
+		border-top: 1px solid #FFC1CD;
+		position: relative;
+		top: 275px;
+		text-align: center;
+		width: 400px;
+		margin: auto;
+		padding-top: 3px;
+		text-shadow: 1px 1px 1px #e7717f;
+	}
+
+	.clear { clear: both; }
+
+</style>
+
+</head>
+
+<!-- FIN CSS -->
+
+
+<!-- HTML PROPER -->
+
+<DIV class="mainbody">
+
+
+	<div class="navi">
+		<span id="1" class="menu">i. faith</span>
+		<span id="2" class="menu normal">ii. progression</span>
+		<span id="3" class="menu normal">iii. anecdotes</span>
+		<span id="4" class="menu normal">iv. roleplays</span>
+	</div>
+
+	<div class="box">	<!-- PREMIER RECTANGLE GRIS -->
+
+
+		<!-- ONGLET CHELSEA -->
+
+		<div id="tab1" class="tab">
+			<div class="c1">
+				<img class="icn" src="http://i.imgur.com/U7Uu5HY.png"/>
+
+				<div class="idcard">
+					<div class="idline"><strong>faith ally quinn</strong></div>
+					<div class="idline">seize ans</div>
+					<div class="idline">rosalia (johto)</div>
+					<div class="idline">en mouvement</div>
+					<div>cercle : justice</div>
+				</div>
+			</div>
+
+			<div class="c2">
+				<strong>Faith</strong> est une adolescente de <strong>seize ans</strong> à qui on en donnerait trois de moins, et qui est arrivée sur Mhyone <strong>fin mai</strong>. Son père habite à <strong>Méridian</strong>, mais elle a décidé de partir de son côté pour explorer l'île, et trouver sa place dans le monde (délaissant l'école au passage). Jeune adolescente connectée, Faith est très présente sur les <strong>réseaux sociaux</strong>, où elle espère se faire une réputation. Au cours de ses errances, elle revêt ses plus beaux jupons et devient une wanna-be <strong>superhéroïne</strong> qui patrouille l'île à la recherche d'aventures. <strong>Altruiste</strong> au possible, Faith <strong>aime tout le monde</strong> ; pourtant, elle <strong>ne supporte pas l'injustice</strong>. Et quand elle tombe sur une brebis égarée, elle fera tout ce qui est en son pouvoir pour la <strong>remettre sur le droit chemin</strong> (en passant si besoin par un <strong>séjour à l'hôpital</strong>). Parce qu'elle a beau être un peu naïve et <strong>maladroite au possible</strong>, elle est plus <strong>fortiche</strong> que sa frêle apparence ne le laisserait croire.
+			</div>
+
+			<div style="clear: both;"></div>
+		</div>
+
+		<!-- FIN ONGLET FAITH -->
+
+
+		<!-- ONGLET PROGRESSION -->
+
+		<div id="tab2" class="tab hide">
+			
+			<div class="items">
+				<div class="title">items</div>
+				<div class="inner">
+					3 pokéballs
+				</div>
+			</div>
+
+			<div class="xp">
+				<div class="xp1">EXP</div>
+				<div class="xp2">totale <span>000</span></div>
+				<div class="xp2">dépensée <span>000</span></div>
+				<div class="xp2">restante <span>000</span></div>
+				<div class="clear"></div>
+			</div>
+
+			<div class="log1">
+				<div class="title">updates</div>
+				<div class="inner">
+					<div class="date">03/06</div>
+					<div class="info">validation</div>
+
+					<div class="date">00/00</div>
+					<div class="info">bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla </div>
+				</div>
+			</div>
+
+			<div class="log2">
+				<div class="title">talents</div>
+				<div class="inner">
+					à venir.
+				</div>
+			</div>
+
+			<div class="clear"></div>
+			<div style="clear: both;"></div>
+		</div>
+
+		<!-- FIN ONGLET PROGRESSION -->
+
+
+		<!-- ONGLET ANECDOTES -->
+
+		<div id="tab3" class="tab hide">
+
+			à venir.		
+
+		</div>
+
+		<!-- FIN ONGLET ANECDOTES -->
+
+
+		<!-- ONGLET ROLEPLAYS -->
+
+		<div id="tab4" class="tab hide">
+			
+			<div class="rp">
+
+			<div class="left">
+				<img src="http://i.imgur.com/XGraoAX.png"/>
+				<br><img src="http://i.imgur.com/4Lh4Xge.png"/>
+			</div>
+
+			<div class="right">
+
+				<div class="chrono">Chronologie</div>
+
+			<div class="inner">
+
+				<div class="date">10/06</div>
+				<div class="info">
+					<a href="http://pkmmhyone.forumactif.org/t98-la-plage-souillee-feat-faith" target="_top">[requête] la plage souillée</a>
+					<br>avec <span>james nichols</span>
+				</div>
+				<div class="clear"></div>
+
+			</div>
+			</div>
+
+			<div class="clear"></div>
+
+			</div>
+
+		</div>
+
+		<!-- FIN ONGLET ROLEPLAYS -->
+
+	</div>	<!-- FIN PREMIER RECTANGLE GRIS -->
+
+
+	<div class="box2">	<!-- DEUXIEME RECTANGLE GRIS -->
+
+		<div class="wanted">
+			<div class="titre">liens & rp recherchés</div>
+
+			<div class="inner">
+				<p><span class="soustitre">bloggeur(se) ;</span> parce que les superhéros ont toujours besoin de quelqu'un pour parler d'eux sur le pokéweb.</p>
+
+				<p><span class="soustitre">titre du lien ;</span> bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla</p>
+
+				<p><span class="soustitre">titre du lien ;</span> bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla</p>
+			</div>
+		</div>
+
+		<div class="icons">
+			<div class="titre">icons icons icons icons</div>
+
+			<div class="inner">
+				<img src="http://i.imgur.com/0ROl27m.jpg"/>
+				<img src="http://i.imgur.com/toNvNem.png"/>
+				<img src="http://i.imgur.com/EiR6wAp.png"/>
+				<img src="http://i.imgur.com/WK6vNBg.png"/>
+				<img src="http://i.imgur.com/KIaohWr.png"/>
+				<img src="http://i.imgur.com/LC09ZUn.png"/>
+				<img src="http://i.imgur.com/RfZ76OW.png"/>
+				<img src="http://i.imgur.com/C74jIJ6.png"/>
+				<img src="http://i.imgur.com/Mbubrke.png"/>
+				<img src="http://i.imgur.com/b7z23EE.png"/>
+				<img src="http://i.imgur.com/DiFnqSJ.png"/>
+				<img src="http://i.imgur.com/CnVUonS.png"/>
+				<img src="http://i.imgur.com/HoiUvii.png"/>
+				<img src="http://i.imgur.com/gKlW1lw.jpg"/>
+				<img src="http://i.imgur.com/zEGDuMe.png"/>
+				<img src="http://i.imgur.com/yAhzT0a.png"/>
+				<img src="http://i.imgur.com/ToY4v1b.png"/>
+				<img src="http://i.imgur.com/Wh7QUuE.png"/>
+				<img src="http://i.imgur.com/LCpIzKj.png"/>
+				<img src="http://i.imgur.com/mxBggyH.png"/>
+			</div>
+
+			<div class="titre">icons icons icons icons</div>
+		</div>
+
+		<div style="clear:both;"></div>
+
+	</div>	<!-- FIN DEUXIEME RECTANGLE GRIS -->
+
+
+	<!-- LIENS EXTERNES (BOTTOM) -->
+
+	<div class="navibottom">
+
+		<a href="http://pkmmhyone.forumactif.org/t58-faith-i-just-want-to-be-a-superhero-terminee" target="_top"><span class="menubottom">présentation</span></a>
+
+		<a href="http://pkmmhyone.forumactif.org/t77-faith-a-quinn-t-card#152" target="_top"><span class="menubottom">pokémon</span></a>
+
+		<a href="http://pkmmhyone.forumactif.org/t77-faith-a-quinn-t-card#153" target="_top"><span class="menubottom">relations</span></a>
+
+	</div>
+
+	<!-- FIN LIENS EXTERNES -->
+
+
+	<div class="footer">
+		Nevertheless, I won’t give up
+		on the tiny prayers
+	</div>
+
+
+</DIV>
+
+<!-- FIN HTML -->

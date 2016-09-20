@@ -1,0 +1,432 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<link href='https://fonts.googleapis.com/css?family=Roboto+Condensed:400,300italic,700italic' rel='stylesheet' type='text/css'>
+
+<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+<script>
+			// JavaScript Document
+
+	$(document).ready(function(){
+	
+	$("#1").click(function(){
+		$(".desc").addClass("hide");
+		$("#desc1").removeClass("hide");
+		});
+
+	$("#2").click(function(){
+		$(".desc").addClass("hide");
+		$("#desc2").removeClass("hide");
+		});
+
+	$("#3").click(function(){
+		$(".desc").addClass("hide");
+		$("#desc3").removeClass("hide");
+		});
+
+	$("#4").click(function(){
+		$(".desc").addClass("hide");
+		$("#desc4").removeClass("hide");
+		});
+	
+	});
+</script>
+
+
+<!-- CSS -->
+
+<style>
+	
+	body {
+		font-family: roboto condensed;
+		font-size: 14px;
+		text-align:justify;
+		font-size: 13px;
+		line-height: 17px;
+		color: gainsboro;
+	}
+
+	a {
+		text-decoration:none;
+		color:inherit;
+		font-weight:inherit;
+	}
+
+	img {
+		opacity: 0.8;
+		transition: 0.8s;
+		-moz-transition: 0.8s;
+		-webkit-transition: 0.8s;
+	}
+
+	img:hover {
+		transition: 0.8s;
+		-moz-transition: 0.8s;
+		-webkit-transition: 0.8s;
+		opacity: 1;
+	}
+
+	.overall {
+		width: 550px;
+		height: 650px;
+		margin: auto;
+		background: url('http://static.tumblr.com/cc52c6d1d20c23147a6c913509e46d67/nmomihv/ilqn3pjzj/tumblr_static_4pbff4p6k0owo0ccg0sgo4c08.gif');
+		padding: 25px;
+	}
+
+	.left {
+		float: left;
+		width: 190px;
+		margin-top: 20px;
+	}
+
+	.left .title {
+		background: black;
+		color: white;
+		font-size: 13px;
+		font-style: italic;
+		letter-spacing: 1px;
+		padding-top: 5px;
+		padding-bottom: 5px;
+		text-align: center;
+		transition: 0.9s;
+		-moz-transition: 0.9s;
+		-webkit-transition: 0.9s;
+	}
+
+	.left .title:hover {
+		background: crimson;
+		transition: 0.9s;
+		-moz-transition: 0.9s;
+		-webkit-transition: 0.9s;
+	}
+
+	.left img {
+		width: 190px;
+	}
+
+	.left .box {
+		background: black;
+		padding: 10px;
+		text-align: center;
+	}
+
+	.left .box .encadre {
+		border: 1px solid #505050;
+		padding: 10px;
+	}
+
+	.left .box .encadre .lien {
+		padding-left: 6px;
+		padding-right: 6px;
+		margin-left: 5px;
+		margin-right: 5px;
+		padding-top: 3px;
+		padding-bottom: 3px;
+		background: black;
+		font-size: 11px;
+	}
+
+	.left .box .encadre .lien:hover {
+		background: crimson;
+		transition: 0.8s;
+		-moz-transition: 0.8s;
+		-webkit-transition: 0.8s;
+	}
+
+	.right {
+		float: left;
+		width: 330px;
+		margin-left: 20px;
+	}
+
+	.right .box {
+		background: black;
+		padding: 10px;
+	}
+
+	.right .box .border {
+		min-height: 300px;
+		max-height: 470px;
+		border: 1px solid #404040;
+		padding: 25px;
+	}
+
+	.id {
+		text-transform: uppercase;
+		color: white;
+		font-size: 13px;
+		font-style: italic;
+		border-top: 1px solid #808080;
+		border-bottom: 1px solid #808080;
+		padding-top: 7px;
+		padding-bottom: 7px;
+		transition: 0.8s;
+		-moz-transition: 0.8s;
+		-webkit-transition: 0.8s;
+	}
+
+	.id:hover {
+		border-top: 1px solid crimson;
+		border-bottom: 1px solid crimson;
+		transition: 0.8s;
+		-moz-transition: 0.8s;
+		-webkit-transition: 0.8s;
+	}
+
+	.champs {
+		float: left;
+		color: crimson;
+		margin-right: 13px;
+		text-align: right;
+	}
+
+	.data {
+		float: left;
+		text-align: left;
+	}
+
+	.icons {
+		text-align: center;
+		margin-top: 30px;
+		margin-bottom: 30px;
+	}
+
+	.icons img {
+		width: 70px;
+		padding: 3px;
+	}
+
+	.quote {
+		padding: 10px;
+		color: transparent;
+		font-size: 12px;
+		font-style: italic;
+		text-align: center;
+		text-transform: uppercase;
+		text-shadow: 0px 0px 2px white;
+		transition: 0.8s;
+		-moz-transition: 0.8s;
+		-webkit-transition: 0.8s;
+	}
+
+	.quote:hover {
+		transition: 0.8s;
+		-moz-transition: 0.8s;
+		-webkit-transition: 0.8s;
+	}
+
+	#desc2 {
+		height: 448px;
+	}
+
+	#desc2 .inner {
+		height: 444px;
+		overflow: auto;
+		padding-right: 10px;
+	}
+
+	#desc3 .title {
+		text-transform: uppercase;
+		font-style: italic;
+		color: crimson;
+		border-bottom: 3px double #707070;
+		padding-bottom: 7px;
+		width: 255px;
+		margin-bottom: 13px;
+		text-align: center;
+	}
+
+	#desc3 .subtitle {
+		color: white;
+	}
+
+	#desc4 {
+		height: 448px;
+	}
+
+	#desc4 .inner {
+		height: 444px;
+		overflow: auto;
+		padding-right: 10px;
+	}
+
+	.footer {
+		background: black;
+		width: 450px;
+		position: fixed;
+		top: 600px;
+		left: 65px;
+		margin: auto;
+		padding: 20px;
+	}
+
+	.footer .icon {
+		float: left;
+	}
+
+	.footer img {
+		width: 30px;
+	}
+
+	.footer .self {
+		float: left;
+		margin-left: 20px;
+		font-size: 16px;
+		text-transform: uppercase;
+		font-style: italic;
+		padding-top: 5px;
+		color: crimson;
+	}
+
+	.footer .comptes {
+		margin-left: 20px;
+		color: #909090;
+	}
+
+	.hide { display: none; }	/* pour les onglets */
+	
+</style>
+</head>
+
+<!-- [FIN] CSS -->
+
+
+<!-- HTML -->
+
+<body>
+<div class="overall">
+
+	<div class="left">
+		<div class="title">
+			the girl with the rotten mind.
+		</div>
+
+		<div class="pic">
+			<img src="http://static.tumblr.com/7307c507a5186aeb67512f2ef73b36bf/nmomihv/CYyn3pjzj/tumblr_static_234l7f5hxsckossg8kwcgc40w.png"/>
+		</div>
+
+		<div class="box">
+			<div class="encadre">
+
+				<span class="lien" id="1">I.</span>
+				<span class="lien" id="2">II.</span>
+				<span class="lien" id="3">III.</span>
+				<span class="lien" id="4">IV.</span>
+
+			</div>
+		</div>
+	</div>
+
+	<div class="right">
+		<div class="box">
+			<div class="border">
+				<div class="inner">
+					
+					<div class="desc" id="desc1">
+						<div class="id">
+							<div class="champs">nom complet<br>surnom<br>âge<br>date de naissance<br>nationalité<br>occupation</div>
+							<div class="data">lisandra liv dýradóttir<br>lethal<br>14 ans<br>xx/xx/xxxx<br>islandaise<br>simple gamine</div>
+							<div style="clear: both;"></div>
+						</div>
+
+						<div class="icons">
+							<img src="http://i.imgur.com/UIxHqV0.png"/>
+							<img src="http://i.imgur.com/gneVuOo.png"/>
+							<img src="http://i.imgur.com/cSg0ilN.png"/>
+						</div>
+
+						<div class="quote">
+							and there's a creepy doll that always follows you; it's got a pretty mouth to swallow you whole. 
+						</div>
+					</div>
+
+					<div class="desc hide" id="desc2">
+						<div class="inner">
+							C’est une journée comme une autre, dans les rues de Babylon. Peut-être discutes-tu avec quelques amis, peut-être prépares-tu quelque stratagème divertissant, peut-être recherches-tu simplement un peu de tranquillité, aux détours des ruelles les plus calmes. Tu commences à te sentir chez toi. Tu te crois entouré de personnes que tu connais bien, tu te crois seul — tu ne l’as pas encore remarquée. Tu n’as pas fait attention à elle, petite poupée de 14 ans, avec son teint de porcelaine, son carré noir, ses ballerines blanches et ses vêtements repassés. Elle se tient bien droite, les mains jointes, et pose un pied devant l’autre, en avançant bien droit. Tu l’as probablement déjà croisée, peut-être même t’a-t-elle attendri, jolie poupée aux yeux noirs, cachés derrière les mèches régulières de sa frange. Ou bien tu ne l’as pas vue, comme souvent, tant elle est discrète. Petite fille bien élevée, elle est sage, si sage. Trop sage. Quand enfin tu la remarques, qui marche sans bruit derrière toi, tu te demandes depuis combien de temps elle est là. Tu te demandes où elle va, comme ça, la petite Lisandra. Si tu t’arrêtes et que tu la regardes, elle te fera un sourire. Un sourire d’une politesse extrême. Si extrême, que c’en est presque dérangeant. Tu ne le verras pas, au début. Ce n’est que lorsqu’elle commencera à te parler, lorsque, telle une princesse capricieuse, elle te donnera des ordres, lorsque sa voix cristalline profèrera les pires insanités et que que tu apercevras l’éclat d’une lame de scalpel entre ses mains, que tu percevras la tension de ce sourire poli qu’elle affiche toujours, même lorsqu’elle te menace. Tu verras les frétillements aux coins de sa bouche, le tremblement discret de ses lèvres qu’elle se retient de mordiller ; tous les signes qui trahissent son excitation. C’est un sourire fendu qu’elle accroche à ses lèvres, un sourire de jouissance, à l’idée de tout ce qu’elle pourrait te faire. Et qu’elle fera.
+
+							<br><br>Lisandra, c’est une enfant. C’est l’enfant qu’on aurait voulu avoir, l’élève attentive qui fait toujours ses devoirs, la petite fille bien élevée et docile dont rêvent tous les parents. C’est la petite soeur que tu voudrais protéger, et tu t’imagines déjà qu’elle te regarde avec admiration, alors que ses yeux convoitent ton pull, pourtant trop grand pour elle, ou s’émerveillent sur le tracé de tes veines. Elle se demande si elle serait capable de le suivre au bistouri, et si les lignes écarlates qu’elle tracerait ainsi seraient plus jolies sur ta peau que les bleues qui paraissent en transparence.
+
+							<br><br>Parce que dès qu’elle pose les yeux sur toi, elle ne voit en toi qu’une nouvelle acquisition. D’un regard, elle possède toute chose et tout être. Elle est gentille et discrète, la petite Lisandra, elle paraît même un peu timide parfois. Mais au fond, elle n’est que jouissance et pulsions, et elle a décidé de jouir de toi. Elle attend tout de toi, même que tu lui donnes ta vie si elle te la demandait. Chateaux en Espagne, naïveté étrange. Elle est persuadée que tout va bien, là-bas en Islande, dans cette famille étrange qui l'a pourtant choyée. Elle ne réalise pas comme ils l'ont tordue, elle aussi. Elle a de la frustration à évacuer. Et quand personne ne la regarde, à l'abri dans sa tête, ou dans ce monde un peu trop parfait pour être vrai, elle fait dans la démesure.
+
+							<br><br>Lorsqu’elle se tient devant toi, mains et pieds joints, et qu’elle lève vers toi ses brillants yeux noirs, pour te demander avec un sourire de lui donner ton gâteau, aurais-tu le cœur de le lui refuser ? Lorsqu’elle s’agrippe à ta manche pour quémander un câlin, en invoquant une peur ou un chagrin, serais-tu assez rustre pour l’en priver ? Mais lorsque la jeune fille te suit depuis plusieurs heures, comme une ombre, en réclamant ton sac ou ta veste, tu hésites. Parfois, on ne la prend pas au sérieux, lorsqu’elle joue à l’impératrice. On s’attendrit face à son sourire, ou on la repousse avec indifférence. Mais ses requêtes sont bel et bien des ordres : elle ne demande pas, Lisandra. Elle exige. Et elle ne manque pas de moyens de le faire savoir. Quand, suite à un refus, Lisandra reformule sa requête en usant d’un ton et d’un vocabulaire plus durs, ça surprend. Surtout lorsque ses yeux sombres te fixent intensément, avec ce petit je-ne-sais-quoi de macabre au fond qui te fait frissonner. Lisandra stalke, crie, insulte, menace, et met ses menaces à exécution, si besoin. On peut dire qu’elle a le sens des affaires, ce qui n’est guère surprenant quand on considère d'où elle vient. Du genre à te faire une offre que tu ne pourras pas refuser, pour citer Marlon Brando. L’une des plus dangereuses de la famille, paraît-il, mais tous se garderont bien de le dire : au contraire, on lui donne crédit, on vante son innocence, on protège sa réputation. Cette salope de Circée elle-même veille à ce que sa petite Lisandra reste blanche comme neige, si c’est pas mignon. Qui voudrait bien te croire, lorsque tu accuses de monstruosité l’image même de la candeur ? Elle connaît son rôle, Lisandra, elle sait que pour régner il faut légitimer ses actions. Qu’il faut se faire aimer. Jamais les adultes ne te croiront, pauvre que tu es, pauvre victime. C’est une louve qui sait faire patte blanche, une louve qui ne montre les crocs que quand le berger n’est pas là. C’est un joli monstre, qui cache très bien ses pendants pervers sous une couche de vernis irréprochable, et qui ne laisse voir que ce qu’elle veut bien laisser paraître. Elle écrit des messages morbides en grandes lettres rouges sur les murs ou les portes, et s’infiltre dans les chambres des autres pour égorger leurs peluches ou voler leurs rongeurs, peut-être bien pour les disséquer. Elle planque des rats morts dans la Tour Cullen, accroche des nœuds coulants aux arbres de la forêt, la nuit, quand les autres dorment. Lisandra veut vous pourrir la vie et obtenir tout ce qu’il est possible d’obtenir, elle vous maintient dans l’horreur et dans la peur pour mieux vous tenir, elle use et abuse du chantage et des menaces, pour que vous assouvissiez ses caprices. Lisandra, c'est la reine mère et Blanche Neige à la fois.
+
+							<br><br>Mais c'est surtout une gamine. Qui croit encore que le monde tourne autour d'elle, et que tout est facile. Impatiente, elle se trahit parfois elle-même avant l'heure. Et elle ne comprend pas l'échec.
+						</div>
+					</div>
+
+					<div class="desc hide" id="desc3">
+						<div class="title">Mindfuck
+						<span class="subtitle"> &nbsp; (télépathie d'émission)</span></div>
+
+						<div class="pouvoir">
+							<br>Lisandra possède des câbles de mana constamment rattachés à elle, et qui peuvent s'accrocher aux gens pour connecter l'Islandaise à leur conscience. Elle peut alors leur transmettre ses pensées sous formes d'images mentales ou de sons, un sort compris dans le Pouvoir permettant de les « traduire » d'un cerveau à l'autre.
+
+							<br><br>C'est un pouvoir qu'elle a reçu de l'Ensemenseur, et qu'elle aime appeler « Mindfuck » —
+
+							<br><br>Ou comment harceler les gens sans témoins, tout en conservant son air innocent. Lisandra a le pouvoir de s'introduire dans votre <em>cerveau</em>. Mieux, elle a le pouvoir de mettre ce qu'elle veut dedans. De préférence, ce qui va vous agacer. Mieux, ce qui va vous traumatiser. Images choquantes, creepy, gores. Phrases compromettantes que vous finirez par ressortir sans même vous en rendre compte, tant elle vous auront trotté dans la tête. Airs de musique insupportables. De quoi devenir fou. Prenez garde : Lisandra spamme votre conscient. Et, la connaissant, ça ne sera pas joli.
+						</div>
+					</div>
+
+					<div class="desc hide" id="desc4"><div class="inner">
+						Quand on vous répète depuis votre plus jeune âge que vous êtes amené à contrôler le monde dans l’ombre, à tirer les ficelles, à profiter des autres et à régir leurs vies en les faisant dépendre de vous, ça a tendance à vous donner de l’ambition. La famille de Lisandra était ce genre de famille, vestige d'un temps où les malfrats et leurs réseaux avaient encore le pouvoir sur le monde. Dýra. Un nom islandais, tout ce qu’il y a de plus banal. Ça sonne bien, ça a un petit côté brut, un petit côté grinçant, mais étouffé, à peine suggéré — ça ferait presque courant. Et pourtant. Ce nom en fait frissonner plus d’un. Dýra et sa fratrie, ses cousins, ses descendants ; la plus grande famille de trafiquants d’Islande. La famille qui a fait main mise sur tout le marché noir du coin, dans des domaines aussi variés que nombreux. Armes, drogue, filles, organes et tant d’autres. Les plus lucratifs. Des marionnettistes, mais aussi des mégalos, qui croient détenir le contrôle dans l’ombre, qui pensent que les autres ne sont bons qu'à venir leur manger dans la main. Ce fut probablement vrai à une époque. Mais l'empire du crime est sur le déclin, et leur influence a dû se faire plus discrète, nuancée, au fil des ans. Et pourtant, les milieux sombres résonnent encore de leur gloire, et l'art du relationnel est un art qui ne s'oublie pas, même s'ils ont parfois du mal à réévaluer leurs rêves de grandeur.
+
+						<br><br>C’est dans cette famille qu’est née Lisandra. La petite dernière, pour l’heure. C'est une grande famille, une fratrie nombreuse. Lisandra eut donc droit à tout l’amour — tordu, parfois — des membres de sa famille. En sa qualité de petite dernière, elle est née dans un monde qui ne semblait bâti que pour elle, où elle fut choyée au-delà de toutes espérances. Et elle était de celles qui se nourrissent de cet amour, de cette attention. Pas de celles qui s’en réjouissent candidement, presque timidement, en rougissant. Non, Lisandra était de celles qui dévorent l’amour des autres, avidement, gloutonnement. C’était laid, tellement laid. Et pourtant, avec son apparence fragile et son sourire radieux, elle est si mignonne, la petite Lisandra. Elle l’a toujours été. Elle était ravissante dans sa monstruosité. Le petit joyau de la famille.
+
+						Elle a toujours été peste. Ce n’était qu’une gamine pourrie gâtée, mais intelligente, persuadée de pouvoir régner sur tout et tout le monde. On lui avait bourré le crâne avec ça, et ça lui convenait très bien. Les membres de sa famille ne voyaient là que des qualités — quand on vous dit qu’ils sont tordus. On ne se préoccupe pas de la vertu ni de la morale, chez les traficants. Seules comptent les affaires, le pouvoir et le plaisir. Et la famille. Très important, la famille. Lisandra elle-même avait beau être une peste, elle aimait sa famille, et ça se voyait. Elle ne leur épargnait pas ses caprices, mais ils étaient doux, et on ne se privait pas de satisfaire la petite chose qu’elle était. Une petite chose précieuse.
+
+						<br><br>Lisandra ne manquait donc pas d’attention. Elle avait toujours du monde pour la regarder, pour jouer avec elle, pour la gâter. Elle passait d’un frère à l’autre quand bon lui semblait, réclamait une soeur, apprenait les valeurs de ses parents. Mais ça ne suffisait pas. Ça ne lui suffisait pas. Elle voulait plus, elle voulait agrandir sa cour, jouer avec d’autre personnes, extérieures au cercle familial. Elle voulait des gens qui ne représentaient rien, avec lesquels elle pourrait vraiment s’amuser comme bon lui semblerait. Petite, elle trouva plusieurs compagnons de jeu. De pauvres enfants innocents, bernés par son sourire délicat et sa fragilité feinte. Elle les amadouait d’abord, timide, effarouchée, donnait l’impression de vouloir être protégée. Elle flattait leur ego, pour les mettre en confiance, leur donner l’impression qu’ils étaient importants. Importants pour elle. Et elle, c’était le monde. Puis les rôles s’inversaient petit à petit. Ils avaient tant pris l’habitude de prendre soin d’elle, qu’elle finissait par leur donner des ordres sans même qu’ils n’en prennent conscience. Au fond, elle avait toujours dominé leurs jeux. Mais ils avaient toujours cru le contraire.
+
+						<br><br>Elle se souvient de deux enfants en particulier. Un frère et une soeur. La petite fille avait son âge, et son frère, un an de moins. Lisandra avait rapidement amadoué le petit. Sa soeur, par contre, s’était montrée plus méfiante. Lisandra avait d’abord cru qu’elle pourrait la convaincre, que cela prendrait juste plus longtemps. Mais Lisandra manque de patience. Elle n’aime pas être contredite. Elle n’aime pas qu’on lui résiste. Et elle n’aime surtout pas qu’on la soupçonne, quand elle joue parfaitement son rôle d’innocente. Alors Lisandra s’impatienta, et décida de punir l’effronterie. Elle affermit son influence sur le petit garçon, et le retourna peu à peu contre sa propre soeur, à force de paroles mielleuses et de fausses larmes. Elle jubilait en le voyant prendre sa défense contre cette importune. Elle jubilait de prendre peu à peu sa place. Regarde. Regarde bien. Je peux tout te prendre. Je peux tout avoir. Ton sourire, ta haine, ton frère. Tout m’appartient. Tout appartient à une Dýradóttir. Quoi que vous cherchiez, ils peuvent l’avoir ou l’ont déjà. Et si vous voulez obtenir quelque chose d’eux, il suffit d’en payer le prix. Tu as compris, petite fille ? Elle demandait ta loyauté, ton asservissement. On ne refuse pas de payer une Dýradóttir : ils te le font juste payer beaucoup plus cher.
+
+						<br><br>C’était un brave garçon. Un bon petit soldat. Elle était sa princesse, peut-être même sa reine, et il lui était dévoué comme un chevalier servant. Tant de complaisance mettait la gamine dans de bonnes dispositions à son égard. Elle était presque tendre avec lui — autant que Lisandra puisse se montrer tendre avec quelqu’un qui ne soit pas de sa famille. C’était plus de l’indulgence qu’autre chose, en fait. Une grâce qu’elle lui accordait négligemment, parce qu’elle en avait le pouvoir. Ah, vraiment, elle était trop bonne avec lui. Mais tant qu’il obéissait à ses caprices, qu’il flattait sa vanité, qu’il la nourrissait d’attention, elle consentait à se montrer généreuse. Les quelques fois où elle le voyait hésiter, elle n’en devenait que plus exigeante. Non, tout se passait si bien, pourquoi décider soudainement de me résister ? <em>Pourriture. Moins que rien. Myase.</em> Les insultes sifflaient, frappaient, violemment. Sur un ton froid et cassant, autoritaire. Ça surprenait toujours, dans cette petite bouche d’enfant, avec cette voix ravissante, de la part de cette petite fille d’ordinaire si polie. Un rappel à l’ordre, dans lequel tremblait l’ombre de la sentence. Prends garde, il n’y aura pas d’autres avertissements.
+
+						<br><br>Son vaillant petit soldat lui échappa le jour où ses parents avaient vu un peu trop clair dans son jeu, et où ils s'arrangèrent pour que leur fils ne s’approche plus jamais de la dangereuse enfant. Lisandra fut davantage frustrée qu’on lui ait volé ce qui, d’après elle, lui appartenait, qu’elle ne fut véritablement peinée d’avoir perdu son camarade. Et c'est aussi grâce à cet épisode qu'elle commença à prendre conscience du pouvoir que les adultes avaient sur elle. Elle prit alors la décision de laisser les adultes en-dehors de tout ça.
+
+						<br><br>Elle repartit donc sur de nouvelles bases, en prenant de soin de bien préciser les règles du jeu. La jeune fille avait décidé de ne plus contrarier les adultes, afin d’éviter qu’ils ne se mettent à nouveau en-travers de son chemin. Elle apprit rapidement à les apprivoiser. Son jeu de petit fille modèle n’avait plus de faille. Dès qu’un adulte se trouvait dans les parages, Lisandra était irréprochable. Et après s'être assurée que les adultes ne la dérangeraient pas, elle pouvait reprendre ses occupations préférées.
+
+						<br><br>Elle le comprit juste à temps pour que son père ne s'intéresse pas à son petit manège. Contrairement à Circée. Sa Circée chérie, la préférée de sa fratrie ; la plus proche aussi, la seule de ses aînés à être encore scolaire, et donc à la maison familiale. La grande soeur attentionnée, complice. Leur proximité est étrange, leurs marques d'affection, parfois tendres, souvent perturbantes. Circée qui l'aide à vivre avec son aquaphobie.
+
+						<br><br>Circée, le mouton noir de la famille.
+
+						<br><br>Circée est probablement celle qui, de la fratrie, aurait le plus voulu faire la fierté de leur père. Mais Circée mal dans sa peau, névrosée, qui vivait le plus mal la pression familiale. Répondre aux attentes, faire au moins aussi bien que les aînés. Ne pas salir le nom du père. Arrêter de faire la conne. Circée qui fait honte.
+
+						<br><br>Mais Lisandra, elle, adore Circée. Elles étaient d'ailleurs ensemble quand elles ont croisé la route de l'Ensemenseur. Lisandra avait sept ans, alors ; Circée, douze. La petite ne s'en souvient pas bien ; le pouvoir de Circée s'est révélé assez vite, impulsive et peu sûre d'elle comme elle pouvait l'être, mais Lisandra a pris plus de temps à prendre conscience du sien. Et quelle révélation, alors : ce pouvoir, qu'elle devait rapidement s'approprier, lui a ouvert de nouvelles portes en termes de divertissements.
+
+						<br><br>Les années ont passé dans ce climat familial si étrange, dans lequel Lisandra s'intégrait pourtant étrangement bien. Mais pas Circée. Et puis il y eut l'enlèvement. La famille n'a jamais bien su ce qu'il s'était passé ; ça avait commencé par le kidnapping de Circée, probablement pour une classique demande de rançon. Mais elle s'est échappée avant que les ravisseurs ne puissent en tirer parti. Et puis elle a disparu. Pendant de longs mois.
+
+						<br><br>Quand elle a fini par revenir, elle était au plus bas. Son aventure avait mal fini, et c'est en miettes qu'elle était revenue dans ce vivier qui l'étouffait pourtant depuis son enfance. Lisandra se souvient de la colère de leur père, des engeulades, des larmes de sa soeur quand elle retournait s'enfermer dans sa chambre pour y jeter frénétiquement tout ce qui lui passait sous la main. Plusieurs fois, Lisandra fut le témoin silencieux des crises, impuissante.
+
+						<br><br>Et puis il y eut l'Éveil. Et Circée devenait enfin intéressante aux yeux de son père. Il lui permit d'aller découvrir Avalon ; à vrai dire, il l'y <em>envoya</em>, même. Il se demandait ce que ce monde pourrait avoir à lui offrir. Quelles ressources il renfermait. Et ce que le business familial pourrait en faire.
+
+						<br><br>Et Lisandra était de l'aventure. Elle se mit à naviguer régulièrement entre la Terre et ce monde fabuleux, avec sa soeur. Et Lisandra y découvrit ce qu'elle avait toujours cherché : un terrain de jeu géant, presque sans adultes. La liberté.
+
+						<br><br>Prenez garde, Lethal débarque, et elle compte bien prendre possession des lieux.
+					</div></div>
+
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div style="clear: both;"></div>
+
+	<div class="footer">
+		<div class="icon">
+			<img src="http://i.imgur.com/KkC7Z3R.png"/>
+		</div>
+
+		<div class="self">
+			alcyone
+			<span class="comptes">
+				sully / diraxy / charlotte / may / raphaëlle
+			</span>
+		</div>
+	</div>
+
+</div>
+</body>
+
+<!-- [FIN] HTML -->
