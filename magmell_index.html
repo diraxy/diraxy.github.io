@@ -1,0 +1,427 @@
+<!-- MAGMELL PRESENTATION INDEX // ACCUEIL, ABOUT, NAVIGATION, AVANCEE DU PROJET -->
+
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<meta charset="utf-8">
+		<meta name="author" content="Eugénie Poupet">
+		<title>Projet final - index</title>
+		
+
+		<style>
+
+			/* ----- GÉNÉRAL ----- */
+
+
+@font-face {
+    font-family: Hensa;
+    src: url(Hensa.otf);
+}
+
+@font-face {
+    font-family: Basic Title Font;
+    src: url(basictitlefont.ttf);
+}
+
+@font-face {
+	font-family: Roboto Light;
+	src: url(Roboto-Light.ttf);
+}
+
+@font-face {
+	font-family: Roboto Regular;
+	src: url(Roboto-Regular.ttf);
+}
+
+@font-face {
+	font-family: QARVIC;
+	src: url(QARVIC.otf);
+}
+
+html, body {
+	height: 100%;
+	background: #F2F2F2;
+	border: 0px solid transparent;
+	font-size: 0.9em; /* Ideal: 16px */
+	margin: 0px 0px 0px 0px;
+	min-height: 100%;
+	padding: 0px 0px 0px 0px;
+	width: 100%;
+	font-family: Roboto Light;
+	line-height: 1.5em;
+}
+
+img, object, embed, canvas, video, audio, picture {
+	max-width: 100%;
+	height: auto;
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+}
+
+h1 {
+	color: white;
+	font-family: Hensa;
+	font-size: 4em;
+	text-align: center;
+}
+
+h2 {
+	border-bottom: 3px solid #F2F2F2;
+	padding-bottom: 0.3em;
+	text-align: center;
+	text-transform: uppercase;
+	font-size: 1.5em;
+}
+
+h3 {
+	font-family: Roboto Regular;
+	font-size: 3em;
+	color: #E7E7E7;
+	text-align: center;
+	text-transform: uppercase;
+	letter-spacing: 0em;
+}
+
+.title_cat {		/* titre dans bloc de texte */
+	text-transform: uppercase;
+	font-family: Roboto Light;
+	font-size: 1.2em;
+	font-style: italic;
+	color: cornflowerblue;
+	border-bottom: 1px solid gainsboro;
+	letter-spacing: 0.2em;
+	text-align: center;
+	padding-left: 20px;
+	padding-right: 20px;
+	padding-bottom: 2px;
+	margin: auto;
+	margin-bottom: 20px;
+	margin-top: 20px;
+}
+
+h1 ~ p, h2 ~ p, h3 ~ p {	/* espace sous les titres */
+	padding-top: 0.7em;
+}
+
+b {
+	color: #7198E5;
+}
+
+#nav {			/* header */
+	background: #7594d4;
+	color: #DAE2E8;
+	text-transform: uppercase;
+	text-align: center;
+	padding-top: 30px;
+	padding-bottom: 30px;
+}
+
+#MagMell {		/* titre */
+	font-family: Hensa;
+	color: white;
+	font-size: 7.5em;
+	text-transform: uppercase;
+	padding-bottom: 20px;
+	line-height: 95%;
+}
+
+#nav a {		/* liens de navigation */
+	padding: 3px 10px 3px 10px;
+	border-top: 1px solid #DAE2E8;
+	border-bottom: 1px solid transparent;
+	margin-left: 10px;
+	margin-right: 10px;
+	font-family: Basic Title Font;
+	font-size: 0.9em;
+	padding-top: 7px;
+	transition: 0.8s;
+}
+
+#nav a:hover:not(.currentpage) {
+	color: white;
+	border-top: 1px solid white;
+	transition: 0.8s;
+}
+
+#nav .currentpage {
+	border-top: 1px solid transparent;
+	border-bottom: 1px solid white;
+	color: white;
+	transition: 0.8s;
+}
+
+
+	/* ----- INDEX ----- */
+
+
+.bg {		/* background pictures */
+	background: url("bg3.jpg");
+	width: 100%;
+	height: 1000px;
+	padding-top: 50px;
+	background-repeat: no-repeat;
+    background-position: top center;
+}
+
+.flex_container {
+	display: flex;
+	justify-content: center;
+	position: relative;
+}
+
+.flex_container > div {
+	padding: 20px;
+	height: auto;
+	text-align: justify;
+}
+
+.flex_container > div:first-child {		/* bloc principal */
+	background: #FFF;
+	width: 50%;
+	margin-right: 3%;
+	color: #50699A;
+	border-bottom: 10px solid #5D7BB6;
+	height: auto;
+}
+
+.flex_container > div:nth-child(2) {	/* bloc du staff */
+	background: #5D7BB6;
+	width: 18%;
+	color: #F2F2F2;
+	text-align: center;
+	height: auto;
+}
+
+#staff {
+	margin-top: -0.8em;
+	color: white;
+	text-shadow: 1px 1px 1px #4F6695;
+}
+
+#staff ~ div {		/* cercles du staff */
+	height: 100px;
+	width: 100px;
+	background-image: url('icon.png');
+	background-color: #303030;
+	margin: 0.3em;
+	border-radius: 100px;
+	display: inline-block;
+	text-transform: uppercase;
+	text-shadow: 1px 1px 1px #303030;
+	font-family: Basic Title Font;
+	font-size: 1.3em;
+	font-style: italic;
+	font-weight: bold;
+}
+
+.staff_content {
+	padding-top: 30px;
+	height: 70px;
+	width: 100px;
+}
+
+.staff {			/* rôles du staff */
+	font-size: 0.7em;
+	border-top: 1px solid #F2F2F2;
+	padding-top: 0.4em;
+	line-height: 1.3em;
+}
+
+.progress_bloc {	/* bloc progression */
+	margin: auto;
+}
+
+.progress_bloc table {
+	margin: auto;
+}
+
+#title_progression {	/* titre progression : title_cat ajustements */
+	width: 30%;
+}
+
+.progress {		/* catégories de progression */
+	letter-spacing: 1px;
+	font-size: 1.2em;
+	text-align: right;
+}
+
+progress {		/* progress bar */
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+.footer {
+	width: 47%;
+	margin: auto;
+	margin-top: 40%;
+	margin-left: 25.5%;
+	text-transform: uppercase;
+	text-shadow: 1px 1px 1px #4F6695;
+	font-family: Roboto Light;
+	color: white;
+	text-align: center;
+}
+
+#soon {
+	font-size: 9em;
+	letter-spacing: 0.4em;
+	border-bottom: 1px solid white;
+	padding-bottom: 10%;
+	margin-top: 20%;
+	font-style: italic;
+}
+
+footer {
+	background: url('icon.png');
+	text-align: center;
+	font-size: 0.7em;
+	letter-spacing: 0.5em;
+	text-transform: uppercase;
+	text-shadow: 1px 1px 1px #4F6695;
+	font-family: Roboto Light;
+	color: white;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+footer a {
+	padding-left: 20%;
+}
+/* .iframes {    STAND BY
+	-webkit-transform: scale(0.48);
+     -moz-transform: scale(0.48);
+      -ms-transform: scale(0.48);
+       -o-transform: scale(0.48);
+          transform: scale(0.48);
+}
+
+.iframes iframe {		STAND BY
+	width: 1120px;
+	height: 800px;
+	overflow: auto;
+} */
+
+		</style>
+		
+	</head>
+
+	<body>
+
+		<div id="nav">
+			<div id="MagMell">Mag Mell</div>
+
+			<a class="currentpage">Accueil</a>
+			<a href="page1.html">le concept</a>
+			<a href="page2.html">L'Univers</a>
+			<a href="page3.html">Contact</a>
+			<a href="http://magmell.forumactif.com/">se rendre sur le forum</a>
+		</div>
+
+		<div class="bg">
+			<div class="flex_container">
+				<div>
+					<h2>Bienvenue sur le site du projet Mag Mell !</h1>
+					<p>
+						Mag Mell, c'est un groupe de quatre amies passionnées de roleplay, et un projet de <b>forum de roleplay</b> fantastique au <b>contexte original</b>. À l'heure actuelle, le forum est encore <i>en construction</i>, mais n'hésitez pas à parcourir un peu ce site pour découvrir notre univers, et suivre l'avancée du projet !
+					</p>
+
+					<div class="progress_bloc">
+						<h3>— Progression —</h3>
+
+						<table>
+							<tr>
+								<td>
+									<div class="progress">
+										Design / Code
+									</div>
+								</td>
+
+								<td>
+									<progress min=0 max=10 value=5></progress>
+								</td>
+
+								<td>
+									<div class="progress">
+										Univers
+									</div>
+								</td>
+
+								<td>
+									<progress min=0 max=10 value=5></progress>
+								</td>
+							</tr>
+
+							<tr>
+								<td>
+									<div class="progress">
+										Rédaction
+									</div>
+								</td>
+
+								<td>
+									<progress min=0 max=10 value=5></progress>
+								</td>
+
+								<td>
+									<div class="progress">
+										PNJs
+									</div>
+								</td>
+
+								<td>
+									<progress min=0 max=10 value=5></progress>
+								</td>
+							</tr>
+						</table>
+					</div>
+				</div>
+
+				<div>
+					<h1 id="staff">Le Staff</h1>
+
+					<div>
+						<div class="staff_content">
+							Luca
+							<div class="staff">fondatrice</div>
+						</div>
+					</div>
+
+					<div>
+						<div class="staff_content">
+							Chupp
+							<div class="staff">graphiste / codeuse</div>
+						</div>
+					</div>
+
+					<div>
+						<div class="staff_content">
+							Anjuu
+							<div class="staff">administratrice</div>
+						</div>
+					</div>
+
+					<div>
+						<div class="staff_content">
+							diraxy
+							<div class="staff">administratrice</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+
+		<!-- <div class="iframes">
+			<iframe src="http://magmell.forumactif.com/" frameborder="0"></iframe>
+		</div> -->
+		
+	</body>
+
+	<footer>
+		site web réalisé par diraxy
+		<a href="http://magmell.forumactif.com/">© Mag Mell 2016</a>
+	</footer>
+</html>
