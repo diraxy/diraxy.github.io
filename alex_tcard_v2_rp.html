@@ -7,42 +7,40 @@
 		color: inherit;
 	}
 
-	#rpboutons {
-		float:left;
-		width: 60px;
+	.trackcrossbloc {
+			background: #FFF;
+			border: 10px solid #F9F9F9;
+			padding: 10px;
+			width: 455px;
+			margin: auto;
+			font-family: arial;
+			font-size: 12px;
+			color: #F4F4F4;
+			-moz-transition: 0.8s;
+			-webkit-transition: 0.8s;
+			-o-transition: 0.8s;
+		}
+
+	.trackcrossbloc:hover {
+		-moz-transition: 0.8s;
+			-webkit-transition: 0.8s;
+			-o-transition: 0.8s;
+			border: 10px solid #FDA6B3;
+			color: #FDA6B3;
 	}
 
-	#rpiframe {
-		float:left;
-		width: 510px;
-	}
+	.trackinnerborder {
+			border: 1px solid #F9F9F9;
+			padding: 20px;
+		}
 
-
-	/* BOUTONS ONGLETS */
-
-	.bouton {
-		width: 30px;
-		border: 5px solid #F9F9F9;
-		background: #FFF;
-		margin: 5px;
-		cursor: pointer;
-		text-transform: uppercase;
-		font-style: italic;
-		font-family: arial;
-		font-size: 10px;
-		text-align: center;
-		color: #E9E9E9;
-	}
-
-	#rp1 {
-		padding-top: 9px;
-		padding-bottom: 9px;
-	}
-
-	#rp2 {
-		padding-top: 4px;
-		padding-bottom: 4px;
-	}
+	.tracktitle {
+			text-transform: uppercase;
+			font-size: 26px;
+			font-family: arial;
+			font-weight: bold;
+			text-align: center;
+		}
 
 
 	/* CHRONOLOGIE ALEX */
@@ -136,24 +134,17 @@
 			color: #E9E9E9;
 		}
 
-
-	/* POUR LES ONGLETS */
-
-	.select {
-		border: 5px solid #EEABB3;
-		color: #EEABB3;
-	}
-	
 </style>
 
 <DIV style="width: 570px; margin: auto;">
 
-	<div id="rpboutons">
-		<a target="_top" href="https://diraxy.github.io/pc_rp_tracker.html"><div class="bouton">rp</div></a>
-		<div class="bouton select">chr<br>ono</div>
-	</div>
-
-	<div id="rpiframe">
+		<a target="_blank" href="https://diraxy.github.io/pc_rp_tracker.html"><div>
+			<div class="trackcrossbloc">
+				<div class="trackinnerborder">
+					<div class="tracktitle">rp tracker</div>
+				</div>
+			</div>
+		</div><br><br>
 
 			<!-- CHRONOLOGIE ALEX -->
 
@@ -337,9 +328,5 @@
 		</div>
 
 			<!-- FIN CHRONOLOGIE -->
-
-	</div>
-
-	<div style="clear:both;"></div>
 
 </DIV>
