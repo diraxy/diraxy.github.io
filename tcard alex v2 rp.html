@@ -1,0 +1,384 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+
+<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+<script>
+			// JavaScript Document
+
+	$(document).ready(function(){
+	
+	$("#rp1").click(function(){
+		$(".rptab").addClass("hide");
+		$("#rptab1").removeClass("hide");
+		$(".bouton").removeClass("select");
+		$("#rp1").addClass("select");
+		});
+
+	$("#rp2").click(function(){
+		$(".rptab").addClass("hide");
+		$("#rptab2").removeClass("hide");
+		$(".bouton").removeClass("select");
+		$("#rp2").addClass("select");
+		});
+	
+	});
+</script>
+
+<!-- CSS -->
+
+<style>
+
+	body a {
+		text-decoration: none;
+		color: inherit;
+	}
+
+	#rpboutons {
+		float:left;
+		width: 60px;
+	}
+
+	#rpiframe {
+		float:left;
+		width: 510px;
+	}
+
+
+	/* BOUTONS ONGLETS */
+
+	.bouton {
+		width: 30px;
+		border: 5px solid #F9F9F9;
+		background: #FFF;
+		margin: 5px;
+		cursor: pointer;
+		text-transform: uppercase;
+		font-style: italic;
+		font-family: arial;
+		font-size: 10px;
+		text-align: center;
+		color: #E9E9E9;
+	}
+
+	#rp1 {
+		padding-top: 9px;
+		padding-bottom: 9px;
+	}
+
+	#rp2 {
+		padding-top: 4px;
+		padding-bottom: 4px;
+	}
+
+
+	/* CHRONOLOGIE ALEX */
+
+		#rptab2 {
+			margin-top: 6px;
+		}
+
+		.crossbloc {
+			background: #FFF;
+			border: 10px solid #F9F9F9;
+			padding: 10px;
+			width: 455px;
+			margin: auto;
+			font-family: arial;
+			font-size: 12px;
+			color: #808080;
+		}
+
+		.crossbloc .innerborder {
+			border: 1px solid #F9F9F9;
+			padding: 20px;
+		}
+
+		.innerborder .title {
+			text-transform: uppercase;
+			color: #F4F4F4;
+			font-size: 26px;
+			font-family: arial;
+			font-weight: bold;
+			text-align: center;
+		}
+
+		.innerbloc {
+			padding-top: 30px;
+		}
+
+		.innerbloc i {
+			letter-spacing: 1px;
+			color: #B0CBD0;
+		}
+
+		.caps {
+			text-transform: uppercase;
+			font-size: 10px;
+		}
+
+		.date {
+			width: 30px;
+			padding: 2px;
+			text-align: center;
+			font-size: 10px;
+			font-weight: bold;
+			letter-spacing: 1px;
+			margin-right: 10px;
+			color: #505050;
+			text-transform: uppercase;
+		}
+
+		.rp {
+			width: 350px;
+			text-transform: lowercase;
+		}
+
+		.float .date { float:left; }
+		.float .rp { float:left; }
+
+		.float {
+			max-height: 300px;
+			overflow: auto;
+		}
+
+		.avec {
+			letter-spacing: 1px;
+			padding-left: 10px;
+			color: #B5B5B5;
+		}
+
+		.clear {
+			clear: both;
+			margin: 10px;
+		}
+
+		.sub {
+			text-transform: uppercase;
+			font-size: 10px;
+			letter-spacing: 2px;
+			border-bottom: 1px solid #F9F9F9;
+			padding-bottom: 5px;
+			margin-bottom: 5px;
+			color: #E9E9E9;
+		}
+
+
+	/* POUR LES ONGLETS */
+
+	.select {
+		border: 5px solid #EEABB3;
+		color: #EEABB3;
+	}
+
+	.hide { display: none; }
+</style>
+
+<DIV style="width: 570px; margin: auto;">
+
+	<div id="rpboutons">
+		<div class="bouton select" id="rp1">rp</div>
+		<div class="bouton" id="rp2">chr<br>ono</div>
+	</div>
+
+	<div id="rpiframe">
+
+
+			<!-- RP TRACKER IFRAME -->
+
+		<iframe class="rptab" id="rptab1" src="http://diraxy.github.io/pc_rp_tracker.html" style="margin: auto; border: none; padding: 0px; width: 510px; height: 765px; position: relative; z-index: 0;"></iframe>
+
+			<!-- FIN IFRAME -->
+
+
+
+			<!-- CHRONOLOGIE ALEX -->
+
+		<div class="rptab hide" id="rptab2">
+			<div class="crossbloc">
+				<div class="innerborder">
+					<div class="title">chronologie / alex</div>
+
+					<div class="innerbloc">
+
+						<div class="sub">2015 - 2016</div><br>
+
+						<div class="float">
+							<div class="date">02/09</div>
+							<div class="rp"><a href="http://pokemoncommunity.forumactif.org/t3931-encore-et-encore-paul-nyllis">encore et encore</a> <span class="avec">— paul</span></div>
+							<div class="clear"></div>
+
+							<div class="date">05/09</div>
+							<div class="rp"><a href="http://pokemoncommunity.forumactif.org/t3942-we-re-the-new-romantics-max-arago">we're the new romantics</a> <span class="avec">— max</span></div>
+							<div class="clear"></div>
+
+							<div class="date">sept.</div>
+							<div class="rp"><a href="http://pokemoncommunity.forumactif.org/t3938-il-y-a-de-l-orage-dans-l-air-il-y-a-de-l-eau-dans-le-pv-alex-termine#41782">il y a de l'orage dans l'air, il y a de l'eau dans le...</a> <span class="avec">— alban</span></div>
+							<div class="clear"></div>
+
+							<div class="date">sept.</div>
+							<div class="rp"><a href="http://pokemoncommunity.forumactif.org/t3953-la-source-de-tout-nos-ennuis-pv-alex">la source de tous nos ennuis</a> <span class="avec">— cael</span></div>
+							<div class="clear"></div>
+
+							<div class="date">sept.</div>
+							<div class="rp"><a href="http://pokemoncommunity.forumactif.org/t4182-say-so-long-to-innocence#44084">say so long to innocence</a> <span class="avec">— ren</span></div>
+							<div class="clear"></div>
+
+							<div class="date">26/09</div>
+							<div class="rp"><a href="pokemoncommunity.forumactif.org/t3940-apprenons-partageons-ecoutons">apprenons, partageons, écoutons</a> <span class="avec">— givrali</span></div>
+							<div class="clear"></div>
+
+							<div class="date">03/10</div>
+							<div class="rp"><a href="http://pokemoncommunity.forumactif.org/t4009-16-engagez-vous-qu-ils-disaient-termine"> engagez-vous qu'ils disaient</a> <span class="avec">— solo <span class="caps">(SC #16)</span></span></div>
+							<div class="clear"></div>
+
+							<div class="date">oct.</div>
+							<div class="rp"><a href="http://pokemoncommunity.forumactif.org/t4051-que-xerneas-soit-avec-nous-pv-l-arborescence">que xerneas soit avec nous</a> <span class="avec">— arborescence</span></div>
+							<div class="clear"></div>
+
+							<div class="date">oct.</div>
+							<div class="rp"><a href="http://pokemoncommunity.forumactif.org/t4211-mission-ordinaire-caramels-et-sucroquins-mademoiselle-amelia-pv-la-team-well">caramels et sucroquins</a> <span class="avec">— ren / sirius <span class="caps">(mission)</span></span></div>
+							<div class="clear"></div>
+
+							<div class="date">oct.</div>
+							<div class="rp"><i>→ alex devient pokéathlète</i></div>
+							<div class="clear"></div>
+
+							<div class="date">oct.</div>
+							<div class="rp"><a href="http://pokemoncommunity.forumactif.org/t4162-les-etoiles-contraires-pv-alex">les étoiles contraires</a> <span class="avec">— alban</span></div>
+							<div class="clear"></div>
+
+							<div class="date">31/10</div>
+							<div class="rp"><a href="http://pokemoncommunity.forumactif.org/t4075-event-1-halloween-2015">halloween</a> <span class="avec">— commun <span class="caps">(event)</span></span></div>
+							<div class="clear"></div>
+
+							<div class="date">31/10</div>
+							<div class="rp"><a href="http://pokemoncommunity.forumactif.org/t4115-event-1-halloween-2015-groupe-1-a-la-traque-du-smogogo#44021">à la traque du smogogo</a> <span class="avec">— groupe 1 <span class="caps">(event)</span></span></div>
+							<div class="clear"></div>
+
+							<div class="date">15/11</div>
+							<div class="rp"><a href="http://pokemoncommunity.forumactif.org/t2381p15-club-de-journalisme-le-zarbdomadaire#43999"><i>→ sortie du zarbdomadaire</i></a></div>
+							<div class="clear"></div>
+
+							<div class="date">21/11</div>
+							<div class="rp"><a href="http://pokemoncommunity.forumactif.org/t4209-oh-let-s-go-back-to-the-start-termine#44297">oh let's go back to the start</a> <span class="avec">— solo</span></div>
+							<div class="clear"></div>
+
+							<div class="date">03/12</div>
+							<div class="rp"><a href="http://pokemoncommunity.forumactif.org/t4243p15-cours-topdresseur-strategie#45465">cours topdresseur stratégie</a> <span class="avec">— commun <span class="caps">(cours)</span></span></div>
+							<div class="clear"></div>
+
+							<div class="date">05/12</div>
+							<div class="rp"><a href="http://pokemoncommunity.forumactif.org/t4310-sc-noel-2015-don-t-tell-me-to-be-quiet-termine">don't tell me to be quiet</a> <span class="avec">— solo <span class="caps">(SC Noël)</span></span></div>
+							<div class="clear"></div>
+
+							<div class="date">05/12</div>
+							<div class="rp"><a href="http://pokemoncommunity.forumactif.org/t4547-and-he-s-dancing-like-a-madman-max#46724">and he's dancing like a madman</a> <span class="avec">— max</span></div>
+							<div class="clear"></div>
+
+							<div class="date">12/12</div>
+							<div class="rp"><a href="http://pokemoncommunity.forumactif.org/t4340-jour-101-un-pas-en-avant">un pas en avant</a> <span class="avec">— haru</span></div>
+							<div class="clear"></div>
+
+							<div class="date">17/12</div>
+							<div class="rp"><a href="http://pokemoncommunity.forumactif.org/t4792-nos-voix-qui-s-echarpent-dans-ce-qui-les-opposent">nos voix qui s'écharpent dans ce qui les oppose</a><br><span class="avec">— hanaë / sirius</span></div>
+							<div class="clear"></div>
+
+							<div class="date">19/12</div>
+							<div class="rp"><a href="pokemoncommunity.forumactif.org/t4546-we-headed-to-the-after-party">we headed to the after party</a> <span class="avec">— hazel / ren / sirius</span></div>
+							<div class="clear"></div>
+
+							<div class="date">FÉV.</div>
+							<div class="rp"><a href="http://pokemoncommunity.forumactif.org/t5070-le-grenat-du-malentendu-pv-alex">le grenat du malentendu</a> <span class="avec">— max sorcion</span></div>
+							<div class="clear"></div>
+
+							<div class="date">06/02</div>
+							<div class="rp"><a href="pokemoncommunity.forumactif.org/t4701-17-je-n-ai-pas-le-temps-de-douter-termine">je n'ai pas le temps de douter</a> <span class="avec">— solo <span class="caps">(SC #17)</span></span></div>
+							<div class="clear"></div>
+
+							<div class="date">07/02</div>
+							<div class="rp"><a href="pokemoncommunity.forumactif.org/t4754-le-fluff-apres-l-orage-obeline">le fluff après la tempête</a> <span class="avec">— obéline</span></div>
+							<div class="clear"></div>
+
+							<div class="date">09/02</div>
+							<div class="rp"><a href="http://pokemoncommunity.forumactif.org/t4749-type-poison-change-de-maison">type poison change de maison</a> <span class="avec">— etna</span></div>
+							<div class="clear"></div>
+
+							<div class="date">14/02</div>
+							<div class="rp"><a href="http://pokemoncommunity.forumactif.org/t4780-event-4-saint-valentin">saint valentin</a> <span class="avec">— alban / luce / aileen <span class="caps">(event)</span></span></div>
+							<div class="clear"></div>
+
+							<div class="date">mars</div>
+							<div class="rp"><a href="pokemoncommunity.forumactif.org/t4864-soiree-de-l-arborescence-des-racines-et-des-ailes-libre"><i>→ soirée d'ouverture de l'arborescence</i></a></div>
+							<div class="clear"></div>
+
+							<div class="date">24/06</div>
+							<div class="rp"><a href="http://pokemoncommunity.forumactif.org/t5208-sources-thermales-come-on-buddy-let-s-go-party-part-1-pv-termine">come on buddy let's go party / partie 1</a><br><span class="avec">— <span class="caps">anniversaire alban</span></span></div>
+							<div class="clear"></div>
+
+							<div class="date">25/06</div>
+							<div class="rp"><a href="http://pokemoncommunity.forumactif.org/t5951-flashback-come-on-buddy-let-s-go-party-part-2-pv">come on buddy let's go party / partie 2</a><br><span class="avec">— <span class="caps">anniversaire alban</span></span></div>
+							<div class="clear"></div>
+
+							<div class="date">JUILL.</div>
+							<div class="rp"><a href="http://pokemoncommunity.forumactif.org/t5385-c-est-pas-ma-guerre-colonel-ft-alex-lovell">c'est pas ma guerre colonel</a> <span class="avec">— andrew</span></div>
+							<div class="clear"></div>
+
+							<div class="date">09/07</div>
+							<div class="rp"><a href="http://pokemoncommunity.forumactif.org/t5374-bataille-d-eau-rp-commun-givrali">bataille d'eau</a> <span class="avec">— givrali</span></div>
+							<div class="clear"></div>
+
+							<div class="date">09/07</div>
+							<div class="rp"><a href="http://pokemoncommunity.forumactif.org/t5373-vamos-al-lago-rp-commun-noctali">bataille d'eau (suite)</a> <span class="avec">— givrali / noctali</span></div>
+							<div class="clear"></div>
+
+							<div class="date">JUILL.</div>
+							<div class="rp"><a href="http://pokemoncommunity.forumactif.org/t5530-pegi-18-quand-le-chacripan-nest-pas-la-les-pikachus-dansent-aaron-alex">quand le chacripan n'est pas là les pikachus dansent</a> <span class="avec">— aaron</span></div>
+							<div class="clear"></div>
+
+							<div class="date">JUILL.</div>
+							<div class="rp"><a href="http://pokemoncommunity.forumactif.org/t5371-mission-d-ete-the-cats-are-out-to-play">the cats are out to play</a> <span class="avec">— logan <span class="caps">(mission)</span></span></div>
+							<div class="clear"></div>
+
+							<div class="date">28/07</div>
+							<div class="rp"><a href="http://pokemoncommunity.forumactif.org/t5510-c-est-l-amour-a-la-cascadeuh-aou-a-tcha-tcha-audrey-ashley-sirius-alex">c'est l'amour à la cascadeuh aou a tcha tcha</a><br><span class="avec">— audrey / ashley / sirius</span></div>
+							<div class="clear"></div>
+
+							<div class="date">07/08</div>
+							<div class="rp"><a href="http://pokemoncommunity.forumactif.org/t5491-sc-ete-2016-surfin-safari-termine#58507">surfin' safari</a> <span class="avec">— luce / ève <span class="caps">(SC été)</span></span></div>
+							<div class="clear"></div>
+
+							<div class="date">15/08</div>
+							<div class="rp"><a href="http://pokemoncommunity.forumactif.org/t5582-event-ete-2016-i-want-you-to-be-a-slave-audrey-alex">i want you, to be a slave</a> <span class="avec">— audrey <span class="caps">(event)</span></span></div>
+							<div class="clear"></div>
+
+							<div class="date">août</div>
+							<div class="rp"><a href="http://pokemoncommunity.forumactif.org/t5570-la-revolte-desinvolte-dun-voltali-pv-alex-d-lowell">la révolte désinvolte d'un voltali</a> <span class="avec">— leype</span></div>
+							<div class="clear"></div>
+						</div>
+
+						<br><br><div class="sub">2016 - 2017</div>
+
+						<div class="float">
+							<div class="date">10/09</div>
+							<div class="rp"><a href="http://pokemoncommunity.forumactif.org/t5831-dedene-qui-touille-n-amasse-pas-mousse-audrey-alex">dédenne qui touille n'amasse pas mousse</a> <span class="avec">— audrey</span></div>
+							<div class="clear"></div>
+
+							<div class="date">19/12</div>
+							<div class="rp"><a href="http://pokemoncommunity.forumactif.org/t5955-noel-2016-7g-not-gonna-slow-down">not gonna slow down</a> <span class="avec">— solo <span class="caps">(SC NOël)</span></span></div>
+							<div class="clear"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+			<!-- FIN CHRONOLOGIE -->
+
+	</div>
+
+	<div style="clear:both;"></div>
+
+</DIV>
