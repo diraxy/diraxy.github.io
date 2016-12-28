@@ -1,0 +1,1620 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+
+<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+<script>
+			// JavaScript Document
+
+	$(document).ready(function(){
+
+		// ONGLETS POKEMON
+	
+	$("#1").click(function(){
+		$(".pkm").addClass("hide");
+		$("#pkm1").removeClass("hide");
+		});
+
+	$("#2").click(function(){
+		$(".pkm").addClass("hide");
+		$("#pkm2").removeClass("hide");
+		});
+
+	$("#3").click(function(){
+		$(".pkm").addClass("hide");
+		$("#pkm3").removeClass("hide");
+		});
+
+	$("#4").click(function(){
+		$(".pkm").addClass("hide");
+		$("#pkm4").removeClass("hide");
+		});
+
+	$("#5").click(function(){
+		$(".pkm").addClass("hide");
+		$("#pkm5").removeClass("hide");
+		});
+
+	$("#6").click(function(){
+		$(".pkm").addClass("hide");
+		$("#pkm6").removeClass("hide");
+		});
+
+	$("#7").click(function(){
+		$(".pkm").addClass("hide");
+		$("#pkm7").removeClass("hide");
+		});
+
+	$("#8").click(function(){
+		$(".pkm").addClass("hide");
+		$("#pkm8").removeClass("hide");
+		});
+
+	$("#9").click(function(){
+		$(".pkm").addClass("hide");
+		$("#pkm9").removeClass("hide");
+		});
+
+	$("#10").click(function(){
+		$(".pkm").addClass("hide");
+		$("#pkm10").removeClass("hide");
+		});
+
+	// AUTRES POKEMON
+
+	$("#a1").click(function(){
+		$(".pokedata2").addClass("hide");
+		$("#pkma1").removeClass("hide");
+		});
+
+	$("#a2").click(function(){
+		$(".pokedata2").addClass("hide");
+		$("#pkma2").removeClass("hide");
+		});
+
+	$("#a3").click(function(){
+		$(".pokedata2").addClass("hide");
+		$("#pkma3").removeClass("hide");
+		});
+
+	$("#a4").click(function(){
+		$(".pokedata2").addClass("hide");
+		$("#pkma4").removeClass("hide");
+		});
+	
+	});
+
+</script>
+
+
+<!-- CSS -->
+
+<style>
+	
+	body {
+		font-family: arial;
+		color: #808080;
+		font-size: 12px;
+		text-align:justify;
+		background: #F4F4F4;
+	}
+
+	body a { text-decoration: none; color: inherit; }
+
+
+
+	/* scrollbar */
+
+	::-webkit-scrollbar {
+   width: 5px;
+   height: 10px;
+  -webkit-border-radius: 10px;
+}
+ 
+::-webkit-scrollbar-track-piece  {
+   background-color: #F3F3F3;
+}
+ 
+::-webkit-scrollbar-thumb:vertical {
+   height: 30px;
+        -webkit-border-radius: 10px;
+   background-color: #7594d4;
+}
+ 
+::-webkit-scrollbar-thumb:horizontal{
+   height: 30px;
+        -webkit-border-radius: 10px;
+   background-color: #7594d4;
+}
+
+	/* FIN scrollbar */
+
+
+
+	.caps {
+		text-transform: uppercase;
+		font-size: 10px;
+		font-weight: bold;
+	}
+
+	.cathead {
+		margin: auto;
+		font-size: 24px;
+		text-transform: uppercase;
+		color: white;
+		text-align: center;
+		font-weight: bold;
+		text-shadow: 1px 1px 1px gainsboro;
+		margin-top: 30px;
+		border-bottom: 1px solid white;
+		padding-bottom: 3px;
+		width: 500px;
+	}
+
+	.pkmicon {
+		background: white;
+		border-radius: 100px;
+		-moz-border-radius: 100px;
+		-o-border-radius: 100px;
+		-webkit-border-radius: 100px;
+		padding: 3px;
+		margin: 3px;
+		cursor: pointer;
+	}
+
+	.pokelist {
+		margin: auto;
+	}
+
+	.pokelist table {
+		margin: auto;
+	}
+
+	.pokelist2 {
+		width: 100px;
+		float: left;
+		margin-left: 10px;
+		margin-top: 20px;
+	}
+
+	.pokelist2 table {
+		margin: auto;
+	}
+
+	.pokedata {
+		background: #FFF;
+		border: 10px solid #F9F9F9;
+		padding: 10px;
+		width: 455px;
+		margin: auto;
+		color: #808080;
+		margin-top: 20px;
+	}
+
+	.pokedata2 {
+		background: #FFF;
+		border: 10px solid #F9F9F9;
+		padding: 10px;
+		width: 345px;
+		margin: auto;
+		color: #808080;
+		margin-top: 20px;
+		float: left;
+	}
+
+	.pokedata .sub {
+		text-transform: uppercase;
+		font-size: 10px;
+		letter-spacing: 2px;
+		border-bottom: 1px solid #F9F9F9;
+		padding-bottom: 5px;
+		margin-bottom: 5px;
+		color: #E9E9E9;
+	}
+
+	.sprite {
+		background: #F4F4F4;
+		border-radius: 100px;
+		-moz-border-radius: 100px;
+		-o-border-radius: 100px;
+		-webkit-border-radius: 100px;
+		width: 100px;
+		height: 100px;
+		margin: auto;
+		text-align: center;
+	}
+
+	.pkmstats {
+		font-size: 9px;
+		font-weight: bold;
+		text-transform: uppercase;
+		margin-top: 20px;
+	}
+
+	.pad { padding-right: 5px; }
+
+	.black { color: black; }
+
+	.blakk {
+		color: black;
+		text-transform: uppercase;
+		font-size: 9px;
+		font-weight: bold;
+		letter-spacing: 1px;
+	}
+
+	.statpc {
+		margin-top: 7px;
+		line-height: 13px;
+		margin-left: 20px;
+		letter-spacing: 1px;
+	}
+
+	.pkmid {
+		text-transform: uppercase;
+		font-size: 9px;
+		font-weight: bold;
+		letter-spacing: 1px;
+		line-height: 15px;
+		margin: auto;
+		margin-left: 20px;
+		border-bottom: 1px solid #F2F2F2;
+		width: 320px;
+		padding-bottom: 5px;
+	}
+
+	.pkmid .caps {
+		color: black;
+		font-size: 9px;
+	}
+
+	.pkmdesc {
+		font-size: 11px;
+		margin-left: 20px;
+		margin-top: 10px;
+		width: 310px;
+		height: 120px;
+		overflow: auto;
+		padding-right: 10px;
+	}
+
+	.talent {
+		margin: auto;
+		font-size: 11px;
+		width: 70px;
+		padding-right: 15px;
+		border-right: 1px solid #F2F2F2;
+	}
+
+	.talent .blakk { padding-bottom: 5px; }
+
+	.moves {
+		padding-right: 15px;
+		padding-left: 15px;
+		border-right: 1px solid #F2F2F2;
+		font-size: 11px;
+		line-height: 13px;
+		text-align: center;
+	}
+
+	.moves .blakk { padding-bottom: 5px; }
+
+	select {
+		width: 120px;
+		text-transform: uppercase;
+		font-weight: bold;
+		font-size: 9px;
+	}
+
+	.title {
+		border-bottom: 1px solid #F2F2F2;
+		padding-bottom: 2px;
+		margin-bottom: 5px;
+		text-align: center;
+	}
+
+	.log {
+		padding-left: 15px;
+	}
+
+	.log .title { margin-bottom: 10px; }
+
+	.log .bloc {
+		height: 70px;
+		overflow: auto;
+		width: 200px;
+	}
+
+	.left {
+		float: left;
+		color: black;
+		font-size: 9px;
+		font-weight: bold;
+		width: 35px;
+		padding-top: 2px;
+	}
+
+	.right {
+		float: left;
+		width: 150px;
+		font-size: 11px;
+		padding-bottom: 7px;
+	}
+
+	.oldpkm {
+		margin: auto;
+		width: 500px;
+	}
+
+	.clear { clear: both; }
+
+	.hide { display: none; }
+
+</style>
+
+</head>
+
+
+<!-- HTML -->
+
+<body>
+
+<DIV>
+
+	<!-- INFOS HRP -->
+
+	<div class="pokedata" style="margin-bottom: 20px; line-height: 13px;">
+		<table style="margin: auto;">
+			<tr>
+				<td class="pkmstats">
+					<span class="blakk">total de points :</span> 105
+					<br><span class="blakk">points utilisés :</span> 00
+					<br><span class="blakk">points restants :</span> 105
+				</td>
+
+				<td class="pkmstats" style="padding-left: 30px;">
+					<span class="blakk">dernière demande d'évolution :</span> 13/12/2015 <a target="_blank" href="http://pokemoncommunity.forumactif.org/t41p225-valider-une-evolution#45636">(www)</a>
+					<br><span class="blakk">dernière évolution :</span> 08/02/2016 <a target="_blank" href="pokemoncommunity.forumactif.org/t4701-17-je-n-ai-pas-le-temps-de-douter-termine">(www)</a>
+				</td>
+			</tr>
+		</table>
+	</div>
+
+	<!-- FIN INFOS HRP -->
+
+
+
+
+	<!-- LISTE POKEMON -->
+
+	<div class="pokelist">
+		<table>
+			<tr>
+				<td>
+					<div id="1" class="pkmicon">
+						<img src="http://www.pokepedia.fr/images/2/22/Miniat_6_x_093.png">
+					</div>
+				</td>
+
+				<td>
+					<div id="2" class="pkmicon">
+						<img src="http://i.imgur.com/kCbWCKV.png">
+					</div>
+				</td>
+
+				<td>
+					<div id="3" class="pkmicon">
+						<img src="http://www.pokepedia.fr/images/0/06/Miniat_6_x_115.png">
+					</div>
+				</td>
+
+				<td>
+					<div id="4" class="pkmicon">
+						<img src="http://i.imgur.com/dnnveSa.png">
+					</div>
+				</td>
+
+				<td>
+					<div id="5" class="pkmicon">
+						<img src="http://i.imgur.com/0D4k1bM.png">
+					</div>
+				</td>
+
+				<td>
+					<div id="6" class="pkmicon">
+						<img src="http://www.pokepedia.fr/images/4/43/Miniat_6_x_032.png">
+					</div>
+				</td>
+
+				<td>
+					<div id="7" class="pkmicon">
+						<img src="http://www.pokepedia.fr/images/d/da/Miniat_6_x_543.png">
+					</div>
+				</td>
+
+				<td>
+					<div id="8" class="pkmicon">
+						<img src="http://www.pokepedia.fr/images/3/37/Miniat_6_x_110.png">
+					</div>
+				</td>
+
+				<td>
+					<div id="9" class="pkmicon" style="padding: 7px;">
+						<img src="http://www.pokepedia.fr/images/f/f2/Honor_Ball.png">
+					</div>
+				</td>
+
+				<td>
+					<div id="10" class="pkmicon" style="padding: 7px;">
+						<img src="http://www.pokepedia.fr/images/f/f2/Honor_Ball.png">
+					</div>
+				</td>
+			</tr>
+		</table>
+	</div>
+
+
+
+	<!-- SPECTRUM -->
+
+	<DIV id="pkm1" class="pkm">
+	<div class="pokedata">
+		<table>
+			<tr>
+				<td>
+					<a target="_blank" href="http://www.pokepedia.fr/Spectrum">
+						<div class="sprite">
+							<img src="http://www.pokepedia.fr/images/e/e9/Sprite_4_o_093.png">
+						</div>
+					</a>
+
+					<div class="pkmstats">
+						<table>
+							<tr>
+								<td>pv</td>
+								<td class="pad black">45</td>
+								<td>def</td>
+								<td class="pad black">45</td>
+								<td>spe</td>
+								<td class="black">55</td>
+							</tr>
+							<tr>
+								<td>vit</td>
+								<td class="pad black">95</td>
+								<td>atk</td>
+								<td class="pad black">50</td>
+								<td>spe</td>
+								<td class="black">115</td>
+							</tr>
+						</table>
+
+						<div class="statpc"><span class="black">0</span> duel
+						<br><span class="black">2</span> athlétisme
+						<br><span class="black">0</span> recherche
+						<br><span class="black">0</span> beauté</div>
+					</div>
+				</td>
+
+				<td>
+					<div class="pkmid">
+						<span class="caps">espèce :</span> spectrum
+						<br><span class="caps">sexe :</span> mâle
+						<br><span class="caps">chromatique :</span> non
+						<br><span class="caps">caché :</span> non
+						<br><span class="caps">type :</span> spectre / poison
+					</div>
+
+					<div class="pkmdesc">
+						Obtenu du <span class="blakk">Collectionneur</span> le <span class="blakk">01/09/2015</span>. De nature <span class="blakk">joviale</span>. Il est plutôt sympathique et relativement taquin, parfois même farceur. Étant très jeune, il s'est aussitôt attaché à sa dresseuse et se montre affectueux et protecteur envers elle. Après quelques débuts difficiles (Alex était terrorisée par son starter), ils sont finalement devenus très proches, et la rouquine s'est habituée à son apparence spectrale ainsi qu'à ses démonstrations d'affection. Le spectre a également gagné en maturité, surtout suite à son évolution. Il a toujours tendance à léchouiller sa dresseuse, ce qui la rend un peu groggy sur le coup. Il veille sur ses rêves toutes les nuits, utilisant parfois les propriétés soporifiques et hallucinogènes du gaz qui le compose pour l'aider à s'endormir ou provoquer des rêves agréables. Il n'y arrive pas encore très bien, mais il s'entraîne également à dévorer ses cauchemars pour lui assurer un sommeil paisible.
+					</div>
+				</td>
+			</tr>
+		</table>
+	</div>
+
+	<div class="pokedata">
+		<table>
+			<tr>
+				<td class="talent">
+						<div class="blakk">lévitation</div>
+						immunité aux capacités de type sol.</td>
+				</td>
+
+				<td class="moves">
+					<div class="blakk">capacités</div>
+					<select>
+						<option>hypnôse</option>
+						<option>léchouille</option>
+						<option>dépit</option>
+						<option>regard noir</option>
+						<option>malédiction</option>
+						<option>ombre nocturne</option>
+						<option>onde folie</option>
+						<option>coup bas</option>
+						<option>poing ombre</option>
+						<option>représailles</option>
+						<option>ball'ombre</option>
+						<option>dévorêve</option>
+						<option>toxic (CT)</option>
+					</select>
+				</td>
+
+				<td class="log">
+					<div class="bloc">
+						<div class="left">16/09</div>
+						<div class="right">ajout de fantominus</div>
+						<div class="clear"></div>
+
+						<div class="left">07/02</div>
+						<div class="right">apprentissage de la CT Toxic</div>
+						<div class="clear"></div>
+
+						<div class="left">08/02</div>
+						<div class="right">évolution en spectrum</div>
+						<div class="clear"></div>
+					</div>
+				</td>
+			</tr>
+		</table>
+	</div>
+	</DIV>
+
+	<!-- FIN SPECTRUM -->
+
+
+
+	<!-- NUCLEOS -->
+
+	<DIV id="pkm2" class="pkm hide">
+	<div class="pokedata">
+		<table>
+			<tr>
+				<td>
+					<a target="_blank" href="http://www.pokepedia.fr/Nucléos">
+						<div class="sprite">
+							<img src="http://www.pokepedia.fr/images/1/10/Sprite_5_n_577.png">
+						</div>
+					</a>
+
+					<div class="pkmstats">
+						<table>
+							<tr>
+								<td>pv</td>
+								<td class="pad black">45</td>
+								<td>def</td>
+								<td class="pad black">40</td>
+								<td>spe</td>
+								<td class="black">50</td>
+							</tr>
+							<tr>
+								<td>vit</td>
+								<td class="pad black">20</td>
+								<td>atk</td>
+								<td class="pad black">30</td>
+								<td>spe</td>
+								<td class="black">105</td>
+							</tr>
+						</table>
+
+						<div class="statpc"><span class="black">0</span> duel
+						<br><span class="black">2</span> athlétisme
+						<br><span class="black">0</span> recherche
+						<br><span class="black">0</span> beauté</div>
+					</div>
+				</td>
+
+				<td>
+					<div class="pkmid">
+						<span class="caps">espèce :</span> nucléos
+						<br><span class="caps">sexe :</span> mâle
+						<br><span class="caps">chromatique :</span> non
+						<br><span class="caps">caché :</span> non
+						<br><span class="caps">type :</span> psy
+					</div>
+
+					<div class="pkmdesc">
+						<span class="blakk">Capturé</span> le <span class="blakk">03/10/2015</span>. De nature <span class="blakk">discrète</span>. Le nucléos d'Alex est une vraie saleté. Il sait se faire discret et se contente généralement de flotter d'un air molasson avec son grand sourire niais. Une façade idéale pour tromper son monde, et faire chier sa dresseuse qui ne supporte pas le sourire en question. Son unique but dans la vie semble de mettre sa dresseuse dans l'embarras, et à s'improviser narrateur de son histoire en lui faisant un commentaire mental permanent généralement destiné à la rabaisser et à appuyer là où ça l'irrite. Il a néanmoins fait preuve de loyauté spontanée envers sa dresseuse lors de sa seconde sortie capture : Alex ignore cependant si son geste était motivé par une sorte de possessivité malsaine, ou par des sentiments plus purs.
+
+						uc.
+					</div>
+				</td>
+			</tr>
+		</table>
+	</div>
+
+	<div class="pokedata">
+		<table>
+			<tr>
+				<td class="talent">
+						<div class="blakk">garde magik</div>
+						seules les capacités qui infligent des dégâts fonctionnent</td>
+				</td>
+
+				<td class="moves">
+					<div class="blakk">capacités</div>
+					<select>
+						<option>vague psy</option>
+						<option>protection</option>
+						<option>roulade</option>
+						<option>saisie</option>
+						<option>puiss. cachée</option>
+						<option>mur lumière</option>
+						<option>charme</option>
+						<option>soin</option>
+						<option>choc psy</option>
+						<option>effort</option>
+						<option>prescience</option>
+						<option>balance</option>
+						<option>psyko</option>
+					</select>
+				</td>
+
+				<td class="log">
+					<div class="bloc">
+						<div class="left">10/10</div>
+						<div class="right">ajout de nucléos</div>
+						<div class="clear"></div>
+					</div>
+				</td>
+			</tr>
+		</table>
+	</div>
+	</DIV>
+
+	<!-- FIN NUCLEOS -->
+
+
+
+	<!-- KANGOUREX -->
+
+	<DIV id="pkm3" class="pkm hide">
+	<div class="pokedata">
+		<table>
+			<tr>
+				<td>
+					<a target="_blank" href="http://www.pokepedia.fr/Kangourex">
+						<div class="sprite">
+							<img src="http://www.pokepedia.fr/images/0/0b/Sprite_4_o_115.png">
+						</div>
+					</a>
+
+					<div class="pkmstats">
+						<table>
+							<tr>
+								<td>pv</td>
+								<td class="pad black">105</td>
+								<td>def</td>
+								<td class="pad black">80</td>
+								<td>spe</td>
+								<td class="black">80</td>
+							</tr>
+							<tr>
+								<td>vit</td>
+								<td class="pad black">90</td>
+								<td>atk</td>
+								<td class="pad black">95</td>
+								<td>spe</td>
+								<td class="black">40</td>
+							</tr>
+						</table>
+
+						<div class="statpc"><span class="black">0</span> duel
+						<br><span class="black">2</span> athlétisme
+						<br><span class="black">0</span> recherche
+						<br><span class="black">0</span> beauté</div>
+					</div>
+				</td>
+
+				<td>
+					<div class="pkmid">
+						<span class="caps">espèce :</span> kangourex
+						<br><span class="caps">sexe :</span> femelle
+						<br><span class="caps">chromatique :</span> non
+						<br><span class="caps">cachée :</span> non
+						<br><span class="caps">type :</span> normal
+					</div>
+
+					<div class="pkmdesc">
+						uc.
+					</div>
+				</td>
+			</tr>
+		</table>
+	</div>
+
+	<div class="pokedata">
+		<table>
+			<tr>
+				<td class="talent">
+						<div class="blakk">matinal</div>
+						réduit le temps de sommeil de moitié</td>
+				</td>
+
+				<td class="moves">
+					<div class="blakk">capacités</div>
+					<select>
+						<option>poing comète</option>
+						<option>groz'yeux</option>
+						<option>bluff</option>
+						<option>mini-queue</option>
+						<option>morsure</option>
+						<option>coup double</option>
+						<option>frénésie</option>
+						<option>ultimapoing</option>
+						<option>attrition</option>
+						<option>uppercut</option>
+						<option>mâchouille</option>
+					</select>
+				</td>
+
+				<td class="log">
+					<div class="bloc">
+						<div class="left">14/08</div>
+						<div class="right">ajout de kangourex</div>
+						<div class="clear"></div>
+					</div>
+				</td>
+			</tr>
+		</table>
+	</div>
+	</DIV>
+
+	<!-- FIN KANGOUREX -->
+
+
+
+	<!-- LUDICOLO -->
+
+	<DIV id="pkm4" class="pkm hide">
+	<div class="pokedata">
+		<table>
+			<tr>
+				<td>
+					<a target="_blank" href="http://www.pokepedia.fr/Ludicolo">
+						<div class="sprite">
+							<img src="http://i.imgur.com/yXNkkvY.png">
+						</div>
+					</a>
+
+					<div class="pkmstats">
+						<table>
+							<tr>
+								<td>pv</td>
+								<td class="pad black">80</td>
+								<td>def</td>
+								<td class="pad black">70</td>
+								<td>spe</td>
+								<td class="black">100</td>
+							</tr>
+							<tr>
+								<td>vit</td>
+								<td class="pad black">70</td>
+								<td>atk</td>
+								<td class="pad black">70</td>
+								<td>spe</td>
+								<td class="black">90</td>
+							</tr>
+						</table>
+
+						<div class="statpc"><span class="black">0</span> duel
+						<br><span class="black">2</span> athlétisme
+						<br><span class="black">0</span> recherche
+						<br><span class="black">0</span> beauté</div>
+					</div>
+				</td>
+
+				<td>
+					<div class="pkmid">
+						<span class="caps">espèce :</span> ludicolo
+						<br><span class="caps">sexe :</span> mâle
+						<br><span class="caps">chromatique :</span> oui
+						<br><span class="caps">caché :</span> non
+						<br><span class="caps">type :</span> eau / plante
+					</div>
+
+					<div class="pkmdesc">
+						uc.
+					</div>
+				</td>
+			</tr>
+		</table>
+	</div>
+
+	<div class="pokedata">
+		<table>
+			<tr>
+				<td class="talent">
+						<div class="blakk">glissade</div>
+						double la vitesse sous la pluie</td>
+				</td>
+
+				<td class="moves">
+					<div class="blakk">capacités</div>
+					<select>
+						<option>rugissement</option>
+						<option>méga-sangsue</option>
+						<option>force-nature</option>
+						<option>étonnement</option>
+						<option>surf (cs)</option>
+						<option>force (cs)</option>
+						<option>cascade (cs)</option>
+						<option>plongée (cs)</option>
+						<option>danse pluie (ct)</option>
+					</select>
+				</td>
+
+				<td class="log">
+					<div class="bloc">
+						<div class="left">08/02</div>
+						<div class="right">ajout de ludicolo</div>
+						<div class="clear"></div>
+
+						<div class="left">28/12</div>
+						<div class="right">apprentissage de la CT Danse Pluie</div>
+						<div class="clear"></div>
+					</div>
+				</td>
+			</tr>
+		</table>
+	</div>
+	</DIV>
+
+	<!-- FIN LUDICOLO -->
+
+
+
+	<!-- FLORIZARRE -->
+
+	<DIV id="pkm5" class="pkm hide">
+	<div class="pokedata">
+		<table>
+			<tr>
+				<td>
+					<a target="_blank" href="http://www.pokepedia.fr/Florizarre">
+						<div class="sprite">
+							<img src="http://www.pokepedia.fr/images/a/a8/Sprite_4_d_003_f.png">
+						</div>
+					</a>
+
+					<div class="pkmstats">
+						<table>
+							<tr>
+								<td>pv</td>
+								<td class="pad black">80</td>
+								<td>def</td>
+								<td class="pad black">83</td>
+								<td>spe</td>
+								<td class="black">100</td>
+							</tr>
+							<tr>
+								<td>vit</td>
+								<td class="pad black">80</td>
+								<td>atk</td>
+								<td class="pad black">82</td>
+								<td>spe</td>
+								<td class="black">100</td>
+							</tr>
+						</table>
+
+						<div class="statpc"><span class="black">0</span> duel
+						<br><span class="black">2</span> athlétisme
+						<br><span class="black">0</span> recherche
+						<br><span class="black">0</span> beauté</div>
+					</div>
+				</td>
+
+				<td>
+					<div class="pkmid">
+						<span class="caps">espèce :</span> florizarre
+						<br><span class="caps">sexe :</span> mâle
+						<br><span class="caps">chromatique :</span> non
+						<br><span class="caps">caché :</span> non
+						<br><span class="caps">type :</span> plante / poison
+					</div>
+
+					<div class="pkmdesc">
+						uc.
+					</div>
+				</td>
+			</tr>
+		</table>
+	</div>
+
+	<div class="pokedata">
+		<table>
+			<tr>
+				<td class="talent">
+						<div class="blakk">chlorophylle</div>
+						double la vitesse sous le soleil</td>
+				</td>
+
+				<td class="moves">
+					<div class="blakk">capacités</div>
+					<select>
+						<option>charge</option>
+						<option>rugissement</option>
+						<option>vampigraine</option>
+						<option>fouet lianes</option>
+						<option>poudre toxik</option>
+						<option>poudre dodo</option>
+						<option>bélier</option>
+						<option>tranch'herbe</option>
+						<option>doux parfum</option>
+						<option>croissance</option>
+						<option>damoclès</option>
+						<option>danse-fleur</option>
+						<option>soucigraine</option>
+						<option>coupe (cs)</option>
+						<option>force (cs)</option>
+						<option>zénith (ct)</option>
+					</select>
+				</td>
+
+				<td class="log">
+					<div class="bloc">
+						<div class="left">08/02</div>
+						<div class="right">ajout de florizarre</div>
+						<div class="clear"></div>
+
+						<div class="left">28/12</div>
+						<div class="right">apprentissage de la CT Zénith</div>
+						<div class="clear"></div>
+					</div>
+				</td>
+			</tr>
+		</table>
+	</div>
+	</DIV>
+
+	<!-- FIN FLORIZARRE -->
+
+
+
+	<!-- NIDORAN -->
+
+	<DIV id="pkm6" class="pkm hide">
+	<div class="pokedata">
+		<table>
+			<tr>
+				<td>
+					<a target="_blank" href="http://www.pokepedia.fr/Nidoran♂">
+						<div class="sprite">
+							<img src="http://www.pokepedia.fr/images/c/c2/Sprite_4_d_032.png">
+						</div>
+					</a>
+
+					<div class="pkmstats">
+						<table>
+							<tr>
+								<td>pv</td>
+								<td class="pad black">46</td>
+								<td>def</td>
+								<td class="pad black">40</td>
+								<td>spe</td>
+								<td class="black">40</td>
+							</tr>
+							<tr>
+								<td>vit</td>
+								<td class="pad black">50</td>
+								<td>atk</td>
+								<td class="pad black">57</td>
+								<td>spe</td>
+								<td class="black">40</td>
+							</tr>
+						</table>
+
+						<div class="statpc"><span class="black">0</span> duel
+						<br><span class="black">2</span> athlétisme
+						<br><span class="black">0</span> recherche
+						<br><span class="black">0</span> beauté</div>
+					</div>
+				</td>
+
+				<td>
+					<div class="pkmid">
+						<span class="caps">espèce :</span> nidoran
+						<br><span class="caps">sexe :</span> mâle
+						<br><span class="caps">chromatique :</span> non
+						<br><span class="caps">caché :</span> non
+						<br><span class="caps">type :</span> poison
+					</div>
+
+					<div class="pkmdesc">
+						uc.
+					</div>
+				</td>
+			</tr>
+		</table>
+	</div>
+
+	<div class="pokedata">
+		<table>
+			<tr>
+				<td class="talent">
+						<div class="blakk">point poison</div>
+						chance d'empoisonner au contact</td>
+				</td>
+
+				<td class="moves">
+					<div class="blakk">capacités</div>
+					<select>
+						<option>groz'yeux</option>
+						<option>picpic</option>
+						<option>puissance</option>
+						<option>double-pied</option>
+						<option>dard-venin</option>
+						<option>furie</option>
+						<option>koud'korne</option>
+						<option>coup d'main</option>
+						<option>pics toxik</option>
+						<option>flatterie</option>
+						<option>direct toxik</option>
+						<option>coupe (cs)</option>
+						<option>force (cs)</option>
+					</select>
+				</td>
+
+				<td class="log">
+					<div class="bloc">
+						<div class="left">28/08</div>
+						<div class="right">ajout de nidoran</div>
+						<div class="clear"></div>
+					</div>
+				</td>
+			</tr>
+		</table>
+	</div>
+	</DIV>
+
+	<!-- FIN NIDORAN -->
+
+
+
+	<!-- VENIPATTe -->
+
+	<DIV id="pkm7" class="pkm hide">
+	<div class="pokedata">
+		<table>
+			<tr>
+				<td>
+					<a target="_blank" href="http://www.pokepedia.fr/Venipatte">
+						<div class="sprite">
+							<img src="http://www.pokepedia.fr/images/2/23/Sprite_5_n_543.png">
+						</div>
+					</a>
+
+					<div class="pkmstats">
+						<table>
+							<tr>
+								<td>pv</td>
+								<td class="pad black">30</td>
+								<td>def</td>
+								<td class="pad black">59</td>
+								<td>spe</td>
+								<td class="black">39</td>
+							</tr>
+							<tr>
+								<td>vit</td>
+								<td class="pad black">57</td>
+								<td>atk</td>
+								<td class="pad black">45</td>
+								<td>spe</td>
+								<td class="black">30</td>
+							</tr>
+						</table>
+
+						<div class="statpc"><span class="black">0</span> duel
+						<br><span class="black">2</span> athlétisme
+						<br><span class="black">0</span> recherche
+						<br><span class="black">0</span> beauté</div>
+					</div>
+				</td>
+
+				<td>
+					<div class="pkmid">
+						<span class="caps">espèce :</span> venipatte
+						<br><span class="caps">sexe :</span> mâle
+						<br><span class="caps">chromatique :</span> non
+						<br><span class="caps">caché :</span> non
+						<br><span class="caps">type :</span> inceste / poison
+					</div>
+
+					<div class="pkmdesc">
+						uc.
+					</div>
+				</td>
+			</tr>
+		</table>
+	</div>
+
+	<div class="pokedata">
+		<table>
+			<tr>
+				<td class="talent">
+						<div class="blakk">turbo</div>
+						augmente la vitesse à chaque tour</td>
+				</td>
+
+				<td class="moves">
+					<div class="blakk">capacités</div>
+					<select>
+						<option>boul'armure</option>
+						<option>roulade</option>
+						<option>dard-venin</option>
+						<option>grincement</option>
+						<option>poursuite</option>
+						<option>abri</option>
+						<option>queue-poison</option>
+						<option>piqûre</option>
+						<option>choc venin</option>
+						<option>hâte</option>
+						<option>bulldoboule</option>
+						<option>toxik</option>
+						<option>piège de venin</option>
+						<option>escalade</option>
+					</select>
+				</td>
+
+				<td class="log">
+					<div class="bloc">
+						<div class="left">xx/xx</div>
+						<div class="right">ajout de venipatte</div>
+						<div class="clear"></div>
+					</div>
+				</td>
+			</tr>
+		</table>
+	</div>
+	</DIV>
+
+	<!-- FIN VENIPATTE -->
+
+
+
+	<!-- SMOGOGO -->
+
+	<DIV id="pkm8" class="pkm hide">
+	<div class="pokedata">
+		<table>
+			<tr>
+				<td>
+					<a target="_blank" href="http://www.pokepedia.fr/Smogogo">
+						<div class="sprite">
+							<img src="http://www.pokepedia.fr/images/b/bf/Sprite_4_o_110.png">
+						</div>
+					</a>
+
+					<div class="pkmstats">
+						<table>
+							<tr>
+								<td>pv</td>
+								<td class="pad black">65</td>
+								<td>def</td>
+								<td class="pad black">120</td>
+								<td>spe</td>
+								<td class="black">70</td>
+							</tr>
+							<tr>
+								<td>vit</td>
+								<td class="pad black">60</td>
+								<td>atk</td>
+								<td class="pad black">90</td>
+								<td>spe</td>
+								<td class="black">85</td>
+							</tr>
+						</table>
+
+						<div class="statpc"><span class="black">0</span> duel
+						<br><span class="black">2</span> athlétisme
+						<br><span class="black">0</span> recherche
+						<br><span class="black">0</span> beauté</div>
+					</div>
+				</td>
+
+				<td>
+					<div class="pkmid">
+						<span class="caps">espèce :</span> smogogo
+						<br><span class="caps">sexe :</span> mâle
+						<br><span class="caps">chromatique :</span> non
+						<br><span class="caps">caché :</span> oui (abri)
+						<br><span class="caps">type :</span> poison
+					</div>
+
+					<div class="pkmdesc">
+						uc.
+					</div>
+				</td>
+			</tr>
+		</table>
+	</div>
+
+	<div class="pokedata">
+		<table>
+			<tr>
+				<td class="talent">
+						<div class="blakk">lévitation</div>
+						immunité aux capacités de type sol</td>
+				</td>
+
+				<td class="moves">
+					<div class="blakk">capacités</div>
+					<select>
+						<option>gaz toxik</option>
+						<option>charge</option>
+						<option>purédpois</option>
+						<option>brouillard</option>
+						<option>assurance</option>
+						<option>bain de smog</option>
+						<option>détritus</option>
+						<option>destruction</option>
+						<option>buée noire</option>
+						<option>coup double</option>
+						<option>bomb-beurk</option>
+						<option>explosion</option>
+						<option>abri (caché)</option>
+					</select>
+				</td>
+
+				<td class="log">
+					<div class="bloc">
+						<div class="left">29/08</div>
+						<div class="right">ajout de smogogo</div>
+						<div class="clear"></div>
+					</div>
+				</td>
+			</tr>
+		</table>
+	</div>
+	</DIV>
+
+	<!-- FIN SMOGOGO -->
+
+
+
+	<!-- PKM 9 -->
+
+	<DIV id="pkm9" class="pkm hide">
+	<div class="pokedata">
+		<table>
+			<tr>
+				<td>
+					<a target="_blank" href="www">
+						<div class="sprite">
+							<img src="">
+						</div>
+					</a>
+
+					<div class="pkmstats">
+						<table>
+							<tr>
+								<td>pv</td>
+								<td class="pad black">00</td>
+								<td>def</td>
+								<td class="pad black">00</td>
+								<td>spe</td>
+								<td class="black">00</td>
+							</tr>
+							<tr>
+								<td>vit</td>
+								<td class="pad black">00</td>
+								<td>atk</td>
+								<td class="pad black">00</td>
+								<td>spe</td>
+								<td class="black">00</td>
+							</tr>
+						</table>
+
+						<div class="statpc"><span class="black">0</span> duel
+						<br><span class="black">2</span> athlétisme
+						<br><span class="black">0</span> recherche
+						<br><span class="black">0</span> beauté</div>
+					</div>
+				</td>
+
+				<td>
+					<div class="pkmid">
+						<span class="caps">espèce :</span> 
+						<br><span class="caps">sexe :</span> 
+						<br><span class="caps">chromatique :</span> 
+						<br><span class="caps">caché :</span> 
+						<br><span class="caps">type :</span> 
+					</div>
+
+					<div class="pkmdesc">
+						uc.
+					</div>
+				</td>
+			</tr>
+		</table>
+	</div>
+
+	<div class="pokedata">
+		<table>
+			<tr>
+				<td class="talent">
+						<div class="blakk">talent</div>
+						description du talent</td>
+				</td>
+
+				<td class="moves">
+					<div class="blakk">capacités</div>
+					<select>
+						<option>uc.</option>
+					</select>
+				</td>
+
+				<td class="log">
+					<div class="bloc">
+						<div class="left">00/00</div>
+						<div class="right">ajout de ???</div>
+						<div class="clear"></div>
+					</div>
+				</td>
+			</tr>
+		</table>
+	</div>
+	</DIV>
+
+	<!-- FIN PKM 9 -->
+
+
+
+	<!-- PKM 10 -->
+
+	<DIV id="pkm10" class="pkm hide">
+	<div class="pokedata">
+		<table>
+			<tr>
+				<td>
+					<a target="_blank" href="www">
+						<div class="sprite">
+							<img src="">
+						</div>
+					</a>
+
+					<div class="pkmstats">
+						<table>
+							<tr>
+								<td>pv</td>
+								<td class="pad black">00</td>
+								<td>def</td>
+								<td class="pad black">00</td>
+								<td>spe</td>
+								<td class="black">00</td>
+							</tr>
+							<tr>
+								<td>vit</td>
+								<td class="pad black">00</td>
+								<td>atk</td>
+								<td class="pad black">00</td>
+								<td>spe</td>
+								<td class="black">00</td>
+							</tr>
+						</table>
+
+						<div class="statpc"><span class="black">0</span> duel
+						<br><span class="black">2</span> athlétisme
+						<br><span class="black">0</span> recherche
+						<br><span class="black">0</span> beauté</div>
+					</div>
+				</td>
+
+				<td>
+					<div class="pkmid">
+						<span class="caps">espèce :</span> 
+						<br><span class="caps">sexe :</span> 
+						<br><span class="caps">chromatique :</span> 
+						<br><span class="caps">caché :</span> 
+						<br><span class="caps">type :</span> 
+					</div>
+
+					<div class="pkmdesc">
+						uc.
+					</div>
+				</td>
+			</tr>
+		</table>
+	</div>
+
+	<div class="pokedata">
+		<table>
+			<tr>
+				<td class="talent">
+						<div class="blakk">talent</div>
+						description du talent</td>
+				</td>
+
+				<td class="moves">
+					<div class="blakk">capacités</div>
+					<select>
+						<option>uc.</option>
+					</select>
+				</td>
+
+				<td class="log">
+					<div class="bloc">
+						<div class="left">00/00</div>
+						<div class="right">ajout de ???</div>
+						<div class="clear"></div>
+					</div>
+				</td>
+			</tr>
+		</table>
+	</div>
+	</DIV>
+
+	<!-- FIN PKM 10 -->
+
+
+
+	<!-- ANCIENS PKM -->
+
+	<div class="cathead">anciens pokémon</div>
+
+	<div class="oldpkm">
+		<div class="pokedata2" id="pkma1">
+			<table>
+				<tr>
+					<td>
+						<div class="sprite">
+							<img src="http://www.pokepedia.fr/images/6/6a/Sprite_5_n_606.png">
+						</div>
+					</td>
+
+					<td>
+						<div class="pkmid" style="border: none;">
+							<span class="caps">neitram</span>
+							<br><a target="_blank" href="http://pokemoncommunity.forumactif.org/t4310-sc-noel-2015-don-t-tell-me-to-be-quiet-termine"><span class="caps">capturé</span> pendant la <span class="caps">SC noël 2015</span>.</a>
+							<br><a target="_blank" href="http://pokemoncommunity.forumactif.org/t4546-we-headed-to-the-after-party#46723"><span class="caps">offert</span> à <span class="caps">sirius</span>.</a>
+						</div>
+					</td>
+				</tr>
+			</table>
+		</div>
+
+		<div class="pokedata2 hide" id="pkma2">
+			<table>
+				<tr>
+					<td>
+						<div class="sprite">
+							<img src="http://www.pokepedia.fr/images/1/1a/Sprite_5_n_546.png">
+						</div>
+					</td>
+
+					<td>
+						<div class="pkmid" style="border: none;">
+							<span class="caps">doudouvet</span>
+							<br><a target="_blank" href="http://pokemoncommunity.forumactif.org/t4701-17-je-n-ai-pas-le-temps-de-douter-termine"><span class="caps">capturé</span> pendant la <span class="caps">SC #17</span>.</a>
+							<br><a target="_blank" href="http://pokemoncommunity.forumactif.org/t4754-le-fluff-apres-l-orage-obeline"><span class="caps">offert</span> à <span class="caps">obéline</span>.</a>
+						</div>
+					</td>
+				</tr>
+			</table>
+		</div>
+
+		<div class="pokedata2 hide" id="pkma3">
+			<table>
+				<tr>
+					<td>
+						<div class="sprite">
+							<img src="">
+						</div>
+					</td>
+
+					<td>
+						<div class="pkmid" style="border: none;">
+							<span class="caps">uc.</span>
+						</div>
+					</td>
+				</tr>
+			</table>
+		</div>
+
+		<div class="pokedata2 hide" id="pkma4">
+			<table>
+				<tr>
+					<td>
+						<div class="sprite">
+							<img src="">
+						</div>
+					</td>
+
+					<td>
+						<div class="pkmid" style="border: none;">
+							<span class="caps">uc.</span>
+						</div>
+					</td>
+				</tr>
+			</table>
+		</div>
+
+		<div class="pokedata2 hide" id="pkma5">
+			<table>
+				<tr>
+					<td>
+						<div class="sprite">
+							<img src="">
+						</div>
+					</td>
+
+					<td>
+						<div class="pkmid" style="border: none;">
+							<span class="caps">uc.</span>
+						</div>
+					</td>
+				</tr>
+			</table>
+		</div>
+
+		<div class="pokedata2 hide" id="pkma6">
+			<table>
+				<tr>
+					<td>
+						<div class="sprite">
+							<img src="">
+						</div>
+					</td>
+
+					<td>
+						<div class="pkmid" style="border: none;">
+							<span class="caps">uc.</span>
+						</div>
+					</td>
+				</tr>
+			</table>
+		</div>
+
+		<div class="pokelist2">
+			<table>
+				<tr>
+					<td>
+						<div id="a1" class="pkmicon">
+							<img src="http://www.pokepedia.fr/images/f/f0/Miniat_6_x_606.png">
+						</div>
+					</td>
+
+					<td>
+						<div id="a2" class="pkmicon">
+							<img src="http://www.pokepedia.fr/images/4/48/Miniat_6_x_546.png">
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<div id="a3" class="pkmicon" style="padding: 7px;">
+							<img src="http://www.pokepedia.fr/images/f/f2/Honor_Ball.png">
+						</div>
+					</td>
+
+					<td>
+						<div id="a4" class="pkmicon" style="padding: 7px;">
+							<img src="http://www.pokepedia.fr/images/f/f2/Honor_Ball.png">
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<div id="a5" class="pkmicon" style="padding: 7px;">
+							<img src="http://www.pokepedia.fr/images/f/f2/Honor_Ball.png">
+						</div>
+					</td>
+
+					<td>
+						<div id="a6" class="pkmicon" style="padding: 7px;">
+							<img src="http://www.pokepedia.fr/images/f/f2/Honor_Ball.png">
+						</div>
+					</td>
+				</tr>
+			</table>
+		</div>
+
+		<div class="clear"></div>
+	</div>
+
+	<!-- FIN ANCIENS PKM -->
+
+</DIV>
+
+</body>
