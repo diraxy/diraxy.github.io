@@ -1,0 +1,403 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+
+<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+<script>
+			// JavaScript Document
+
+	$(document).ready(function(){
+
+		// ONGLETS POKEMON
+	
+	$("#1").click(function(){
+		$(".data").addClass("hide");
+		$("#data1").removeClass("hide");
+		});
+
+	$("#2").click(function(){
+		$(".data").addClass("hide");
+		$("#data2").removeClass("hide");
+		});
+
+	$("#3").click(function(){
+		$(".data").addClass("hide");
+		$("#data3").removeClass("hide");
+		});
+
+	$("#4").click(function(){
+		$(".data").addClass("hide");
+		$("#data4").removeClass("hide");
+		});
+	
+	});
+
+</script>
+
+
+<!-- CSS -->
+
+<style>
+	
+	body {
+		font-family: arial;
+		color: #808080;
+		font-size: 12px;
+		text-align:justify;
+		background: #F4F4F4;
+	}
+
+	body a { text-decoration: none; color: inherit; }
+
+
+
+	/* scrollbar */
+
+	::-webkit-scrollbar {
+   width: 5px;
+   height: 10px;
+  -webkit-border-radius: 10px;
+}
+ 
+::-webkit-scrollbar-track-piece  {
+   background-color: #F3F3F3;
+}
+ 
+::-webkit-scrollbar-thumb:vertical {
+   height: 30px;
+        -webkit-border-radius: 10px;
+   background-color: #7594d4;
+}
+ 
+::-webkit-scrollbar-thumb:horizontal{
+   height: 30px;
+        -webkit-border-radius: 10px;
+   background-color: #7594d4;
+}
+
+	/* FIN scrollbar */
+
+	.caps {
+		text-transform: uppercase;
+		font-size: 9px;
+		font-weight: bold;
+	}
+
+	.title {
+		border-bottom: 1px solid #F2F2F2;
+		padding-bottom: 2px;
+		margin-bottom: 5px;
+		text-align: center;
+	}
+
+	.black { color: black; }
+
+	.blakk {
+		color: black;
+		text-transform: uppercase;
+		font-size: 9px;
+		font-weight: bold;
+		letter-spacing: 1px;
+	}
+
+	.nav {
+		text-align: center;
+		margin: auto;
+		margin-bottom: -10px;
+		width: 550px;
+	}
+
+	.box {
+		background: #FFF;
+		border: 10px solid #F9F9F9;
+		padding: 10px;
+		width: 455px;
+		margin: auto;
+		color: #808080;
+		margin-top: 20px;
+	}
+
+	.alex {
+		float: left;
+		width: 160px;
+		text-align: center;
+		border-right: 1px solid #F9F9F9;
+	}
+
+	.alex img {
+		border-radius: 100px;
+		-moz-border-radius: 100px;
+		-o-border-radius: 100px;
+		-webkit-border-radius: 100px;
+	}
+
+	.alex .name {
+		text-align: center;
+		margin-top: 20px;
+		line-height: 13px;
+		color: black;
+		text-transform: uppercase;
+		font-size: 9px;
+		font-weight: bold;
+	}
+
+	.alex .id {
+		margin-top: 15px;
+		line-height: 14px;
+		color: #B9B9B9;
+		text-transform: uppercase;
+		font-size: 9px;
+		text-align: justify;
+	}
+
+	.profile {
+		float: left;
+		width: 275px;
+		font-size: 11px;
+		margin-left: 15px;
+	}
+
+	.icons {
+		text-align: center;
+		height: 89px;
+		overflow: auto;
+		margin-top: 10px;
+	}
+
+	.icons img {
+		width: 85px;
+		padding: 1px;
+	}
+
+	.menu {
+		float: left;
+		width: 80px;
+		line-height: 15px;
+		text-align: right;
+	}
+
+	.menu div {
+		cursor: pointer;
+	}
+
+	.data {
+		float: left;
+		width: 350px;
+		margin-left: 10px;
+		border-left: 1px solid #F9F9F9;
+		padding-left: 10px;
+		font-size: 11px;
+	}
+
+	.log {
+		text-transform: lowercase;
+		margin-top: 10px;
+		height: 206px;
+		overflow: auto;
+		padding-right: 10px;
+	}
+
+	.clear { clear: both; }
+
+	.hide { display: none; }
+
+
+
+</style>
+
+</head>
+
+
+<!-- HTML -->
+
+<body>
+
+<DIV>
+
+	<div class="nav blakk">
+		<a target="_blank" href="http://pokemoncommunity.forumactif.org/t3913-0283-alex-j-lovell-how-can-you-expect-to-be-taken-seriously-givrali">présentation</a> /
+
+		pokémon /
+
+		roleplays /
+
+		relations /
+
+		autres
+	</div>
+
+	<div class="box">
+		<div class="alex">
+			<img src="http://i.imgur.com/Zjyn6AQ.png">
+			<div class="name">alex jim lovell</div>
+
+			<div class="id">
+				<span class="blakk">âge /</span> 16 ans
+				<br><span class="blakk">anniversaire /</span> 17 avril
+				<br><span class="blakk">origine /</span> lavanville
+				<br><span class="blakk">N.ID /</span> 0283
+				<br><span class="blakk">dortoir /</span> givrali
+				<br><span class="blakk">colocataire /</span> max arago
+				<br><span class="blakk">parcours 1 /</span> pokéathlète
+				<br><span class="blakk">spé. 1 /</span> coach
+				<br><span class="blakk">parcours 2 /</span> aucun
+				<br><span class="blakk">spé. 2 /</span> aucun
+				<br><span class="blakk">promotion /</span> sept. 2015
+				<br><span class="blakk">clubs /</span> arborescence
+			</div>
+		</div>
+
+		<div class="profile">
+			Alex est une ado clichée et superficielle. Du moins au premier abord. Svelte et tonique, de longs cheveux raides entre le roux et le blond vénitien, des yeux d'un bleu électrique, un maquillage impeccable, et un style vestimentaire étudié ; Alex soigne les apparences et ça se voit. Elle est complexée et obsédée par le regard des autres, par ce qu'on va penser d'elle. Elle rêve d'être la fille populaire qui ne fait jamais un pas de travers, mais elle en est loin. Sa réputation n'est pas ce qu'elle devrait être. Alex, elle compense ses insécurités par une grande gueule qu'elle ouvre presque malgré elle. Elle a du mal à être honnête avec ses sentiments. Elle se donne des airs, une contenance, et joue farouche la fille sûre d'elle et indépendante, mais en vrai elle est perdue. Elle vient tout juste d'admettre qu'elle était bi, et s'est même trouvée une copine. Peut-être que ça l'aidera un peu à s'assumer.
+
+			<div class="icons">
+				<img src="http://s16.postimg.org/93jqymhb5/corneal_evangelion006.png?noCache=1446203093">
+
+				<img src="http://s16.postimg.org/93jqymhb5/corneal_evangelion006.png?noCache=1446203093">
+
+				<img src="http://s16.postimg.org/93jqymhb5/corneal_evangelion006.png?noCache=1446203093">
+
+				<img src="http://s16.postimg.org/93jqymhb5/corneal_evangelion006.png?noCache=1446203093">
+
+				<img src="http://s16.postimg.org/93jqymhb5/corneal_evangelion006.png?noCache=1446203093">
+
+				<img src="http://s16.postimg.org/93jqymhb5/corneal_evangelion006.png?noCache=1446203093">
+			</div>
+		</div>
+
+		<div class="clear"></div>
+	</div>
+
+	<div class="box">
+		<div class="menu blakk">
+			<div id="1">mises à jour</div>
+			<div id="2">progression</div>
+			<div id="3">jetons</div>
+			<div id="4">cs</div>
+		</div>
+
+		<div class="data" id="data1">
+			dernière màj : <span class="blakk">???</span>
+
+			<div class="log">
+				<span class="blakk">16/09</span> validation, obtention de fantominus
+				<span class="blakk">03/10</span> +2 pokéballs
+				(don de Merri)
+				<span class="blakk">06/10</span> -1 pokéball
+				(SC #16)
+				<span class="blakk">06/10</span> capture de nucléos
+				(SC #16)
+				<span class="blakk">08/10</span> Pokéathlète Grade 0
+				+ Foulard SPEEDY
+				<span class="blakk">19/11</span> + mini-costume d'halloween
+				(+1 beauté)
+				<span class="blakk">25/11</span> + oeuf de kangourex
+				(-1000 jetons)
+				<span class="blakk">04/12</span> + bonus capture #1
+				(event thanksgiving)
+				<span class="blakk">05/12</span> + 4 pokéballs
+				(-300 jetons)
+				<span class="blakk">05/12</span> - 2 pokéballs
+				(don à merri)
+				<span class="blakk">06/12</span> -1 pokéball, - bonus capture #1
+				(SC de Noël)
+				<span class="blakk">07/12</span> capture de neitram
+				(SC de Noël)
+				<span class="blakk">13/12</span> Grade 1 : Coach
+				+ CT06 Toxik
+				+ Orbe Vie
+				+ Lot de musculation
+				<span class="blakk">20/12</span>+1 écaillecoeur rose
+				+1 ruban halloween
+				Event Halloween
+				<span class="blakk">déc.</span> Boutique de Noël
+				+1 baie Nanab (Alban)
+				+1 baie Lingan (Alban)
+				+1 baie Ceriz (Alban)
+				+1 écaillercoeur rose (Sirius)
+				+5 pokéballs (Callie)
+				+2 superballs (Callie)
+				+3 pokéballs (Paul)
+				+1 écaillecoeur rose (Hazel)
+				+5 pokéballs (Ren)
+				+2 superballs (Ren)
+				+1 écaillecoeur rose (Max)
+				+1 écaillecoeur rose (Aaron)
+				+1 objet évolutif au choix (pierre lune) (moi-même)
+				+1 ruban de noël (moi-même)
+				+3 pokéballs (Caël)
+				<span class="blakk">23/12</span> obtention de florizarre
+				(acheté à Haru)
+				<span class="blakk">19/01</span> -3 écaillecoeurs roses
+				<span class="blakk">07/02</span> -5 pokéballs (don à Hanaë)
+				<span class="blakk">08/02</span> capture de doudouvet
+				-1 pokéball
+				+1 baie oran
+				+1 baie pêcha
+				(SC #17)
+				<span class="blakk">20/02</span> +1 CT Danse Pluie
+				+1 CT Zénith
+				+1 CT Distorsion
+				(achats)
+				<span class="blakk">29/02</span> +1 pierre soleil
+				(event st valentin)
+				<span class="blakk">24/04</span> +1 pierre eau
+				(SC #18)
+				<span class="blakk">25/04</span> -5 pokéballs
+				(don à Luce)
+				<span class="blakk">26/04</span> +1 vive griffe
+				(event pâques)
+				<span class="blakk">10/05</span> -1 pierre soleil
+				(vendue à aileen)
+				<span class="blakk">10/05</span> -1 pierre eau
+				(vendue à dahlia)
+				<span class="blakk">01/07</span> achats boutique d'été
+				+1 foulard Touga
+				+1 pendentif Touga
+			</div>
+		</div>
+
+		<div class="data hide" id="data2">
+			<div class="title blakk">grade 0</div>
+			<input type="checkbox" checked> niveau 2
+
+			<div class="title blakk" style="margin-top: 20px;">grade 1</div>
+			<input type="checkbox" checked> niveau 10<br>
+			<input type="checkbox" checked> 1 event<br>
+			<input type="checkbox" checked> 1 cours<br>
+			<input type="checkbox" checked> 2 pokémon
+
+			<div class="title blakk" style="margin-top: 20px;">grade 2</div>
+			<input type="checkbox" checked> niveau 20<br>
+			<input type="checkbox" checked> 3 events<br>
+			<input type="checkbox"> 3 cours (1 spé, 1 normal)<br>
+			<input type="checkbox"> 2 missions (1 spé)<br>
+			<input type="checkbox" checked> 4 pokémon
+		</div>
+
+		<div class="data hide" id="data3">
+			uc.
+		</div>
+
+		<div class="data hide" id="data4">
+			<input type="checkbox"> <span class="blakk">vol</span><br>
+
+			<input type="checkbox" checked> <span class="blakk">surf</span> / dernère utilisation <span class="black">00/00</span><br>
+
+			<input type="checkbox" checked> <span class="blakk">force</span> / dernère utilisation <span class="black">00/00</span><br>
+
+			<input type="checkbox" checked> <span class="blakk">coupe</span> / dernère utilisation <span class="black">00/00</span><br>
+
+			<input type="checkbox" checked> <span class="blakk">cascade</span> / dernère utilisation <span class="black">00/00</span><br>
+
+			<input type="checkbox" checked> <span class="blakk">plongée</span> / dernère utilisation <span class="black">00/00</span>
+		</div>
+
+		<div class="clear"></div>
+	</div>
+
+</DIV>
+
+</body>
