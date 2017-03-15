@@ -1,0 +1,794 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+
+<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+<script>
+			// JavaScript Document
+	$(document).ready(function(){
+		// ONGLETS POKEMON
+	
+	$("#1").click(function(){
+		$(".pkm").addClass("hide");
+		$("#pkm1").removeClass("hide");
+		});
+	$("#2").click(function(){
+		$(".pkm").addClass("hide");
+		$("#pkm2").removeClass("hide");
+		});
+	$("#3").click(function(){
+		$(".pkm").addClass("hide");
+		$("#pkm3").removeClass("hide");
+		});
+	$("#4").click(function(){
+		$(".pkm").addClass("hide");
+		$("#pkm4").removeClass("hide");
+		});
+	$("#5").click(function(){
+		$(".pkm").addClass("hide");
+		$("#pkm5").removeClass("hide");
+		});
+	$("#6").click(function(){
+		$(".pkm").addClass("hide");
+		$("#pkm6").removeClass("hide");
+		});
+	$("#7").click(function(){
+		$(".pkm").addClass("hide");
+		$("#pkm7").removeClass("hide");
+		});
+	$("#8").click(function(){
+		$(".pkm").addClass("hide");
+		$("#pkm8").removeClass("hide");
+		});
+	$("#9").click(function(){
+		$(".pkm").addClass("hide");
+		$("#pkm9").removeClass("hide");
+		});
+	$("#10").click(function(){
+		$(".pkm").addClass("hide");
+		$("#pkm10").removeClass("hide");
+		});
+	// AUTRES POKEMON
+	$("#a1").click(function(){
+		$(".pokedata2").addClass("hide");
+		$("#pkma1").removeClass("hide");
+		});
+	$("#a2").click(function(){
+		$(".pokedata2").addClass("hide");
+		$("#pkma2").removeClass("hide");
+		});
+	$("#a3").click(function(){
+		$(".pokedata2").addClass("hide");
+		$("#pkma3").removeClass("hide");
+		});
+	$("#a4").click(function(){
+		$(".pokedata2").addClass("hide");
+		$("#pkma4").removeClass("hide");
+		});
+	
+	});
+</script>
+
+
+<!-- CSS -->
+
+<style>
+	
+	body {
+		font-family: arial;
+		color: #808080;
+		font-size: 12px;
+		text-align:justify;
+		background: #F4F4F4;
+	}
+	body a { text-decoration: none; color: inherit; }
+	/* scrollbar */
+	::-webkit-scrollbar {
+   width: 5px;
+   height: 10px;
+  -webkit-border-radius: 10px;
+}
+ 
+::-webkit-scrollbar-track-piece  {
+   background-color: #F3F3F3;
+}
+ 
+::-webkit-scrollbar-thumb:vertical {
+   height: 30px;
+        -webkit-border-radius: 10px;
+   background-color: #7594d4;
+}
+ 
+::-webkit-scrollbar-thumb:horizontal{
+   height: 30px;
+        -webkit-border-radius: 10px;
+   background-color: #7594d4;
+}
+	/* FIN scrollbar */
+	.caps {
+		text-transform: uppercase;
+		font-size: 10px;
+		font-weight: bold;
+	}
+	.cathead {
+		margin: auto;
+		font-size: 24px;
+		text-transform: uppercase;
+		color: white;
+		text-align: center;
+		font-weight: bold;
+		text-shadow: 1px 1px 1px gainsboro;
+		margin-top: 30px;
+		border-bottom: 1px solid white;
+		padding-bottom: 3px;
+		width: 500px;
+	}
+	.pkmicon {
+		background: white;
+		border-radius: 100px;
+		-moz-border-radius: 100px;
+		-o-border-radius: 100px;
+		-webkit-border-radius: 100px;
+		padding: 3px;
+		margin: 3px;
+		cursor: pointer;
+	}
+	.pokelist {
+		margin: auto;
+	}
+	.pokelist table {
+		margin: auto;
+	}
+	.pokelist2 {
+		width: 100px;
+		float: left;
+		margin-left: 10px;
+		margin-top: 20px;
+	}
+	.pokelist2 table {
+		margin: auto;
+	}
+	.pokedata {
+		background: #FFF;
+		border: 10px solid #F9F9F9;
+		padding: 10px;
+		width: 455px;
+		margin: auto;
+		color: #808080;
+		margin-top: 20px;
+	}
+	.pokedata2 {
+		background: #FFF;
+		border: 10px solid #F9F9F9;
+		padding: 10px;
+		width: 345px;
+		margin: auto;
+		color: #808080;
+		margin-top: 20px;
+		float: left;
+	}
+	.pokedata .sub {
+		text-transform: uppercase;
+		font-size: 10px;
+		letter-spacing: 2px;
+		border-bottom: 1px solid #F9F9F9;
+		padding-bottom: 5px;
+		margin-bottom: 5px;
+		color: #E9E9E9;
+	}
+	.sprite {
+		background: #F4F4F4;
+		border-radius: 100px;
+		-moz-border-radius: 100px;
+		-o-border-radius: 100px;
+		-webkit-border-radius: 100px;
+		width: 100px;
+		height: 100px;
+		margin: auto;
+		text-align: center;
+	}
+	.pkmstats {
+		font-size: 9px;
+		font-weight: bold;
+		text-transform: uppercase;
+		margin-top: 20px;
+	}
+	.pad { padding-right: 5px; }
+	.black { color: black; }
+	.blakk {
+		color: black;
+		text-transform: uppercase;
+		font-size: 9px;
+		font-weight: bold;
+		letter-spacing: 1px;
+	}
+	.statpc {
+		margin-top: 7px;
+		line-height: 13px;
+		margin-left: 20px;
+		letter-spacing: 1px;
+	}
+	.pkmid {
+		text-transform: uppercase;
+		font-size: 9px;
+		font-weight: bold;
+		letter-spacing: 1px;
+		line-height: 15px;
+		margin: auto;
+		margin-left: 20px;
+		border-bottom: 1px solid #F2F2F2;
+		width: 320px;
+		padding-bottom: 5px;
+	}
+	.pkmid .caps {
+		color: black;
+		font-size: 9px;
+	}
+	.pkmdesc {
+		font-size: 11px;
+		margin-left: 20px;
+		margin-top: 10px;
+		width: 310px;
+		height: 120px;
+		overflow: auto;
+		padding-right: 10px;
+	}
+	.talent {
+		margin: auto;
+		font-size: 11px;
+		width: 70px;
+		padding-right: 15px;
+		border-right: 1px solid #F2F2F2;
+	}
+	.talent .blakk { padding-bottom: 5px; }
+	.moves {
+		padding-right: 15px;
+		padding-left: 15px;
+		border-right: 1px solid #F2F2F2;
+		font-size: 11px;
+		line-height: 13px;
+		text-align: center;
+	}
+	.moves .blakk { padding-bottom: 5px; }
+	select {
+		width: 120px;
+		text-transform: uppercase;
+		font-weight: bold;
+		font-size: 9px;
+	}
+	.title {
+		border-bottom: 1px solid #F2F2F2;
+		padding-bottom: 2px;
+		margin-bottom: 5px;
+		text-align: center;
+	}
+	.log {
+		padding-left: 15px;
+	}
+	.log .title { margin-bottom: 10px; }
+	.log .bloc {
+		height: 70px;
+		overflow: auto;
+		width: 200px;
+	}
+	.left {
+		float: left;
+		color: black;
+		font-size: 9px;
+		font-weight: bold;
+		width: 35px;
+		padding-top: 2px;
+	}
+	.right {
+		float: left;
+		width: 150px;
+		font-size: 11px;
+		padding-bottom: 7px;
+	}
+	.oldpkm {
+		margin: auto;
+		width: 500px;
+	}
+	.clear { clear: both; }
+	.hide { display: none; }
+</style>
+
+</head>
+
+
+<!-- HTML -->
+
+<body>
+
+<DIV>
+
+	<!-- INFOS HRP -->
+
+	<div class="pokedata" style="margin-bottom: 20px; line-height: 13px;">
+		<table style="margin: auto;">
+			<tr>
+				<td class="pkmstats">
+					<span class="blakk">total de points :</span> 10
+					<br><span class="blakk">points utilisés :</span> 00
+					<br><span class="blakk">points restants :</span> 10
+				</td>
+
+				<td class="pkmstats" style="padding-left: 30px;">
+					<span class="blakk">dernière demande d'évolution :</span> jamaix <a target="_blank" href="www">(www)</a>
+					<br><span class="blakk">dernière évolution :</span> jamais <a target="_blank" href="www">(www)</a>
+					<br><span class="blakk">dernier achat d'oeuf :</span> jamais <a target="_blank" href="www">(www)</a>
+				</td>
+			</tr>
+		</table>
+	</div>
+
+	<!-- FIN INFOS HRP -->
+
+
+
+
+	<!-- LISTE POKEMON -->
+
+	<div class="pokelist">
+		<table>
+			<tr>
+				<td>
+					<div id="1" class="pkmicon">
+						<img src="http://i.imgur.com/ssGQ8yK.png">
+					</div>
+				</td>
+
+				<td>
+					<div id="2" class="pkmicon">
+						<img src="">
+					</div>
+				</td>
+			</tr>
+		</table>
+	</div>
+
+
+
+	<!-- PIJAKO -->
+
+	<DIV id="pkm1" class="pkm">
+	<div class="pokedata">
+		<table>
+			<tr>
+				<td>
+					<a target="_blank" href="http://www.pokepedia.fr/Pijako">
+						<div class="sprite">
+							<img src="http://i.imgur.com/ssGQ8yK.png">
+						</div>
+					</a>
+
+					<div class="pkmstats">
+						<table>
+							<tr>
+								<td>pv</td>
+								<td class="pad black">76</td>
+								<td>def</td>
+								<td class="pad black">45</td>
+								<td>spe</td>
+								<td class="black">42</td>
+							</tr>
+							<tr>
+								<td>vit</td>
+								<td class="pad black">91</td>
+								<td>atk</td>
+								<td class="pad black">65</td>
+								<td>spe</td>
+								<td class="black">92</td>
+							</tr>
+						</table>
+
+						<div class="statpc"><span class="black">0</span> duel
+						<br><span class="black">0</span> athlétisme
+						<br><span class="black">0</span> recherche
+						<br><span class="black">0</span> beauté</div>
+					</div>
+				</td>
+
+				<td>
+					<div class="pkmid">
+            <span class="caps">surnom :</span> capella
+						<br><span class="caps">espèce :</span> pijako
+						<br><span class="caps">sexe :</span> femelle
+						<br><span class="caps">chromatique / cachée :</span> oui / non
+						<br><span class="caps">type :</span> normal / vol
+					</div>
+
+					<div class="pkmdesc">
+						Obtenue du <span class="blakk">Collectionneur</span> le <span class="blakk">01/09/2016</span>. De nature <span class="blakk">malpolie</span>. uc.
+					</div>
+				</td>
+			</tr>
+		</table>
+	</div>
+
+	<div class="pokedata">
+		<table>
+			<tr>
+				<td class="talent">
+						<div class="blakk">regard vif</div>
+						empêche la diminution de la précision</td>
+				</td>
+
+				<td class="moves">
+					<div class="blakk">capacités</div>
+					<select>
+						<option>confidence</option>
+						<option>picpic</option>
+						<option>babil</option>
+						<option>provoc</option>
+						<option>mégaphone</option>
+						<option>rugissement</option>
+						<option>mimique</option>
+						<option>berceuse</option>
+						<option>furie</option>
+					</select>
+				</td>
+
+				<td class="log">
+					<div class="bloc">
+						<div class="left">09/09</div>
+						<div class="right">ajout de Capella</div>
+						<div class="clear"></div>
+					</div>
+				</td>
+			</tr>
+		</table>
+	</div>
+	</DIV>
+
+	<!-- FIN PIJAKO -->
+
+
+
+	<!-- BEBECAILLE -->
+
+	<DIV id="pkm2" class="pkm hide">
+	<div class="pokedata">
+		<table>
+			<tr>
+				<td>
+					<a target="_blank" href="http://www.pokepedia.fr/Bébécaille">
+						<div class="sprite">
+							<img src="">
+						</div>
+					</a>
+
+					<div class="pkmstats">
+						<table>
+							<tr>
+								<td>pv</td>
+								<td class="pad black">45</td>
+								<td>def</td>
+								<td class="pad black">65</td>
+								<td>spe</td>
+								<td class="black">45</td>
+							</tr>
+							<tr>
+								<td>vit</td>
+								<td class="pad black">45</td>
+								<td>atk</td>
+								<td class="pad black">55</td>
+								<td>spe</td>
+								<td class="black">45</td>
+							</tr>
+						</table>
+
+						<div class="statpc"><span class="black">0</span> duel
+						<br><span class="black">0</span> athlétisme
+						<br><span class="black">0</span> recherche
+						<br><span class="black">0</span> beauté</div>
+					</div>
+				</td>
+
+				<td>
+					<div class="pkmid">
+            <span class="caps">surnom :</span> uc
+						<br><span class="caps">espèce :</span> bébécaille
+						<br><span class="caps">sexe :</span> mâle
+						<br><span class="caps">chromatique / caché :</span> oui / non
+						<br><span class="caps">type :</span> dragon
+					</div>
+
+					<div class="pkmdesc">
+						<span class="blakk">Capturé</span> le <span class="blakk">18/12/2016</span>. De nature <span class="blakk">hardie</span>. uc.
+
+						uc.
+					</div>
+				</td>
+			</tr>
+		</table>
+	</div>
+
+	<div class="pokedata">
+		<table>
+			<tr>
+				<td class="talent">
+						<div class="blakk">envelocape</div>
+						Neutralise les dégâts dus à la météo</td>
+				</td>
+
+				<td class="moves">
+					<div class="blakk">capacités</div>
+					<select>
+						<option>uc</option>
+					</select>
+				</td>
+
+				<td class="log">
+					<div class="bloc">
+						<div class="left">26/11</div>
+						<div class="right">ajout de bébécaille</div>
+						<div class="clear"></div>
+					</div>
+				</td>
+			</tr>
+		</table>
+	</div>
+	</DIV>
+
+	<!-- FIN BEBECAILLE -->
+  
+  
+  
+
+
+
+	<!-- PKM 3 -->
+
+	<DIV id="pkm3" class="pkm hide">
+	<div class="pokedata">
+		<table>
+			<tr>
+				<td>
+					<a target="_blank" href="www">
+						<div class="sprite">
+							<img src="">
+						</div>
+					</a>
+
+					<div class="pkmstats">
+						<table>
+							<tr>
+								<td>pv</td>
+								<td class="pad black">00</td>
+								<td>def</td>
+								<td class="pad black">00</td>
+								<td>spe</td>
+								<td class="black">00</td>
+							</tr>
+							<tr>
+								<td>vit</td>
+								<td class="pad black">00</td>
+								<td>atk</td>
+								<td class="pad black">00</td>
+								<td>spe</td>
+								<td class="black">00</td>
+							</tr>
+						</table>
+
+						<div class="statpc"><span class="black">0</span> duel
+						<br><span class="black">0</span> athlétisme
+						<br><span class="black">0</span> recherche
+						<br><span class="black">0</span> beauté</div>
+					</div>
+				</td>
+
+				<td>
+					<div class="pkmid">
+						<span class="caps">surnom :</span> 
+            <br><span class="caps">espèce :</span> 
+						<br><span class="caps">sexe :</span> 
+						<br><span class="caps">chromatique / caché :</span> 
+						<br><span class="caps">type :</span> 
+					</div>
+
+					<div class="pkmdesc">
+						uc.
+					</div>
+				</td>
+			</tr>
+		</table>
+	</div>
+
+	<div class="pokedata">
+		<table>
+			<tr>
+				<td class="talent">
+						<div class="blakk">talent</div>
+						description du talent</td>
+				</td>
+
+				<td class="moves">
+					<div class="blakk">capacités</div>
+					<select>
+						<option>uc.</option>
+					</select>
+				</td>
+
+				<td class="log">
+					<div class="bloc">
+						<div class="left">00/00</div>
+						<div class="right">ajout de ???</div>
+						<div class="clear"></div>
+					</div>
+				</td>
+			</tr>
+		</table>
+	</div>
+	</DIV>
+
+	<!-- FIN PKM 9 -->
+
+
+
+	<!-- ANCIENS PKM -->
+
+	<div class="cathead">anciens pokémon</div>
+
+	<div class="pokedata2 hide" id="pkma1">
+			<table>
+				<tr>
+					<td>
+						<div class="sprite">
+							<img src="">
+						</div>
+					</td>
+
+					<td>
+						<div class="pkmid" style="border: none;">
+							<span class="caps">uc.</span>
+						</div>
+					</td>
+				</tr>
+			</table>
+		</div>
+
+		<div class="pokedata2 hide" id="pkma2">
+			<table>
+				<tr>
+					<td>
+						<div class="sprite">
+							<img src="">
+						</div>
+					</td>
+
+					<td>
+						<div class="pkmid" style="border: none;">
+							<span class="caps">uc.</span>
+						</div>
+					</td>
+				</tr>
+			</table>
+		</div>
+
+		<div class="pokedata2 hide" id="pkma3">
+			<table>
+				<tr>
+					<td>
+						<div class="sprite">
+							<img src="">
+						</div>
+					</td>
+
+					<td>
+						<div class="pkmid" style="border: none;">
+							<span class="caps">uc.</span>
+						</div>
+					</td>
+				</tr>
+			</table>
+		</div>
+
+		<div class="pokedata2 hide" id="pkma4">
+			<table>
+				<tr>
+					<td>
+						<div class="sprite">
+							<img src="">
+						</div>
+					</td>
+
+					<td>
+						<div class="pkmid" style="border: none;">
+							<span class="caps">uc.</span>
+						</div>
+					</td>
+				</tr>
+			</table>
+		</div>
+
+		<div class="pokedata2 hide" id="pkma5">
+			<table>
+				<tr>
+					<td>
+						<div class="sprite">
+							<img src="">
+						</div>
+					</td>
+
+					<td>
+						<div class="pkmid" style="border: none;">
+							<span class="caps">uc.</span>
+						</div>
+					</td>
+				</tr>
+			</table>
+		</div>
+
+		<div class="pokedata2 hide" id="pkma6">
+			<table>
+				<tr>
+					<td>
+						<div class="sprite">
+							<img src="">
+						</div>
+					</td>
+
+					<td>
+						<div class="pkmid" style="border: none;">
+							<span class="caps">uc.</span>
+						</div>
+					</td>
+				</tr>
+			</table>
+		</div>
+
+		<div class="pokelist2">
+			<table>
+				<tr>
+					<td>
+						<div id="a1" class="pkmicon">
+							<img src="http://www.pokepedia.fr/images/f/f0/Miniat_6_x_606.png">
+						</div>
+					</td>
+
+					<td>
+						<div id="a2" class="pkmicon">
+							<img src="http://www.pokepedia.fr/images/4/48/Miniat_6_x_546.png">
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<div id="a3" class="pkmicon" style="padding: 7px;">
+							<img src="http://www.pokepedia.fr/images/f/f2/Honor_Ball.png">
+						</div>
+					</td>
+
+					<td>
+						<div id="a4" class="pkmicon" style="padding: 7px;">
+							<img src="http://www.pokepedia.fr/images/f/f2/Honor_Ball.png">
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<div id="a5" class="pkmicon" style="padding: 7px;">
+							<img src="http://www.pokepedia.fr/images/f/f2/Honor_Ball.png">
+						</div>
+					</td>
+
+					<td>
+						<div id="a6" class="pkmicon" style="padding: 7px;">
+							<img src="http://www.pokepedia.fr/images/f/f2/Honor_Ball.png">
+						</div>
+					</td>
+				</tr>
+			</table>
+		</div>
+
+		<div class="clear"></div>
+	</div>
+
+	<!-- FIN ANCIENS PKM -->
+
+</DIV>
+
+</body>
