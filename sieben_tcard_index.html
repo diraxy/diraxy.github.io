@@ -1,0 +1,802 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+
+<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+<script>
+			// JavaScript Document
+	$(document).ready(function(){
+		// ONGLETS POKEMON
+	
+	$("#1").click(function(){
+		$(".pkm").addClass("hide");
+		$("#pkm1").removeClass("hide");
+		});
+	$("#2").click(function(){
+		$(".pkm").addClass("hide");
+		$("#pkm2").removeClass("hide");
+		});
+	$("#3").click(function(){
+		$(".pkm").addClass("hide");
+		$("#pkm3").removeClass("hide");
+		});
+	$("#4").click(function(){
+		$(".pkm").addClass("hide");
+		$("#pkm4").removeClass("hide");
+		});
+	$("#5").click(function(){
+		$(".pkm").addClass("hide");
+		$("#pkm5").removeClass("hide");
+		});
+	$("#6").click(function(){
+		$(".pkm").addClass("hide");
+		$("#pkm6").removeClass("hide");
+		});
+	$("#7").click(function(){
+		$(".pkm").addClass("hide");
+		$("#pkm7").removeClass("hide");
+		});
+	$("#8").click(function(){
+		$(".pkm").addClass("hide");
+		$("#pkm8").removeClass("hide");
+		});
+	$("#9").click(function(){
+		$(".pkm").addClass("hide");
+		$("#pkm9").removeClass("hide");
+		});
+	$("#10").click(function(){
+		$(".pkm").addClass("hide");
+		$("#pkm10").removeClass("hide");
+		});
+	
+	});
+</script>
+
+
+<!-- CSS -->
+
+<style>
+	
+	body {
+		font-family: arial;
+		color: #808080;
+		font-size: 12px;
+		text-align:justify;
+		background: #F4F4F4;
+	}
+	body a { text-decoration: none; color: inherit; }
+	/* scrollbar */
+	::-webkit-scrollbar {
+   width: 5px;
+   height: 10px;
+  -webkit-border-radius: 10px;
+}
+ 
+::-webkit-scrollbar-track-piece  {
+   background-color: #F3F3F3;
+}
+ 
+::-webkit-scrollbar-thumb:vertical {
+   height: 30px;
+        -webkit-border-radius: 10px;
+   background-color: #7594d4;
+}
+ 
+::-webkit-scrollbar-thumb:horizontal{
+   height: 30px;
+        -webkit-border-radius: 10px;
+   background-color: #7594d4;
+}
+	/* FIN scrollbar */
+	.caps {
+		text-transform: uppercase;
+		font-size: 9px;
+		font-weight: bold;
+	}
+	.title {
+		border-bottom: 1px solid #F2F2F2;
+		padding-bottom: 2px;
+		margin-bottom: 5px;
+		text-align: center;
+	}
+	.black { color: black; }
+	.blakk {
+		color: black;
+		text-transform: uppercase;
+		font-size: 9px;
+		font-weight: bold;
+		letter-spacing: 1px;
+	}
+	.nav {
+		text-align: center;
+		margin: auto;
+		margin-bottom: -10px;
+		width: 550px;
+	}
+	.box {
+		background: #FFF;
+		border: 10px solid #F9F9F9;
+		padding: 10px;
+		width: 455px;
+		margin: auto;
+		color: #808080;
+		margin-top: 20px;
+	}
+	.sieben {
+		float: left;
+		width: 160px;
+		text-align: center;
+		border-right: 1px solid #F9F9F9;
+	}
+	.sieben img {
+		border-radius: 100px;
+		-moz-border-radius: 100px;
+		-o-border-radius: 100px;
+		-webkit-border-radius: 100px;
+	}
+	.sieben .name {
+		text-align: center;
+		margin-top: 20px;
+		line-height: 13px;
+		color: black;
+		text-transform: uppercase;
+		font-size: 9px;
+		font-weight: bold;
+	}
+	.sieben .id {
+		margin-top: 15px;
+		line-height: 14px;
+		color: #B9B9B9;
+		text-transform: uppercase;
+		font-size: 9px;
+		text-align: justify;
+	}
+	.profile {
+		float: left;
+		width: 275px;
+		font-size: 11px;
+		margin-left: 15px;
+	}
+	.icons {
+		text-align: center;
+		height: 89px;
+		overflow: auto;
+		margin-top: 10px;
+	}
+	.icons img {
+		width: 85px;
+		padding: 1px;
+	}
+	.menu {
+		float: left;
+		width: 80px;
+		line-height: 15px;
+		text-align: right;
+	}
+	.menu div {
+		cursor: pointer;
+	}
+	.data {
+		float: left;
+		width: 350px;
+		margin-left: 10px;
+		border-left: 1px solid #F9F9F9;
+		padding-left: 10px;
+		font-size: 11px;
+	}
+	.log {
+		text-transform: lowercase;
+		margin-top: 10px;
+		height: 206px;
+		overflow: auto;
+		padding-right: 10px;
+	}
+	.clear { clear: both; }
+	.hide { display: none; }
+    
+    .pad { padding-right: 5px; }
+    
+	.cathead {
+		margin: auto;
+		font-size: 24px;
+		text-transform: uppercase;
+		color: white;
+		text-align: center;
+		font-weight: bold;
+		text-shadow: 1px 1px 1px gainsboro;
+		margin-top: 30px;
+		border-bottom: 1px solid white;
+		padding-bottom: 3px;
+		width: 500px;
+	}
+	.pkmicon {
+		background: white;
+		border-radius: 100px;
+		-moz-border-radius: 100px;
+		-o-border-radius: 100px;
+		-webkit-border-radius: 100px;
+		padding: 3px;
+		margin: 3px;
+		cursor: pointer;
+        height: 45px;
+        width: 45px;
+        display:flex;
+        align-items: center;
+	}
+    
+    .pkmicon img { display: block; margin: auto;}
+	.pokelist {
+		margin: auto;
+        padding-top: 20px;
+	}
+	.pokelist table {
+		margin: auto;
+	}
+	.pokelist2 {
+		width: 100px;
+		float: left;
+		margin-left: 10px;
+		margin-top: 20px;
+	}
+	.pokelist2 table {
+		margin: auto;
+	}
+	.pokedata {
+		background: #FFF;
+		border: 10px solid #F9F9F9;
+		padding: 10px;
+		width: 455px;
+		margin: auto;
+		color: #808080;
+		margin-top: 20px;
+	}
+	.pokedata2 {
+		background: #FFF;
+		border: 10px solid #F9F9F9;
+		padding: 10px;
+		width: 345px;
+		margin: auto;
+		color: #808080;
+		margin-top: 20px;
+		float: left;
+	}
+	.pokedata .sub {
+		text-transform: uppercase;
+		font-size: 10px;
+		letter-spacing: 2px;
+		border-bottom: 1px solid #F9F9F9;
+		padding-bottom: 5px;
+		margin-bottom: 5px;
+		color: #E9E9E9;
+	}
+	.sprite {
+		background: #F4F4F4;
+		border-radius: 100px;
+		-moz-border-radius: 100px;
+		-o-border-radius: 100px;
+		-webkit-border-radius: 100px;
+		width: 100px;
+		height: 100px;
+		margin: auto;
+		display: flex;
+        align-items: center;
+	}
+    .sprite img { display: bloc; margin: auto; }
+	.pkmstats {
+		font-size: 9px;
+		font-weight: bold;
+		text-transform: uppercase;
+		margin-top: 20px;
+	}
+    .statpc {
+		margin-top: 7px;
+		line-height: 13px;
+		margin-left: 20px;
+		letter-spacing: 1px;
+	}
+	.pkmid {
+		text-transform: uppercase;
+		font-size: 9px;
+		font-weight: bold;
+		letter-spacing: 1px;
+		line-height: 15px;
+		margin: auto;
+		margin-left: 20px;
+		border-bottom: 1px solid #F2F2F2;
+		width: 320px;
+		padding-bottom: 5px;
+	}
+	.pkmid .caps {
+		color: black;
+		font-size: 9px;
+	}
+	.pkmdesc {
+		font-size: 11px;
+		margin-left: 20px;
+		margin-top: 10px;
+		width: 310px;
+		height: 120px;
+		overflow: auto;
+		padding-right: 10px;
+	}
+	.talent {
+		margin: auto;
+		font-size: 11px;
+		width: 200px;
+		padding-right: 15px;
+		border-right: 1px solid #F2F2F2;
+	}
+	.talent .blakk { padding-bottom: 5px; }
+	.moves {
+		padding-right: 15px;
+		padding-left: 15px;
+		border-right: 1px solid #F2F2F2;
+		font-size: 11px;
+		line-height: 13px;
+		text-align: center;
+	}
+	.moves .blakk { padding-bottom: 5px; }
+	select {
+		width: 120px;
+		text-transform: uppercase;
+		font-weight: bold;
+		font-size: 9px;
+	}
+    
+    .log {
+		padding-left: 15px;
+	}
+	.log .title { margin-bottom: 10px; }
+	.log .bloc {
+		height: 70px;
+		overflow: auto;
+		width: 140px;
+	}
+	.left {
+		float: left;
+		color: black;
+		font-size: 9px;
+		font-weight: bold;
+		width: 35px;
+		padding-top: 2px;
+	}
+	.right {
+		float: left;
+		width: 105px;
+		font-size: 11px;
+		padding-bottom: 7px;
+	}
+	.oldpkm {
+		margin: auto;
+		width: 500px;
+	}
+</style>
+
+</head>
+
+
+<!-- HTML -->
+
+<body>
+
+<DIV>
+
+	<div class="box">
+		<div class="sieben">
+			<img src="http://i.imgur.com/qwHSbWI.png">
+			<div class="name">sieben hercules connil</div>
+
+			<div class="id">
+				<span class="blakk">présentation /</span> lien
+				<br><span class="blakk">carnet de bord /</span> lien
+			</div>
+		</div>
+
+		<div class="profile">
+			<div class="title blakk">inventaire</div>
+            <br><ul><li>5 pokéballs</li></ul>
+            
+            <br><br><br><div class="title blakk">palier</div>
+            <br><p><input type="checkbox"> <span class="blakk">Niveau 2 :</span> 150 stardust<ul><li>création de pokéballs, quatre par mois</li></ul>
+                <input type="checkbox"> <span class="blakk">Niveau 3 :</span> 350 Stardust<ul><li>spé type / chance</li></ul>
+                <input type="checkbox"> <span class="blakk">Niveau 4 :</span> 600 Stardust<ul><li>création de capsules techniques, deux par mois</li></ul>
+                <input type="checkbox"> <span class="blakk">Niveau 5 :</span> 800 Stardust<ul><li>capture / radar</li></ul>
+                <input type="checkbox"> <span class="blakk">Niveau 6 :</span> 1200 Stardust<ul><li>création de superbonbons, cinq par mois</li></ul></p>
+
+			
+		</div>
+
+		<div class="clear"></div>
+	</div>
+
+
+
+
+	<!-- LISTE POKEMON -->
+
+	<div class="pokelist">
+		<table>
+			<tr>
+				<td>
+					<div id="1" class="pkmicon">
+						<img src="http://cdn.bulbagarden.net/upload/f/f7/137MS.png">
+					</div>
+				</td>
+
+				<td>
+					<div id="2" class="pkmicon">
+						<img src="http://cdn.bulbagarden.net/upload/9/93/Bag_Pok%C3%A9_Ball_Sprite.png">
+					</div>
+				</td>
+                
+                <td>
+					<div id="3" class="pkmicon">
+						<img src="http://cdn.bulbagarden.net/upload/9/93/Bag_Pok%C3%A9_Ball_Sprite.png">
+					</div>
+				</td>
+                
+                <td>
+					<div id="4" class="pkmicon">
+						<img src="http://cdn.bulbagarden.net/upload/9/93/Bag_Pok%C3%A9_Ball_Sprite.png">
+					</div>
+				</td>
+                
+                <td>
+					<div id="5" class="pkmicon">
+						<img src="http://cdn.bulbagarden.net/upload/9/93/Bag_Pok%C3%A9_Ball_Sprite.png">
+					</div>
+				</td>
+                
+                <td>
+					<div id="5" class="pkmicon">
+						<img src="http://cdn.bulbagarden.net/upload/9/93/Bag_Pok%C3%A9_Ball_Sprite.png">
+					</div>
+				</td>
+			</tr>
+		</table>
+	</div>
+
+
+
+	<!-- PORYGON -->
+
+	<DIV id="pkm1" class="pkm">
+	<div class="pokedata">
+		<table>
+			<tr>
+				<td>
+					<a target="_blank" href="http://www.pokepedia.fr/Porygon">
+						<div class="sprite">
+							<img src="http://cdn.bulbagarden.net/upload/a/a3/Spr_4p_137.png">
+						</div>
+					</a>
+
+					<div class="pkmstats">
+                        <center><span class="blakk">niveau 5</span>
+                        
+                            <br><br><span class="blakk">type :</span> normal
+                            <br><br><span class="blakk">talent :</span> analyste</center>
+                        
+                        <br><select>
+						<option>capacités</option>
+                        <option>conversion2</option>
+						<option>charge</option>
+						<option>conversion</option>
+						<option>affûtage</option>
+					</select>
+					</div>
+				</td>
+
+				<td>
+					<div class="pkmid">
+            <span class="caps">surnom :</span> copy x
+						<br><span class="caps">espèce :</span> porygon
+						<br><span class="caps">sexe :</span> asexué
+						<br><span class="caps">chromatique :</span> non
+                        <br><span class="caps">nature :</span> discret
+					</div>
+
+					<div class="pkmdesc">
+						Obtenu du <span class="blakk">Professeur baobab</span> le <span class="blakk">11/09/2016</span>. Sieben a été très agréablement surpris quand le Professeur Baobab lui a confié ce pokémon. Il était anxieux à l'idée de devoir s'occuper d'une créature ; mais les programmes et les algorithmes, ça, il connaît. Au début, il ne savait pas trop quoi faire du pokémon, qui se contentait de traîner autour de lui, visiblement en attente d'instructions. Mais le petit programme s'est montré diablement adaptable, et après quelques jours d'observation, il commençait déjà à se rendre utile. Discret mais efficace, il aide Sieben dans l'écriture de ses lignes de code, et facilite son quotidien en contrôlant ses appareils à sa demande. Il analyse sans cesse ce qui se passe autour de lui, et notamment les habitudes de son dresseur, et se retrouve ainsi capable de prendre de nombreuses initiatives pour lui apporter son aide. Sieben est fasciné par le pokémon, et tente à son tour de l'étudier, mais le programme est trop complexe pour lui. Il espère que ses cours l'aideront à en apprendre plus sur son nouveau coéquipier. Si porygon fait preuve de ce qui ressemble à du libre arbitre, il n'est pour autant pas doué de conscience, et ne fait pas de différence entre ce qui est bien ou mal au-delà de ce qui est inscrit dans son code ; son désir moteur est de se rendre utile à son dresseur, aussi ses actions dépendront-elles du comportement de ce dernier, et de ce que le porygon aura pu en apprendre. Malgré tous ses défauts, Sieben a bon fond, mais il est également impulsif et rancunier, et il lui arrive par exemple de se servir de son porygon pour tricher dans un jeu, ou envoyer un virus à un joueur rival. Quand il se déplace, le garçon emporte le porygon avec lui dans son téléphone portable. Il l'a nommé en référence à l'intelligence artificielle qu'il avait tenté de développer, X, et dont le porygon est désormais le remplaçant. Il s'agit également d'une référence à l'une de ses séries de jeux vidéos préférées.
+					</div>
+				</td>
+			</tr>
+		</table>
+	</div>
+
+        
+        <div class="pokedata">
+            <div style="font-size:11px;"><span class="blakk">19/04&nbsp;&nbsp;</span> ajout du porygon</div>
+        </div>
+        
+	
+	</DIV>
+
+	<!-- FIN PORYGON -->
+    
+    
+    
+    
+    <!-- PKM 2 -->
+
+	<DIV id="pkm2" class="pkm hide">
+	<div class="pokedata">
+		<table>
+			<tr>
+				<td>
+					<a target="_blank" href="">
+						<div class="sprite">
+							<img src="">
+						</div>
+					</a>
+
+					<div class="pkmstats">
+                        <center><span class="blakk">niveau x</span>
+                        
+                            <br><br><span class="blakk">type :</span> uc
+                            <br><br><span class="blakk">talent :</span> uc</center>
+                        
+                        <br><select>
+						<option>capacités</option>
+					</select>
+					</div>
+				</td>
+
+				<td>
+					<div class="pkmid">
+            <span class="caps">surnom :</span> uc
+						<br><span class="caps">espèce :</span> uc
+						<br><span class="caps">sexe :</span> uc
+						<br><span class="caps">chromatique :</span> uc
+                        <br><span class="caps">nature :</span> uc
+					</div>
+
+					<div class="pkmdesc">
+						uc
+					</div>
+				</td>
+			</tr>
+		</table>
+	</div>
+
+        
+        <div class="pokedata">
+            <div style="font-size:11px;"><span class="blakk">xx/xx&nbsp;&nbsp;</span> uc</div>
+        </div>
+        
+	
+	</DIV>
+
+	<!-- FIN PKM 2 -->
+    
+    
+    
+    
+    <!-- PKM 3 -->
+
+	<DIV id="pkm3" class="pkm hide">
+	<div class="pokedata">
+		<table>
+			<tr>
+				<td>
+					<a target="_blank" href="">
+						<div class="sprite">
+							<img src="">
+						</div>
+					</a>
+
+					<div class="pkmstats">
+                        <center><span class="blakk">niveau x</span>
+                        
+                            <br><br><span class="blakk">type :</span> uc
+                            <br><br><span class="blakk">talent :</span> uc</center>
+                        
+                        <br><select>
+						<option>capacités</option>
+					</select>
+					</div>
+				</td>
+
+				<td>
+					<div class="pkmid">
+            <span class="caps">surnom :</span> uc
+						<br><span class="caps">espèce :</span> uc
+						<br><span class="caps">sexe :</span> uc
+						<br><span class="caps">chromatique :</span> uc
+                        <br><span class="caps">nature :</span> uc
+					</div>
+
+					<div class="pkmdesc">
+						uc
+					</div>
+				</td>
+			</tr>
+		</table>
+	</div>
+
+        
+        <div class="pokedata">
+            <div style="font-size:11px;"><span class="blakk">xx/xx&nbsp;&nbsp;</span> uc</div>
+        </div>
+        
+	
+	</DIV>
+
+	<!-- FIN PKM 3 -->
+    
+    
+    
+    
+    <!-- PKM 4 -->
+
+	<DIV id="pkm4" class="pkm hide">
+	<div class="pokedata">
+		<table>
+			<tr>
+				<td>
+					<a target="_blank" href="">
+						<div class="sprite">
+							<img src="">
+						</div>
+					</a>
+
+					<div class="pkmstats">
+                        <center><span class="blakk">niveau x</span>
+                        
+                            <br><br><span class="blakk">type :</span> uc
+                            <br><br><span class="blakk">talent :</span> uc</center>
+                        
+                        <br><select>
+						<option>capacités</option>
+					</select>
+					</div>
+				</td>
+
+				<td>
+					<div class="pkmid">
+            <span class="caps">surnom :</span> uc
+						<br><span class="caps">espèce :</span> uc
+						<br><span class="caps">sexe :</span> uc
+						<br><span class="caps">chromatique :</span> uc
+                        <br><span class="caps">nature :</span> uc
+					</div>
+
+					<div class="pkmdesc">
+						uc
+					</div>
+				</td>
+			</tr>
+		</table>
+	</div>
+
+        
+        <div class="pokedata">
+            <div style="font-size:11px;"><span class="blakk">xx/xx&nbsp;&nbsp;</span> uc</div>
+        </div>
+        
+	
+	</DIV>
+
+	<!-- FIN PKM 4 -->
+    
+    
+    
+    
+    
+    <!-- PKM 5 -->
+
+	<DIV id="pkm5" class="pkm hide">
+	<div class="pokedata">
+		<table>
+			<tr>
+				<td>
+					<a target="_blank" href="">
+						<div class="sprite">
+							<img src="">
+						</div>
+					</a>
+
+					<div class="pkmstats">
+                        <center><span class="blakk">niveau x</span>
+                        
+                            <br><br><span class="blakk">type :</span> uc
+                            <br><br><span class="blakk">talent :</span> uc</center>
+                        
+                        <br><select>
+						<option>capacités</option>
+					</select>
+					</div>
+				</td>
+
+				<td>
+					<div class="pkmid">
+            <span class="caps">surnom :</span> uc
+						<br><span class="caps">espèce :</span> uc
+						<br><span class="caps">sexe :</span> uc
+						<br><span class="caps">chromatique :</span> uc
+                        <br><span class="caps">nature :</span> uc
+					</div>
+
+					<div class="pkmdesc">
+						uc
+					</div>
+				</td>
+			</tr>
+		</table>
+	</div>
+
+        
+        <div class="pokedata">
+            <div style="font-size:11px;"><span class="blakk">xx/xx&nbsp;&nbsp;</span> uc</div>
+        </div>
+        
+	
+	</DIV>
+
+	<!-- FIN PKM 5 -->
+    
+    
+    
+    
+    
+    
+    
+    
+    <!-- PKM 6 -->
+
+	<DIV id="pkm6" class="pkm hide">
+	<div class="pokedata">
+		<table>
+			<tr>
+				<td>
+					<a target="_blank" href="">
+						<div class="sprite">
+							<img src="">
+						</div>
+					</a>
+
+					<div class="pkmstats">
+                        <center><span class="blakk">niveau x</span>
+                        
+                            <br><br><span class="blakk">type :</span> uc
+                            <br><br><span class="blakk">talent :</span> uc</center>
+                        
+                        <br><select>
+						<option>capacités</option>
+					</select>
+					</div>
+				</td>
+
+				<td>
+					<div class="pkmid">
+            <span class="caps">surnom :</span> uc
+						<br><span class="caps">espèce :</span> uc
+						<br><span class="caps">sexe :</span> uc
+						<br><span class="caps">chromatique :</span> uc
+                        <br><span class="caps">nature :</span> uc
+					</div>
+
+					<div class="pkmdesc">
+						uc
+					</div>
+				</td>
+			</tr>
+		</table>
+	</div>
+
+        
+        <div class="pokedata">
+            <div style="font-size:11px;"><span class="blakk">xx/xx&nbsp;&nbsp;</span> uc</div>
+        </div>
+        
+	
+	</DIV>
+
+	<!-- FIN PKM 6 -->
+    
+
+</DIV>
+
+</body>
