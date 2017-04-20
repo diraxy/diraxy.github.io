@@ -194,8 +194,8 @@
 	}
 
 	body a { text-decoration: none; color: inherit; }
-
-
+    
+    
 
 	/* scrollbar */
 
@@ -223,6 +223,53 @@
 
 	/* FIN scrollbar */
 
+    
+    /* SEARCHBOX */
+    
+    .searchbox {
+		background: #FFF;
+		border: 10px solid #F9F9F9;
+		padding: 10px;
+		width: 455px;
+		margin: auto;
+		color: #808080;
+		margin-top: 20px;
+        margin-bottom: 40px;
+	}
+    
+    .searchtitle {
+			text-transform: uppercase;
+			color: #F4F4F4;
+			font-size: 26px;
+			font-family: arial;
+			font-weight: bold;
+			text-align: center;
+			transition: 0.8s;
+			-moz-transition: 0.8s;
+			-webkit-transition: 0.8s;
+			-o-transition: 0.8s;
+		}
+	
+		.searchtitle:hover {
+			color: #FDA6B3;
+			transition: 0.8s;
+			-moz-transition: 0.8s;
+			-webkit-transition: 0.8s;
+			-o-transition: 0.8s;
+	}
+    
+    .searchbox p {
+        border: 1px solid #F2F2F2;
+        padding: 10px;
+        font-size: 11px;
+        color: #B9B9B9;
+        line-height: 13px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    
+    /* FIN SEARCHBOX */
+    
 	.caps {
 		text-transform: uppercase;
 		font-size: 9px;
@@ -370,7 +417,23 @@
 <body>
 
 <DIV>
+    
+    <!-- SEARCHBOX -->
+    
+    <div class="searchbox">
+        <div class="searchtitle">Avis de recherche</div>
+        
+        <p><span class="blakk">ancien colocataire /</span> c'est un mec, et il a habité en colocation avec Sieben à Voltapolis pendant un à quatre ans, avant de déménager en février dernier (2017). Ils se sont quittés sur des rapports plutôt tendus, mais les détails sont à discuter :></p>
+        
+        <p><span class="blakk">beauté toxique /</span> une jolie fille qui le fascinerait. Crush inaccessible, il est fou d'elle, il ferait probablement n'importe quoi pour elle, mais elle flirte avec lui sans le prendre au sérieux, l'ignore quand elle n'a pas envie de jouer, ou alors est de mauvaise fréquentation... détails à discuter.</p>
+        
+        <p><span class="blakk">intéresé(e) /</span> fille ou garçon, camarade de classe de Sieben ou alors habitué(e) du magasin d'informatique dans lequel il travaille, et qui a un crush sur lui. Sieben est bien trop crétin pour s'en rendre compte (et n'est pas intéressé parce qu'il est trop occupé à courir après des filles compliquées). Histoire à suivre...</p>
+    </div>
+    
+    <!-- FIN SEARCHBOX -->
+    
 
+    
 	<!-- MENU ICONS -->
 
 	<div class="menu">
@@ -709,6 +772,8 @@
 
 	<!-- FIN BLOC RELATIONS - PSEUDO 6 -->
 
+
+    
 </DIV>
 
 </body>
